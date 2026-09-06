@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nzdocumentassist.co.nz/sitemap.xml

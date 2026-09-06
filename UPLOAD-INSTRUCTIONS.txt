@@ -1,0 +1,1 @@
+KEEP your existing assets/images folder and all 7 WebP logo files. Replace index.html and upload the folders/files in this package to the repository root. The planned email hello@nzdocumentassist.co.nz must be activated or changed before launch. Privacy/Terms are starter wording and should be reviewed before launch.
