@@ -6,19 +6,20 @@
 
   <title>Apostille NZ | New Zealand Apostille Document Assistance</title>
 
-  <meta name="description" content="Need an apostille for a New Zealand document? NZ Document Assist provides independent apostille coordination and document handling throughout New Zealand. From NZ$89 plus government and third-party fees.">
+  <meta name="description" content="Need an apostille for a New Zealand document? NZ Document Assist provides independent apostille coordination, document checking, notary coordination and overseas document handling throughout New Zealand.">
 
   <link rel="canonical" href="https://nzdocumentassist.co.nz/apostille-nz/">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Apostille NZ | New Zealand Apostille Assistance">
-  <meta property="og:description" content="Independent administrative help with New Zealand apostille applications, document preparation, notary coordination and return delivery.">
+  <meta property="og:description" content="Independent help coordinating apostilles for New Zealand documents being used overseas.">
   <meta property="og:url" content="https://nzdocumentassist.co.nz/apostille-nz/">
   <meta property="og:image" content="https://nzdocumentassist.co.nz/assets/images/nz-document-assist-social.webp">
 
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <style>
+
     .page-hero {
       padding: 76px 0 68px;
       background:
@@ -192,6 +193,25 @@
       margin: 28px 0;
     }
 
+    .guide-box {
+      border: 1px solid #d9e0e8;
+      background: linear-gradient(135deg,#f8fafc,#fff);
+      padding: 28px;
+      border-radius: 16px;
+      margin: 34px 0;
+    }
+
+    .guide-box h3 {
+      margin-top: 0;
+      color: #071f3f;
+    }
+
+    .guide-box .btn {
+      display: inline-flex;
+      text-decoration: none;
+      margin-top: 8px;
+    }
+
     .sidebar {
       position: sticky;
       top: 110px;
@@ -212,11 +232,24 @@
       margin-top: 0;
     }
 
-    .side-card a {
+    .side-card > a:not(.btn) {
       display: block;
       padding: 9px 0;
       color: #8b6811;
       font-weight: 700;
+    }
+
+    .side-card .btn {
+      width: 100%;
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 14px 20px;
+      color: #071f3f;
+      text-decoration: none;
+      font-weight: 800;
     }
 
     .comparison {
@@ -238,13 +271,22 @@
       color: #fff;
     }
 
+    .faq-intro {
+      margin-bottom: 20px;
+    }
+
     .faq-item {
       border-bottom: 1px solid #e2e7ed;
-      padding: 20px 0;
+      padding: 22px 0;
     }
 
     .faq-item h3 {
       margin: 0 0 9px;
+      color: #071f3f;
+    }
+
+    .faq-item p {
+      margin-bottom: 0;
     }
 
     .cta-section {
@@ -265,36 +307,40 @@
       margin: 0 auto 26px;
       color: #d8e1ec;
     }
-header .nav {
-  min-height: 74px;
-  gap: 20px;
-}
 
-header .logo {
-  width: 225px;
-  height: auto;
-}
+    header .nav {
+      min-height: 74px;
+      gap: 20px;
+    }
 
-header .links {
-  gap: 20px;
-  font-size: 15px;
-}
+    header .logo {
+      width: 225px;
+      height: auto;
+    }
 
-header .nav-quote {
-  padding: 12px 18px;
-}
+    header .links {
+      gap: 20px;
+      font-size: 15px;
+    }
 
-@media (max-width: 1050px) {
-  header .logo {
-    width: 205px;
-  }
+    header .nav-quote {
+      padding: 12px 18px;
+    }
 
-  header .links {
-    gap: 15px;
-    font-size: 14px;
-  }
-}
+    @media (max-width: 1050px) {
+
+      header .logo {
+        width: 205px;
+      }
+
+      header .links {
+        gap: 15px;
+        font-size: 14px;
+      }
+    }
+
     @media (max-width: 900px) {
+
       .page-hero-grid,
       .content-grid {
         grid-template-columns: 1fr;
@@ -306,6 +352,7 @@ header .nav-quote {
     }
 
     @media (max-width: 620px) {
+
       .page-hero {
         padding: 52px 0;
       }
@@ -327,6 +374,7 @@ header .nav-quote {
         padding: 10px;
       }
     }
+
   </style>
 
   <script type="application/ld+json">
@@ -339,7 +387,7 @@ header .nav-quote {
         "name": "NZ Document Assist",
         "url": "https://nzdocumentassist.co.nz/",
         "logo": "https://nzdocumentassist.co.nz/assets/images/nz-document-assist-logo-primary.webp",
-        "description": "Independent administrative document assistance and coordination service for New Zealand documents being used overseas."
+        "description": "Independent administrative document assistance and coordination for New Zealand documents being used overseas."
       },
       {
         "@type": "WebSite",
@@ -355,7 +403,7 @@ header .nav-quote {
         "@id": "https://nzdocumentassist.co.nz/apostille-nz/#webpage",
         "url": "https://nzdocumentassist.co.nz/apostille-nz/",
         "name": "Apostille NZ | New Zealand Apostille Document Assistance",
-        "description": "Independent New Zealand apostille coordination and document assistance.",
+        "description": "Independent New Zealand apostille coordination and overseas document assistance.",
         "isPartOf": {
           "@id": "https://nzdocumentassist.co.nz/#website"
         },
@@ -380,7 +428,7 @@ header .nav-quote {
           "@type": "Offer",
           "price": "89",
           "priceCurrency": "NZD",
-          "description": "NZ Document Assist coordination fee from NZ$89. Government, notary, translation, courier and other third-party fees are additional where applicable."
+          "description": "Apostille coordination from NZ$89. Official processing, notary, translation, courier and other external charges may apply."
         }
       },
       {
@@ -410,7 +458,7 @@ header .nav-quote {
             "name": "What is an apostille in New Zealand?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "An apostille is an official certificate used to help verify the origin of certain New Zealand public documents for use in countries that recognise the Hague Apostille Convention."
+              "text": "An apostille is an official certificate that verifies the signature, stamp or seal on certain New Zealand documents for use in countries that use the Hague Apostille Convention."
             }
           },
           {
@@ -418,15 +466,55 @@ header .nav-quote {
             "name": "Who issues apostilles in New Zealand?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "New Zealand apostilles are issued through the Department of Internal Affairs Authentication Unit. NZ Document Assist is an independent administrative coordination service and does not issue apostilles."
+              "text": "New Zealand apostilles are issued through the Department of Internal Affairs Authentication Unit. NZ Document Assist coordinates the administrative process but does not issue apostilles."
             }
           },
           {
             "@type": "Question",
-            "name": "How much does an apostille cost in New Zealand?",
+            "name": "Do I need to send my original document for an apostille?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The New Zealand Government fee is currently NZ$37 for one apostille certificate. NZ Document Assist charges a separate coordination fee from NZ$89. Other costs may apply depending on the document, destination, notarisation, translation and courier requirements."
+              "text": "It depends on the document. Some documents must be original while some types may be accepted as properly notarised copies or in another permitted format. The receiving organisation may also have its own requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I get an electronic apostille instead of a paper apostille?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. New Zealand offers both paper apostilles and electronic apostilles called e-apostilles. You should confirm which format the overseas organisation will accept."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does a PDF document need to be notarised before it can be apostilled?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not always. Requirements depend on the type and source of the PDF. Some electronically issued documents may be accepted in their permitted digital format, while other documents may need notarisation first."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a Justice of the Peace certify a document for an apostille?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Where a document must be notarised for the New Zealand apostille or authentication process, it must be notarised by a New Zealand Notary Public. Certification by a Justice of the Peace or ordinary solicitor is not accepted for that notarisation requirement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does my document need to be recently issued?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sometimes. The overseas organisation receiving the document may require a document issued within a particular period even where New Zealand processing requirements do not impose the same age requirement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I arrange a New Zealand apostille while living overseas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In many cases yes. New Zealand documents can often be handled by post, courier and electronic communication, depending on the document and the receiving organisation's requirements."
             }
           },
           {
@@ -434,23 +522,15 @@ header .nav-quote {
             "name": "How long does a New Zealand apostille take?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The New Zealand Government currently advises allowing up to 15 working days for standard apostille processing. Eligible urgent applications may be processed within 5 working days for an additional government urgent-service fee."
+              "text": "Standard processing is currently within 15 working days once a complete eligible application is received. Eligible urgent applications can be processed within 5 working days and an additional NZ$120 urgent-processing fee applies."
             }
           },
           {
             "@type": "Question",
-            "name": "Do I need an apostille or authentication?",
+            "name": "Can several documents be apostilled together?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "This depends mainly on the country where the document will be used and the document involved. Countries participating in the Hague Apostille Convention generally use apostilles, while other destinations may require authentication and additional embassy or consular steps."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can NZ Document Assist provide legal or immigration advice?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. NZ Document Assist provides administrative document assistance and coordination only. It is not a law firm, notary public, government agency or licensed immigration adviser."
+              "text": "Sometimes documents can be processed as a set, while in other situations they need to be treated individually. This depends on the documents and the overseas organisation's requirements."
             }
           }
         ]
@@ -460,298 +540,453 @@ header .nav-quote {
   </script>
 </head>
 
+
 <body>
 
 <header>
+
   <div class="wrap nav">
+
     <a href="/" aria-label="NZ Document Assist home">
+
       <img
         class="logo"
         src="/assets/images/nz-document-assist-logo-primary.webp"
         alt="NZ Document Assist - Apostille and Overseas Document Assistance"
         width="550"
         height="201">
+
     </a>
 
     <nav class="links" aria-label="Main navigation">
+
       <a href="/apostille-nz/">Apostille</a>
       <a href="/document-authentication-nz/">Authentication</a>
       <a href="/how-it-works/">How It Works</a>
       <a href="/pricing/">Pricing</a>
       <a href="/about/">About</a>
+
     </nav>
 
     <a class="btn nav-quote" href="/contact/">Get a Quote</a>
+
   </div>
+
 </header>
 
 
 <main>
 
+
 <section class="page-hero">
+
   <div class="wrap">
 
     <div class="breadcrumbs">
+
       <a href="/">Home</a> &nbsp;›&nbsp; Apostille NZ
+
     </div>
+
 
     <div class="page-hero-grid">
 
       <div>
-        <div class="gold-label">New Zealand Apostille Assistance</div>
 
-        <h1>Need an Apostille for a New Zealand Document?</h1>
+        <div class="gold-label">
+          New Zealand Apostille Assistance
+        </div>
+
+        <h1>
+          Need an Apostille for a New Zealand Document?
+        </h1>
 
         <p class="lead">
-          We help individuals, families and businesses coordinate the apostille
-          process for New Zealand documents being used overseas — including
-          document checks, administrative preparation, notary coordination
-          where required, submission coordination and return delivery.
+
+          We help individuals, families and businesses coordinate the
+          apostille process for New Zealand documents being used overseas —
+          including document checking, administrative preparation, notary
+          coordination where required, submission coordination and return
+          delivery.
+
         </p>
 
         <div class="hero-actions">
-          <a class="btn" href="/contact/">Get an Apostille Quote</a>
-          <a class="btn btn-light" href="/how-it-works/">See How It Works</a>
+
+          <a class="btn" href="/contact/">
+            Get an Apostille Quote
+          </a>
+
+          <a class="btn btn-light" href="/how-it-works/">
+            See How It Works
+          </a>
+
         </div>
+
       </div>
 
-      <aside class="quote-box">
-        <h2>Apostille Coordination</h2>
 
-        <div class="price">From NZ$89</div>
+      <aside class="quote-box">
+
+        <h2>
+          Apostille Coordination
+        </h2>
+
+        <div class="price">
+          From NZ$89
+        </div>
 
         <p>
           Our administrative coordination fee.
         </p>
 
         <p class="small">
-          Government, notary, translation, courier and other third-party
-          charges are additional where applicable.
+          Official processing, notary, translation, courier and other
+          external charges may apply depending on your document.
         </p>
 
-        <a class="btn" href="/contact/">Ask About Your Document</a>
+        <a class="btn" href="/contact/">
+          Ask About Your Document
+        </a>
+
       </aside>
 
     </div>
+
   </div>
+
 </section>
 
 
+
 <section class="section">
+
   <div class="wrap content-grid">
 
+
     <article class="article">
+
 
       <h2>What Is an Apostille in New Zealand?</h2>
 
       <p>
-        An apostille is an official certificate used to help verify the origin
-        of certain New Zealand public documents when they are being presented
-        in another country that recognises the Hague Apostille Convention.
+        An apostille is an official certificate that verifies the signature,
+        stamp or seal on certain New Zealand documents so they can be
+        recognised in countries that use the Hague Apostille Convention.
       </p>
 
       <p>
-        In New Zealand, apostilles are issued through the
+        New Zealand apostilles are issued through the
         <strong>Department of Internal Affairs Authentication Unit</strong>.
         NZ Document Assist does not issue apostilles. We provide independent
         administrative assistance and coordination to help make the process
-        easier to manage.
+        easier to organise and manage.
       </p>
 
       <div class="info-box">
-        <strong>Important:</strong> whether you need an apostille,
-        authentication, notarisation or another step depends on your document
-        and the country where it will be used.
+
+        <strong>Not sure whether you need an apostille?</strong><br><br>
+
+        The correct process depends on the document, the country where it will
+        be used and sometimes the requirements of the overseas organisation
+        asking for it.
+
       </div>
+
 
 
       <h2>Documents Commonly Used Overseas</h2>
 
       <p>
-        People seek apostille assistance for many different types of New Zealand
-        documents. The exact requirements depend on the receiving country and
-        organisation.
+        Apostilles may be required for many different types of New Zealand
+        documents. The exact preparation required can differ considerably
+        between document types.
       </p>
 
       <ul class="check-list">
+
         <li>New Zealand birth certificates</li>
+
         <li>Marriage and civil union certificates</li>
+
         <li>Death certificates</li>
-        <li>Academic and education documents</li>
-        <li>Police or background-related documents</li>
+
+        <li>Academic qualifications and education documents</li>
+
+        <li>Criminal record and background-related documents</li>
+
         <li>Company and business documents</li>
+
         <li>Powers of attorney and privately prepared documents</li>
-        <li>Certified copies and documents requiring notarisation</li>
-        <li>Documents required for overseas property, banking or estate matters</li>
+
+        <li>Certified copies requiring notarisation</li>
+
+        <li>Documents for overseas property transactions</li>
+
+        <li>Documents for banking and financial matters overseas</li>
+
+        <li>Estate and inheritance documents</li>
+
+        <li>Documents requested by foreign authorities or institutions</li>
+
       </ul>
 
       <p>
-        Not every document follows the same process. Some documents can be
-        submitted directly, while others may first need certification,
-        notarisation or another preliminary step.
+        Not every document follows the same route. Some can be processed in
+        their original form, while others may first require notarisation,
+        translation, certification or another preliminary step.
       </p>
+
 
 
       <h2>How Our Apostille Assistance Works</h2>
 
+
       <div class="steps">
 
-        <div class="step">
-          <div class="step-number">1</div>
-          <div>
-            <h3>Tell Us About Your Document</h3>
-            <p>
-              Send us details of the document, the country where it will be
-              used and any instructions you have received from the overseas
-              organisation.
-            </p>
-          </div>
-        </div>
 
         <div class="step">
-          <div class="step-number">2</div>
-          <div>
-            <h3>Administrative Document Check</h3>
-            <p>
-              We review the information you provide and help identify the
-              administrative steps that may be involved. Where specialist
-              legal, immigration or notarial advice is required, we will
-              direct you to an appropriate professional.
-            </p>
+
+          <div class="step-number">
+            1
           </div>
+
+          <div>
+
+            <h3>Tell Us What You Need</h3>
+
+            <p>
+              Tell us what document you have, which country it will be used in
+              and any instructions you have received from the organisation
+              requesting it.
+            </p>
+
+          </div>
+
         </div>
 
+
+
         <div class="step">
-          <div class="step-number">3</div>
+
+          <div class="step-number">
+            2
+          </div>
+
           <div>
+
+            <h3>We Check the Administrative Requirements</h3>
+
+            <p>
+              We review the information provided and identify the practical
+              document-handling steps that may be involved.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="step">
+
+          <div class="step-number">
+            3
+          </div>
+
+          <div>
+
             <h3>Coordinate Any Preliminary Steps</h3>
+
             <p>
-              If your document needs notarisation, translation, certified
-              copies or other preparation, we can help coordinate those
-              services.
+              If notarisation, translation, certified copies or other
+              preparation is required, we can help coordinate those services
+              before the apostille stage.
             </p>
+
           </div>
+
         </div>
 
+
+
         <div class="step">
-          <div class="step-number">4</div>
+
+          <div class="step-number">
+            4
+          </div>
+
           <div>
+
             <h3>Apostille Application Coordination</h3>
+
             <p>
-              We help organise the administrative application and document
-              handling for submission to the appropriate New Zealand
-              authority.
+              We help organise the application, document handling and
+              administrative submission process.
             </p>
+
           </div>
+
         </div>
 
+
+
         <div class="step">
-          <div class="step-number">5</div>
+
+          <div class="step-number">
+            5
+          </div>
+
           <div>
+
             <h3>Return and Delivery</h3>
+
             <p>
-              Once the process is complete, we can coordinate return delivery
-              within New Zealand or international courier arrangements where
+              Once processing is complete, we can coordinate document return,
+              New Zealand delivery or international courier arrangements where
               required.
             </p>
+
           </div>
+
         </div>
+
 
       </div>
 
 
-      <h2>How Much Does an Apostille Cost in NZ?</h2>
 
-      <p>
-        The New Zealand Government currently charges
-        <strong>NZ$37 for one apostille certificate</strong>.
-        Government fees are separate from our service fee.
-      </p>
+      <h2>Our Apostille Coordination Fee</h2>
 
       <p>
         Our apostille coordination service starts from
-        <strong>NZ$89</strong>, plus government and any applicable third-party
-        costs.
+        <strong>NZ$89</strong>.
       </p>
 
       <p>
-        Additional costs can arise if your case requires notarisation,
-        translation, courier services or other external services.
+        This covers our administrative coordination and handling service.
+        Additional charges may apply where your document requires external
+        processing, notarisation, translation, courier services or other
+        third-party services.
+      </p>
+
+      <p>
+        The simplest way to know what your particular case is likely to involve
+        is to tell us what document you have and where it needs to be used.
       </p>
 
       <p>
         See our <a href="/pricing/">pricing page</a> or
-        <a href="/contact/">contact us</a> with details of your document for a
-        clearer estimate.
+        <a href="/contact/">ask us about your document</a>.
       </p>
+
 
 
       <h2>How Long Does an Apostille Take in New Zealand?</h2>
 
       <p>
-        The New Zealand Government currently advises allowing
-        <strong>up to 15 working days</strong> for standard apostille
-        processing.
+        Standard apostille processing is currently within
+        <strong>15 working days</strong> once a complete application that meets
+        the required criteria is received.
       </p>
 
       <p>
-        An eligible urgent service may be available, with government processing
-        within approximately <strong>5 working days</strong>. The Government
-        currently charges an additional <strong>NZ$120 urgent-service fee</strong>
-        where the urgent option applies.
+        Eligible urgent applications can currently be processed within
+        <strong>5 working days</strong>.
+        An additional <strong>NZ$120 urgent-processing fee</strong> applies.
       </p>
 
       <div class="info-box">
-        Government processing times are outside our control and can change.
-        Our priority service relates to our own administrative handling and
-        does not guarantee faster processing by government agencies,
-        notaries, translators, embassies or courier providers.
+
+        Urgent processing is only available for eligible applications.
+        Documents requiring translation, incomplete applications or documents
+        that do not meet the required criteria may not qualify.
+
       </div>
+
+      <p>
+        Our own priority handling relates to how quickly we deal with the
+        administrative work on our side. It cannot guarantee faster processing
+        by DIA, a notary, translator, embassy, courier company or any other
+        external organisation.
+      </p>
+
 
 
       <h2>Apostille or Authentication — Which Do You Need?</h2>
 
       <p>
-        These terms are often confused, but they are not the same process.
-        The correct route largely depends on the country where the New Zealand
-        document will be used.
+        Apostille and authentication are often confused, but they are not the
+        same process.
       </p>
-
-      <table class="comparison">
-        <thead>
-          <tr>
-            <th>Apostille</th>
-            <th>Authentication</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              Generally used for countries that recognise the Hague Apostille
-              Convention.
-            </td>
-            <td>
-              Often used where the destination country does not use the Hague
-              Apostille process.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Usually involves an apostille certificate issued in New Zealand.
-            </td>
-            <td>
-              May involve authentication followed by additional embassy,
-              consular or foreign-government requirements.
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       <p>
-        If your document requires authentication rather than an apostille,
-        see our
-        <a href="/document-authentication-nz/">New Zealand document authentication service</a>.
+        The correct route primarily depends on the country where your
+        New Zealand document will be used.
       </p>
+
+
+      <table class="comparison">
+
+        <thead>
+
+          <tr>
+
+            <th>
+              Apostille
+            </th>
+
+            <th>
+              Authentication
+            </th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody>
+
+          <tr>
+
+            <td>
+              Used for countries that participate in the Hague Apostille
+              Convention.
+            </td>
+
+            <td>
+              Used for countries that require an authentication or legalisation
+              process instead.
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>
+              Available as a paper apostille or electronic e-apostille.
+            </td>
+
+            <td>
+              May involve additional verification and, in some cases, embassy
+              or consular steps.
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+
+      <p>
+        If your destination requires authentication rather than an apostille,
+        see our
+        <a href="/document-authentication-nz/">
+          New Zealand Document Authentication service
+        </a>.
+      </p>
+
 
 
       <h2>What If My Document Needs a Notary?</h2>
@@ -762,190 +997,548 @@ header .nav-quote {
       </p>
 
       <p>
-        Where notarisation is required as part of the New Zealand
-        apostille/authentication process, the Department of Internal Affairs
-        specifies that the relevant notarisation must be performed by a
-        <strong>New Zealand Notary Public</strong>.
+        When notarisation is required for this process, it must be completed by
+        a <strong>New Zealand Notary Public</strong>.
+      </p>
+
+      <p>
+        A Justice of the Peace or ordinary solicitor certification is not a
+        substitute where the document specifically requires notarisation for
+        apostille or authentication.
       </p>
 
       <p>
         NZ Document Assist is <strong>not a Notary Public</strong>, but we can
-        help coordinate an appointment and document handling.
-        See our
-        <a href="/notary-public-auckland-help/">notary coordination service</a>.
+        help coordinate the notarial stage and document handling.
       </p>
+
+      <p>
+        Learn about our
+        <a href="/notary-public-auckland-help/">
+          Notary Coordination service
+        </a>.
+      </p>
+
+
+
+      <h2>Do You Need an Original Document or a Copy?</h2>
+
+      <p>
+        This is one of the most common areas of confusion.
+      </p>
+
+      <p>
+        The answer depends on the type of document. Some documents need to be
+        submitted as originals, while certain other documents may be accepted
+        as properly notarised copies or in an approved electronic format.
+      </p>
+
+      <p>
+        There is another important consideration: the overseas organisation
+        receiving the document can have its own rules. It may require an
+        original even where another format could otherwise be processed.
+      </p>
+
+      <p>
+        That is why we ask about both your <strong>document</strong> and the
+        <strong>country and organisation receiving it</strong> before
+        coordinating the next steps.
+      </p>
+
+
+
+      <h2>Paper Apostille or E-Apostille?</h2>
+
+      <p>
+        New Zealand offers both a paper apostille and an electronic apostille,
+        known as an <strong>e-apostille</strong>.
+      </p>
+
+      <p>
+        A paper apostille is physically attached to the document set. An
+        e-apostille is supplied electronically as a secure PDF.
+      </p>
+
+      <p>
+        One is not automatically better than the other. The important question
+        is which format the organisation receiving your documents will accept.
+      </p>
+
 
 
       <h2>Apostille Assistance Anywhere in New Zealand</h2>
 
       <p>
         NZ Document Assist provides administrative document assistance
-        throughout New Zealand. Many cases can be handled remotely using
-        email, post and courier services.
+        throughout New Zealand.
+      </p>
+
+      <p>
+        Many cases can be coordinated remotely using email, post and courier,
+        which means you do not necessarily need to be located near our Auckland
+        service area.
       </p>
 
       <p>
         Whether you are in Auckland, Wellington, Christchurch, Hamilton,
-        Tauranga, Dunedin or elsewhere in New Zealand, you can contact us
-        about coordinating your overseas document requirements.
-      </p>
-
-
-      <h2>Official New Zealand Apostille Information</h2>
-
-      <p>
-        For official government information about apostilles,
-        authentication, current government fees and processing requirements,
-        visit the New Zealand Government website:
+        Tauranga, Dunedin or elsewhere in New Zealand, you can contact us about
+        coordinating your overseas document requirements.
       </p>
 
       <p>
-        <a
-          href="https://www.govt.nz/browse/passports-citizenship-and-identity/proving-and-protecting-your-identity/use-your-nz-documents-overseas/"
-          target="_blank"
-          rel="noopener noreferrer">
-          New Zealand Government — Use your NZ documents overseas
+        We can also assist people who are currently living overseas but need
+        help coordinating the use of New Zealand documents internationally.
+      </p>
+
+
+
+      <div class="guide-box">
+
+        <h3>
+          Want to Understand the Full NZ Apostille Process?
+        </h3>
+
+        <p>
+          We have prepared a detailed guide explaining New Zealand apostille
+          requirements, document preparation, original documents, notarisation,
+          e-apostilles, authentication, processing times and common issues.
+        </p>
+
+        <a class="btn" href="/new-zealand-apostille-requirements/">
+          Read the NZ Apostille Requirements Guide
         </a>
+
+      </div>
+
+
+
+      <h2 id="faq">
+        Frequently Asked Questions About Apostilles in New Zealand
+      </h2>
+
+      <p class="faq-intro">
+        These are some of the practical questions people commonly have when
+        preparing New Zealand documents for use overseas.
       </p>
 
 
-      <h2 id="faq">Frequently Asked Questions About Apostilles in NZ</h2>
 
       <div class="faq-item">
-        <h3>What is an apostille in New Zealand?</h3>
+
+        <h3>
+          What is an apostille in New Zealand?
+        </h3>
+
         <p>
-          An apostille is an official certificate used to help verify the
-          origin of certain New Zealand public documents for use in countries
-          that recognise the Hague Apostille Convention.
+          An apostille is an official certificate that verifies the signature,
+          stamp or seal on certain New Zealand documents so they can be used in
+          countries that recognise the Hague Apostille Convention.
         </p>
+
       </div>
 
-      <div class="faq-item">
-        <h3>Who issues apostilles in New Zealand?</h3>
-        <p>
-          Apostilles are issued through the New Zealand Department of Internal
-          Affairs Authentication Unit. NZ Document Assist provides independent
-          administrative assistance and does not issue apostilles.
-        </p>
-      </div>
+
 
       <div class="faq-item">
-        <h3>How much is an apostille in New Zealand?</h3>
+
+        <h3>
+          Who issues apostilles in New Zealand?
+        </h3>
+
         <p>
-          The Government currently charges NZ$37 for one apostille certificate.
-          Our separate apostille coordination fee starts from NZ$89. Other
-          costs may apply depending on your document and requirements.
+          New Zealand apostilles are issued through the Department of Internal
+          Affairs Authentication Unit. NZ Document Assist coordinates the
+          administrative process but does not issue apostilles.
         </p>
+
       </div>
 
-      <div class="faq-item">
-        <h3>How long does an apostille take?</h3>
-        <p>
-          The New Zealand Government currently advises allowing up to
-          15 working days for standard processing. Eligible urgent applications
-          may be processed within approximately 5 working days for an
-          additional government fee.
-        </p>
-      </div>
+
 
       <div class="faq-item">
-        <h3>Can I get an apostille urgently?</h3>
+
+        <h3>
+          Do I need to send my original document for an apostille?
+        </h3>
+
         <p>
-          An urgent Government service is available for eligible applications.
-          The current additional Government urgent fee is NZ$120. Eligibility
-          and government processing times are controlled by the relevant
-          authority rather than NZ Document Assist.
+          It depends on the type of document. Some documents must be supplied
+          as originals, while others may be accepted as properly notarised
+          copies or in another approved format. The overseas organisation may
+          also insist on an original even where another format might otherwise
+          be accepted.
         </p>
+
       </div>
 
-      <div class="faq-item">
-        <h3>Do I need an apostille or authentication?</h3>
-        <p>
-          It depends on the destination country and the document involved.
-          Countries using the Hague Apostille Convention generally accept
-          apostilles, while other countries may require authentication and
-          additional steps.
-        </p>
-      </div>
+
 
       <div class="faq-item">
-        <h3>Can NZ Document Assist give me legal or immigration advice?</h3>
+
+        <h3>
+          Can I get an e-apostille instead of a paper apostille?
+        </h3>
+
         <p>
-          No. We provide administrative document assistance and coordination
-          only. We are not a law firm, Notary Public, government agency or
-          licensed immigration adviser.
+          Yes. New Zealand offers both paper apostilles and electronic
+          e-apostilles. The receiving organisation should determine which
+          format you choose because some organisations accept electronic
+          documents while others require the physical paper version.
         </p>
+
       </div>
+
+
+
+      <div class="faq-item">
+
+        <h3>
+          If I get an e-apostille, do I still need my original document?
+        </h3>
+
+        <p>
+          Possibly. Choosing an e-apostille does not automatically remove the
+          document requirements that apply to the underlying document. Whether
+          an original, electronic document or notarised copy is needed depends
+          on the document type and the requirements of the organisation
+          receiving it.
+        </p>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <h3>
+          Will I get my original documents back?
+        </h3>
+
+        <p>
+          Documents submitted for processing are normally returned using the
+          return details provided with the application. If you need documents
+          delivered overseas, we can also help coordinate appropriate return
+          or courier arrangements.
+        </p>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <h3>
+          Does a PDF document need to be notarised before it can be apostilled?
+        </h3>
+
+        <p>
+          Not necessarily. Some electronically issued documents can be
+          processed in their permitted electronic form, while other documents
+          may first need notarisation. The answer depends on what the document
+          is, who issued it and the applicable document requirements.
+        </p>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <h3>
+          Can a Justice of the Peace certify my document for an apostille?
+        </h3>
+
+        <p>
+          Not where the document is required to be notarised for the apostille
+          or authentication process. In that situation, the document must be
+          notarised by a <strong>New Zealand Notary Public</strong>. A Justice
+          of the Peace or ordinary solicitor certification is not accepted as
+          a substitute for that particular requirement.
+        </p>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <h3>
+          Does my birth or marriage certificate need to be recently issued?
+        </h3>
+
+        <p>
+          Sometimes. The organisation overseas may specify that a birth,
+          marriage or other certificate must have been issued within a certain
+          period. This is separate from the general apostille process, so it is
+          worth checking the receiving organisation's instructions before
+          sending the document.
+        </p>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <h3>
+          Do I need my document translated before getting an apostille?
+        </h3>
+
+        <p>
+          It depends on the destination and the organisation requesting the
+          document. Some overseas authorities require translations while
+          others do not. Translation can also affect how the document needs to
+          be prepared, so it is best to establish this before processing starts.
+        </p>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <h3>
+          Can I arrange a New Zealand apostille if I am living overseas?
+        </h3>
+
+        <p>
+          In many cases, yes. New Zealand documents can often be coordinated
+          using electronic communication, post and international courier
+          services. The exact method depends on the document and whether an
+          original or other physical document is required.
+        </p>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <h3>
+          How long does a New Zealand apostille take?
+        </h3>
+
+        <p>
+          Standard processing is currently within 15 working days once a
+          complete eligible application has been received. Eligible urgent
+          applications can currently be processed within 5 working days.
+          An additional <strong>NZ$120 urgent-processing fee</strong> applies.
+        </p>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <h3>
+          Can several documents be apostilled together?
+        </h3>
+
+        <p>
+          Sometimes. Depending on what the documents are and how the overseas
+          organisation requires them to be presented, documents may be handled
+          individually or as a set. We can check the administrative handling
+          requirements before arranging the application.
+        </p>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <h3>
+          What if the embassy or overseas organisation gives me different instructions?
+        </h3>
+
+        <p>
+          Follow the requirements of the organisation that will ultimately
+          receive your documents. Overseas authorities can impose their own
+          rules about document age, originals, translations, paper versus
+          electronic apostilles and how several documents should be presented.
+          Send us the instructions you received and we can take them into
+          account when coordinating the administrative process.
+        </p>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <h3>
+          I am not sure whether I need an apostille, authentication or notarisation. What should I do?
+        </h3>
+
+        <p>
+          Send us the document type, the country where it will be used and any
+          instructions you have received. We can help identify the practical
+          administrative route and coordinate the appropriate document-handling
+          steps.
+        </p>
+
+      </div>
+
 
 
       <div class="notice">
-        <strong>Important service disclosure:</strong><br><br>
+
+        <strong>Important service disclosure:</strong>
+
+        <br><br>
+
         NZ Document Assist provides administrative document assistance and
         coordination services only. We are not a government agency, law firm,
         Notary Public or licensed immigration adviser. We do not provide legal
         or immigration advice and we do not issue apostilles or authentication
         certificates.
+
       </div>
+
 
     </article>
 
 
+
     <aside class="sidebar">
 
+
       <div class="side-card">
-        <h2>Need Help With an Apostille?</h2>
+
+        <h2>
+          Need Help With an Apostille?
+        </h2>
+
         <p>
           Tell us what document you have and where it needs to be used.
         </p>
-        <a class="btn" href="/contact/">Get a Quote</a>
+
+        <a class="btn" href="/contact/">
+          Get a Quote
+        </a>
+
       </div>
 
-      <div class="side-card">
-        <h3>Related Services</h3>
-        <a href="/document-authentication-nz/">Document Authentication →</a>
-        <a href="/notary-public-auckland-help/">Notary Coordination →</a>
-        <a href="/translation-coordination-nz/">Translation Coordination →</a>
-        <a href="/courier-document-return/">Document Courier & Return →</a>
-        <a href="/pricing/">Pricing →</a>
-      </div>
+
 
       <div class="side-card">
-        <h3>NZ Document Assist</h3>
+
+        <h3>
+          Apostille Information
+        </h3>
+
+        <a href="/new-zealand-apostille-requirements/">
+          NZ Apostille Requirements →
+        </a>
+
+        <a href="#faq">
+          Apostille FAQs →
+        </a>
+
+        <a href="/how-it-works/">
+          How It Works →
+        </a>
+
+        <a href="/pricing/">
+          Pricing →
+        </a>
+
+      </div>
+
+
+
+      <div class="side-card">
+
+        <h3>
+          Related Services
+        </h3>
+
+        <a href="/document-authentication-nz/">
+          Document Authentication →
+        </a>
+
+        <a href="/notary-public-auckland-help/">
+          Notary Coordination →
+        </a>
+
+        <a href="/translation-coordination-nz/">
+          Translation Coordination →
+        </a>
+
+        <a href="/courier-document-return/">
+          Document Courier & Return →
+        </a>
+
+      </div>
+
+
+
+      <div class="side-card">
+
+        <h3>
+          NZ Document Assist
+        </h3>
+
         <p>
           Independent administrative assistance for New Zealand documents
           being used overseas.
         </p>
-        <a href="/about/">About Us →</a>
-        <a href="/how-it-works/">How It Works →</a>
+
+        <a href="/about/">
+          About Us →
+        </a>
+
+        <a href="/contact/">
+          Contact Us →
+        </a>
+
       </div>
+
 
     </aside>
 
+
   </div>
+
 </section>
+
 
 
 <section class="cta-section">
+
   <div class="wrap">
-    <h2>Not Sure What Your Document Needs?</h2>
+
+    <h2>
+      Not Sure What Your Document Needs?
+    </h2>
 
     <p>
-      Send us the document type, the country where it will be used and any
-      instructions you have received. We can help you understand the
-      administrative process and coordinate the next steps.
+      Tell us the document type, the country where it will be used and any
+      instructions you have received. We can help coordinate the practical
+      steps needed to get your New Zealand documents ready for overseas use.
     </p>
 
-    <a class="btn" href="/contact/">Ask About Your Document</a>
+    <a class="btn" href="/contact/">
+      Ask About Your Document
+    </a>
+
   </div>
+
 </section>
+
 
 </main>
 
 
+
 <footer>
+
   <div class="wrap foot">
 
+
     <div>
+
       <img
         src="/assets/images/nz-document-assist-logo-dark-bg.webp"
         alt="NZ Document Assist"
@@ -955,28 +1548,78 @@ header .nav-quote {
       <p>
         Apostille &amp; Overseas Document Assistance throughout New Zealand.
       </p>
+
     </div>
 
-    <div>
-      <strong>Services</strong>
-      <a href="/apostille-nz/">Apostille NZ</a>
-      <a href="/document-authentication-nz/">Authentication</a>
-      <a href="/translation-coordination-nz/">Translation Coordination</a>
-      <a href="/notary-public-auckland-help/">Notary Coordination</a>
-    </div>
+
 
     <div>
-      <strong>Information</strong>
-      <a href="/how-it-works/">How It Works</a>
-      <a href="/pricing/">Pricing</a>
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
-      <a href="/privacy-policy/">Privacy Policy</a>
-      <a href="/terms/">Terms</a>
+
+      <strong>
+        Services
+      </strong>
+
+      <a href="/apostille-nz/">
+        Apostille NZ
+      </a>
+
+      <a href="/document-authentication-nz/">
+        Authentication
+      </a>
+
+      <a href="/translation-coordination-nz/">
+        Translation Coordination
+      </a>
+
+      <a href="/notary-public-auckland-help/">
+        Notary Coordination
+      </a>
+
     </div>
+
+
+
+    <div>
+
+      <strong>
+        Information
+      </strong>
+
+      <a href="/new-zealand-apostille-requirements/">
+        Apostille Requirements
+      </a>
+
+      <a href="/how-it-works/">
+        How It Works
+      </a>
+
+      <a href="/pricing/">
+        Pricing
+      </a>
+
+      <a href="/about/">
+        About
+      </a>
+
+      <a href="/contact/">
+        Contact
+      </a>
+
+      <a href="/privacy-policy/">
+        Privacy Policy
+      </a>
+
+      <a href="/terms/">
+        Terms
+      </a>
+
+    </div>
+
 
   </div>
+
 </footer>
+
 
 <script src="/assets/js/main.js"></script>
 
