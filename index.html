@@ -3,12 +3,847 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NZ Document Assist</title>
+
+  <title>Apostille NZ & Overseas Document Assistance | NZ Document Assist</title>
+
+  <meta
+    name="description"
+    content="NZ Document Assist provides independent administrative help with apostilles, document authentication, notary coordination, translation coordination and overseas document handling throughout New Zealand."
+  >
+
+  <link rel="canonical" href="https://nzdocumentassist.co.nz/">
+
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Apostille NZ & Overseas Document Assistance | NZ Document Assist">
+  <meta
+    property="og:description"
+    content="Independent help with New Zealand apostilles, authentication, notary coordination, translation coordination and overseas document handling."
+  >
+  <meta property="og:url" content="https://nzdocumentassist.co.nz/">
+  <meta property="og:site_name" content="NZ Document Assist">
+  <meta
+    property="og:image"
+    content="https://nzdocumentassist.co.nz/assets/images/nz-document-assist-social.webp"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link
+    rel="icon"
+    type="image/webp"
+    href="assets/images/nz-document-assist-icon.webp"
+  >
+
+  <style>
+    :root {
+      --navy: #0b2d5b;
+      --navy-dark: #071f3f;
+      --gold: #d4af37;
+      --gold-light: #f4d06f;
+      --cream: #fffaf0;
+      --white: #ffffff;
+      --text: #1d2a3a;
+      --muted: #5e6b7a;
+      --border: #e6e9ee;
+      --bg-soft: #f7f9fc;
+      --shadow: 0 14px 40px rgba(11, 45, 91, 0.10);
+      --radius: 18px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid rgba(11,45,91,0.08);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-wrap {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      flex: 0 0 auto;
+    }
+
+    .brand img {
+      width: 285px;
+      max-width: 100%;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .main-nav a {
+      transition: color 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: #0b2344;
+      padding: 13px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(212, 175, 55, 0.25);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(244,208,111,0.18), transparent 34%),
+        linear-gradient(135deg, #f8fbff 0%, #ffffff 58%, #fffaf0 100%);
+      padding: 88px 0 80px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 18px;
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 3px;
+      border-radius: 100px;
+      background: var(--gold);
+    }
+
+    h1 {
+      font-size: clamp(42px, 5vw, 68px);
+      line-height: 1.06;
+      letter-spacing: -0.035em;
+      color: var(--navy-dark);
+      margin-bottom: 22px;
+      max-width: 760px;
+    }
+
+    .hero-copy {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 690px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy-dark);
+      box-shadow: 0 10px 24px rgba(212,175,55,0.26);
+    }
+
+    .btn-secondary {
+      border: 1px solid #bfc9d6;
+      background: var(--white);
+      color: var(--navy-dark);
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero-point {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-point span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 5px rgba(212,175,55,0.12);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.96);
+      border: 1px solid rgba(11,45,91,0.08);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h2 {
+      font-size: 28px;
+      color: var(--navy-dark);
+      margin-bottom: 8px;
+    }
+
+    .hero-card > p {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .service-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .service-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 15px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
+      color: var(--navy-dark);
+      font-weight: 700;
+    }
+
+    .service-link:hover {
+      border-color: rgba(212,175,55,0.65);
+      background: #fffdf7;
+    }
+
+    .trust-strip {
+      padding: 26px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      text-align: center;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--navy-dark);
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+
+    .trust-item span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 86px 0;
+    }
+
+    .section-soft {
+      background: var(--bg-soft);
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 42px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(32px, 4vw, 46px);
+      line-height: 1.15;
+      color: var(--navy-dark);
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 8px 28px rgba(11,45,91,0.05);
+    }
+
+    .service-card h3 {
+      color: var(--navy-dark);
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .text-link {
+      color: #9a7413;
+      font-weight: 700;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .process-step {
+      position: relative;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy-dark);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .process-step h3 {
+      color: var(--navy-dark);
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .process-step p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .disclaimer {
+      background: var(--navy-dark);
+      color: var(--white);
+      padding: 34px;
+      border-radius: 20px;
+      margin-top: 36px;
+    }
+
+    .disclaimer strong {
+      color: var(--gold-light);
+    }
+
+    .final-cta {
+      background:
+        linear-gradient(rgba(7,31,63,0.96), rgba(7,31,63,0.96));
+      color: var(--white);
+      text-align: center;
+      padding: 74px 0;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      margin-bottom: 14px;
+    }
+
+    .final-cta p {
+      max-width: 670px;
+      margin: 0 auto 26px;
+      color: #d9e3ef;
+      font-size: 18px;
+    }
+
+    footer {
+      background: #06182f;
+      color: #cbd6e4;
+      padding: 28px 0;
+      font-size: 14px;
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 960px) {
+      .main-nav {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 700px;
+      }
+
+      .trust-grid,
+      .services-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-wrap {
+        min-height: 72px;
+      }
+
+      .brand img {
+        width: 225px;
+      }
+
+      .nav-cta {
+        padding: 11px 14px;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 64px 0 56px;
+      }
+
+      .hero-copy {
+        font-size: 17px;
+      }
+
+      .trust-grid,
+      .services-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 66px 0;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://nzdocumentassist.co.nz/#organization",
+        "name": "NZ Document Assist",
+        "url": "https://nzdocumentassist.co.nz/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nzdocumentassist.co.nz/assets/images/nz-document-assist-logo-primary.webp"
+        },
+        "description": "Independent administrative assistance for New Zealand apostilles, document authentication, notary coordination, translation coordination and overseas document handling."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://nzdocumentassist.co.nz/#website",
+        "url": "https://nzdocumentassist.co.nz/",
+        "name": "NZ Document Assist",
+        "publisher": {
+          "@id": "https://nzdocumentassist.co.nz/#organization"
+        },
+        "inLanguage": "en-NZ"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://nzdocumentassist.co.nz/#webpage",
+        "url": "https://nzdocumentassist.co.nz/",
+        "name": "Apostille NZ & Overseas Document Assistance | NZ Document Assist",
+        "isPartOf": {
+          "@id": "https://nzdocumentassist.co.nz/#website"
+        },
+        "about": {
+          "@id": "https://nzdocumentassist.co.nz/#organization"
+        },
+        "inLanguage": "en-NZ"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://nzdocumentassist.co.nz/#apostille-assistance",
+        "name": "Apostille Assistance",
+        "provider": {
+          "@id": "https://nzdocumentassist.co.nz/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "New Zealand"
+        },
+        "description": "Administrative assistance coordinating the apostille process for New Zealand documents intended for overseas use."
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <h1>NZ Document Assist</h1>
-  <p>Apostille & Overseas Document Assistance</p>
-  <p>Website coming soon.</p>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+
+      <a class="brand" href="/" aria-label="NZ Document Assist home">
+        <img
+          src="assets/images/nz-document-assist-logo-primary.webp"
+          alt="NZ Document Assist - Apostille and overseas document assistance"
+          width="1000"
+          height="300"
+        >
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="#contact">Get a Quote</a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="eyebrow">Apostille & Overseas Document Assistance</div>
+
+          <h1>Your New Zealand Documents. Ready for the World.</h1>
+
+          <p class="hero-copy">
+            Independent administrative help with New Zealand apostilles,
+            document authentication, notary coordination, translation
+            coordination and secure document handling for overseas use.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Get a Quote</a>
+            <a class="btn btn-secondary" href="#how-it-works">How It Works</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="hero-point"><span></span> New Zealand nationwide</div>
+            <div class="hero-point"><span></span> Clear service fees</div>
+            <div class="hero-point"><span></span> Personal case support</div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Document assistance services">
+          <h2>What do you need help with?</h2>
+          <p>
+            Start with the service closest to your situation.
+          </p>
+
+          <div class="service-list">
+            <a class="service-link" href="#services">
+              <span>Apostille Assistance</span>
+              <span>→</span>
+            </a>
+
+            <a class="service-link" href="#services">
+              <span>Document Authentication</span>
+              <span>→</span>
+            </a>
+
+            <a class="service-link" href="#services">
+              <span>Notary Coordination</span>
+              <span>→</span>
+            </a>
+
+            <a class="service-link" href="#services">
+              <span>Translation Coordination</span>
+              <span>→</span>
+            </a>
+
+            <a class="service-link" href="#services">
+              <span>Courier & Document Return</span>
+              <span>→</span>
+            </a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Service highlights">
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <strong>Nationwide</strong>
+          <span>Online and courier-based support across NZ</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Auckland</strong>
+          <span>In-person assistance by arrangement</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Independent</strong>
+          <span>Clear, transparent administrative support</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Overseas Use</strong>
+          <span>Help coordinating NZ documents for use abroad</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Our Services</div>
+          <h2>Document Support for Overseas Use</h2>
+          <p>
+            We coordinate the administrative steps involved in preparing
+            New Zealand documents for use overseas.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <h3>Apostille Assistance</h3>
+            <p>
+              Help coordinating New Zealand apostille applications and
+              document handling for overseas use.
+            </p>
+            <a class="text-link" href="#">Learn more →</a>
+          </article>
+
+          <article class="service-card">
+            <h3>Document Authentication</h3>
+            <p>
+              Administrative support with authentication processes where
+              apostille is not the applicable route.
+            </p>
+            <a class="text-link" href="#">Learn more →</a>
+          </article>
+
+          <article class="service-card">
+            <h3>Notary Coordination</h3>
+            <p>
+              Help arranging appointments and coordinating documentation
+              with an appropriately qualified New Zealand notary public.
+            </p>
+            <a class="text-link" href="#">Learn more →</a>
+          </article>
+
+          <article class="service-card">
+            <h3>Translation Coordination</h3>
+            <p>
+              Administrative coordination with independent translation
+              providers where translated documents are required.
+            </p>
+            <a class="text-link" href="#">Learn more →</a>
+          </article>
+
+          <article class="service-card">
+            <h3>Courier & Return Service</h3>
+            <p>
+              Coordinated document collection, tracking and return options
+              within New Zealand and internationally.
+            </p>
+            <a class="text-link" href="#">Learn more →</a>
+          </article>
+
+          <article class="service-card">
+            <h3>Multi-Step Document Cases</h3>
+            <p>
+              Support for cases involving several administrative stages,
+              service providers or destination-country requirements.
+            </p>
+            <a class="text-link" href="#">Learn more →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="how-it-works">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">How It Works</div>
+          <h2>A Simple 4-Step Process</h2>
+          <p>
+            We keep the administrative side of your document process clear
+            and organised from start to finish.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <article class="process-step">
+            <div class="step-number">1</div>
+            <h3>Tell Us What You Need</h3>
+            <p>
+              Let us know the document type, destination country and what
+              assistance you are looking for.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <div class="step-number">2</div>
+            <h3>We Confirm the Process</h3>
+            <p>
+              We explain the administrative steps, our service fee and
+              relevant third-party or government costs.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <div class="step-number">3</div>
+            <h3>We Coordinate the Steps</h3>
+            <p>
+              We help organise the document handling, appointments,
+              applications and logistics involved.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <div class="step-number">4</div>
+            <h3>Your Documents Are Returned</h3>
+            <p>
+              Once the relevant process is completed, we coordinate safe
+              return or onward delivery of your documents.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="disclaimer" id="about">
+          <strong>Important:</strong>
+          NZ Document Assist provides independent administrative document
+          assistance and coordination services only. We are not a government
+          agency, law firm, notary public or licensed immigration adviser.
+          Apostilles, authentications, notarial services and translations are
+          issued or performed by the relevant authorities or appropriately
+          qualified third parties.
+        </div>
+
+      </div>
+    </section>
+
+    <section class="final-cta" id="contact">
+      <div class="container">
+
+        <h2>Need Help With Your New Zealand Documents?</h2>
+
+        <p>
+          Tell us what document you have, where it will be used and what
+          assistance you need. We’ll help you understand the next
+          administrative step.
+        </p>
+
+        <a class="btn btn-primary" href="mailto:hello@nzdocumentassist.co.nz">
+          Get a Quote
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <span>© 2026 NZ Document Assist. All rights reserved.</span>
+      <span>Independent Apostille & Overseas Document Assistance</span>
+    </div>
+  </footer>
+
 </body>
 </html>
