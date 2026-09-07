@@ -564,6 +564,111 @@ header .nav-dropdown:hover .nav-arrow,
 header .nav-dropdown:focus-within .nav-arrow {
   transform: rotate(180deg);
 }
+    /* ===== MOBILE NAVIGATION ===== */
+
+@media (max-width: 900px) {
+
+  header .nav {
+    position: relative;
+    min-height: 76px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+
+  header .logo {
+    width: 205px !important;
+  }
+
+  header .links {
+    width: 100%;
+    order: 3;
+    display: none !important;
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 0 !important;
+    padding: 14px 0 6px;
+  }
+
+  header .nav.mobile-open .links {
+    display: flex !important;
+  }
+
+  header .nav-quote {
+    display: none !important;
+  }
+
+  header .mobile-menu-toggle {
+    margin-left: auto;
+    border: 0;
+    background: #071f3f;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 12px 16px;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+
+  header .links > a,
+  header .nav-dropbtn {
+    width: 100%;
+    justify-content: space-between;
+    padding: 14px 8px !important;
+    font-size: 16px !important;
+    border-bottom: 1px solid #e6ebf0 !important;
+  }
+
+  header .nav-dropdown {
+    display: block !important;
+    width: 100%;
+  }
+
+  header .nav-dropdown-menu {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 0 0 6px 14px !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+
+    transform: none !important;
+
+    display: none !important;
+    background: #fff !important;
+  }
+
+  header .nav-dropdown.mobile-open .nav-dropdown-menu {
+    display: block !important;
+  }
+
+  header .nav-dropdown-menu a {
+    padding: 11px 10px !important;
+    border-bottom: 0 !important;
+    font-size: 15px !important;
+  }
+
+  header .nav-arrow {
+    transition: transform .2s ease;
+  }
+
+  header .nav-dropdown.mobile-open .nav-arrow {
+    transform: rotate(180deg);
+  }
+
+}
   </style>
 
   <script type="application/ld+json">
