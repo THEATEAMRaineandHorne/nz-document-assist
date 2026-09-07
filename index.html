@@ -343,6 +343,59 @@ header .nav-dropdown:focus-within .nav-arrow {
   }
 
 }
+    /* ===== CENTRE MOBILE FOOTER ===== */
+
+@media (max-width: 900px) {
+
+  /* Logo + description across full width and centred */
+  footer .foot > div:first-child {
+    grid-column: 1 / -1 !important;
+    text-align: center !important;
+  }
+
+  footer .foot img.footer-logo {
+    display: block !important;
+    width: 300px !important;
+    max-width: 82vw !important;
+    height: auto !important;
+    margin: 0 auto 24px !important;
+  }
+
+  footer .foot > div:first-child p {
+    max-width: 620px !important;
+    margin: 0 auto 36px !important;
+    text-align: center !important;
+  }
+
+  /* Centre the two columns as a group */
+  footer .foot {
+    grid-template-columns: minmax(130px, 190px) minmax(130px, 190px) !important;
+    justify-content: center !important;
+    column-gap: 55px !important;
+    row-gap: 20px !important;
+  }
+
+  /* Keep text inside each column left aligned */
+  footer .foot > div:nth-child(2),
+  footer .foot > div:nth-child(3) {
+    text-align: left !important;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  footer .foot img.footer-logo {
+    width: 270px !important;
+  }
+
+  footer .foot {
+    grid-template-columns: minmax(120px, 165px) minmax(120px, 165px) !important;
+    column-gap: 28px !important;
+  }
+
+}
 </style>
 </head>
 
