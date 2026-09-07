@@ -17,7 +17,7 @@
 <meta property="og:title" content="Get a Document Quote | NZ Document Assist">
 <meta property="og:description" content="Tell us about your New Zealand documents, where they will be used and what you have been asked to provide.">
 <meta property="og:url" content="https://nzdocumentassist.co.nz/contact/">
-<meta property="og:image" content="https://nzdocumentassist.co.nz/assets/images/nz-document-assist-social.webp">
+<meta property="og:image" content="https://nzdocumentassist.co.nz/assets/images/contact-nz-document-assist-hero..webp">
 
 <link rel="icon" type="image/webp" href="/assets/images/nz-document-assist-icon.webp">
 <link rel="stylesheet" href="/assets/css/style.css">
@@ -51,6 +51,13 @@
       "url": "https://nzdocumentassist.co.nz/contact/",
       "name": "Contact NZ Document Assist",
       "description": "Request a quote for administrative assistance with New Zealand documents being prepared for overseas use.",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nzdocumentassist.co.nz/assets/images/contact-nz-document-assist-hero..webp",
+        "width": 1400,
+        "height": 800,
+        "caption": "NZ Document Assist office for document assistance enquiries in New Zealand"
+      },
       "isPartOf": {
         "@id": "https://nzdocumentassist.co.nz/#website"
       },
@@ -243,9 +250,40 @@ header .nav-quote {
 /* ===== HERO ===== */
 
 .pagehero {
-  background:#071f3f;
+  position:relative;
+  overflow:hidden;
+  min-height:560px;
+  padding:0;
   color:#fff;
-  padding:64px 0 68px;
+  background-image:url('/assets/images/contact-nz-document-assist-hero..webp');
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  display:flex;
+  align-items:center;
+}
+
+.pagehero::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(7,31,63,.96) 0%,
+    rgba(7,31,63,.90) 34%,
+    rgba(7,31,63,.58) 55%,
+    rgba(7,31,63,.18) 76%,
+    rgba(7,31,63,.05) 100%
+  );
+  z-index:0;
+}
+
+.pagehero > .wrap {
+  position:relative;
+  z-index:1;
+  width:min(92%,1180px);
+  padding-top:62px;
+  padding-bottom:62px;
 }
 
 .pagehero .eyebrow {
@@ -258,15 +296,16 @@ header .nav-quote {
 
 .pagehero h1 {
   color:#fff;
-  max-width:900px;
+  max-width:760px;
   margin-bottom:18px;
 }
 
 .pagehero .hero-lead {
-  max-width:800px;
+  max-width:700px;
   font-size:20px;
   line-height:1.55;
-  color:#e7edf5;
+  color:#eef3f8;
+  text-shadow:0 1px 2px rgba(0,0,0,.18);
 }
 
 .breadcrumbs {
@@ -740,8 +779,23 @@ footer .foot > div:first-child {
 
 
   .pagehero {
-    padding-top:34px!important;
-    padding-bottom:44px!important;
+    min-height:0;
+    background-position:68% center;
+  }
+
+  .pagehero::before {
+    background:linear-gradient(
+      90deg,
+      rgba(7,31,63,.97) 0%,
+      rgba(7,31,63,.92) 52%,
+      rgba(7,31,63,.66) 80%,
+      rgba(7,31,63,.44) 100%
+    );
+  }
+
+  .pagehero > .wrap {
+    padding-top:36px;
+    padding-bottom:42px;
   }
 
   .pagehero h1 {
@@ -826,6 +880,15 @@ footer .foot > div:first-child {
 
 
 @media (max-width:520px) {
+
+  .pagehero {
+    background-position:72% center;
+  }
+
+  .pagehero > .wrap {
+    padding-top:30px;
+    padding-bottom:36px;
+  }
 
   .pagehero h1 {
     font-size:36px!important;
@@ -926,7 +989,6 @@ NZ Apostille Requirements
 <a href="/how-it-works/">How It Works</a>
 <a href="/pricing/">Pricing</a>
 <a href="/about/">About</a>
-<a href="/contact/">Contact</a>
 <a href="/contact/">Contact</a>
 
 </nav>
@@ -1774,7 +1836,9 @@ prepared for overseas use.
 
 <a href="/apostille-nz/">Apostille</a>
 <a href="/document-authentication-nz/">Authentication</a>
+<a href="/notary-public-auckland-help/">Notary Coordination</a>
 <a href="/translation-coordination-nz/">Translations</a>
+<a href="/courier-document-return/">Courier &amp; Document Return</a>
 
 </div>
 
