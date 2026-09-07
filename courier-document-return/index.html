@@ -23,7 +23,7 @@
 
 <meta property="og:url" content="https://nzdocumentassist.co.nz/courier-document-return/">
 
-<meta property="og:image" content="https://nzdocumentassist.co.nz/assets/images/nz-document-assist-social.webp">
+<meta property="og:image" content="https://nzdocumentassist.co.nz/assets/images/courier-document-return-nz-hero.webp">
 
 <link rel="icon" type="image/webp" href="/assets/images/nz-document-assist-icon.webp">
 
@@ -58,6 +58,13 @@
       "@id": "https://nzdocumentassist.co.nz/courier-document-return/#webpage",
       "url": "https://nzdocumentassist.co.nz/courier-document-return/",
       "name": "Document Courier & Return Coordination NZ",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nzdocumentassist.co.nz/assets/images/courier-document-return-nz-hero.webp",
+        "width": 1400,
+        "height": 800,
+        "caption": "Secure tracked courier handling for important New Zealand documents"
+      },
       "isPartOf": {
         "@id": "https://nzdocumentassist.co.nz/#website"
       },
@@ -265,9 +272,40 @@ header .nav-quote {
 /* ===== PAGE HERO ===== */
 
 .pagehero {
-  background: #071f3f;
+  position: relative;
+  overflow: hidden;
+  min-height: 560px;
+  padding: 0;
   color: #ffffff;
-  padding: 64px 0 68px;
+  background-image: url('/assets/images/courier-document-return-nz-hero.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.pagehero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7,31,63,.96) 0%,
+    rgba(7,31,63,.90) 34%,
+    rgba(7,31,63,.58) 55%,
+    rgba(7,31,63,.18) 76%,
+    rgba(7,31,63,.05) 100%
+  );
+  z-index: 0;
+}
+
+.pagehero > .wrap {
+  position: relative;
+  z-index: 1;
+  width: min(92%,1180px);
+  padding-top: 62px;
+  padding-bottom: 62px;
 }
 
 .pagehero .eyebrow {
@@ -280,15 +318,16 @@ header .nav-quote {
 
 .pagehero h1 {
   color: #ffffff;
-  max-width: 900px;
+  max-width: 760px;
   margin-bottom: 18px;
 }
 
 .pagehero .hero-lead {
-  max-width: 780px;
+  max-width: 700px;
   font-size: 20px;
   line-height: 1.55;
-  color: #e7edf5;
+  color: #eef3f8;
+  text-shadow: 0 1px 2px rgba(0,0,0,.18);
 }
 
 .breadcrumbs {
@@ -497,8 +536,23 @@ footer .foot > div:first-child {
   /* Compact mobile hero */
 
   .pagehero {
-    padding-top: 34px !important;
-    padding-bottom: 44px !important;
+    min-height: 0;
+    background-position: 68% center;
+  }
+
+  .pagehero::before {
+    background: linear-gradient(
+      90deg,
+      rgba(7,31,63,.97) 0%,
+      rgba(7,31,63,.92) 52%,
+      rgba(7,31,63,.66) 80%,
+      rgba(7,31,63,.44) 100%
+    );
+  }
+
+  .pagehero > .wrap {
+    padding-top: 36px;
+    padding-bottom: 42px;
   }
 
   .pagehero h1 {
@@ -568,6 +622,15 @@ footer .foot > div:first-child {
 
 
 @media (max-width: 520px) {
+
+  .pagehero {
+    background-position: 72% center;
+  }
+
+  .pagehero > .wrap {
+    padding-top: 30px;
+    padding-bottom: 36px;
+  }
 
   .pagehero h1 {
     font-size: 36px !important;
@@ -1346,8 +1409,16 @@ Apostille
 Authentication
 </a>
 
+<a href="/notary-public-auckland-help/">
+Notary Coordination
+</a>
+
 <a href="/translation-coordination-nz/">
 Translations
+</a>
+
+<a href="/courier-document-return/">
+Courier &amp; Document Return
 </a>
 
 </div>
