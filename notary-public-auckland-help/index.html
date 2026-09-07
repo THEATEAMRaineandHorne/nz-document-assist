@@ -875,7 +875,9 @@ header .nav-dropdown:focus-within .nav-arrow {
   </a>
 
 </nav>
-
+<button class="mobile-menu-toggle" type="button" aria-label="Open menu">
+  Menu
+</button>
     <a class="btn nav-quote" href="/contact/">
       Get a Quote
     </a>
@@ -1963,6 +1965,53 @@ header .nav-dropdown:focus-within .nav-arrow {
 
 
 <script src="/assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
 
+  const nav = document.querySelector('header .nav');
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', function () {
+      nav.classList.toggle('mobile-open');
+
+      const isOpen = nav.classList.contains('mobile-open');
+
+      menuToggle.textContent = isOpen ? 'Close' : 'Menu';
+      menuToggle.setAttribute(
+        'aria-label',
+        isOpen ? 'Close menu' : 'Open menu'
+      );
+    });
+  }
+
+  dropdowns.forEach(function (dropdown) {
+
+    const button = dropdown.querySelector('.nav-dropbtn');
+
+    if (!button) return;
+
+    button.addEventListener('click', function (event) {
+
+      if (window.innerWidth <= 900) {
+
+        event.preventDefault();
+
+        dropdowns.forEach(function (otherDropdown) {
+          if (otherDropdown !== dropdown) {
+            otherDropdown.classList.remove('mobile-open');
+          }
+        });
+
+        dropdown.classList.toggle('mobile-open');
+      }
+
+    });
+
+  });
+
+});
+</script>
 </body>
 </html>
