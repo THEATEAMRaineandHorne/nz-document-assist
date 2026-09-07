@@ -14,18 +14,47 @@
   <meta property="og:title" content="Notary Public Auckland Help | Notary Coordination NZ">
   <meta property="og:description" content="Administrative help coordinating New Zealand notary appointments and overseas document processing.">
   <meta property="og:url" content="https://nzdocumentassist.co.nz/notary-public-auckland-help/">
-  <meta property="og:image" content="https://nzdocumentassist.co.nz/assets/images/nz-document-assist-social.webp">
+  <meta property="og:image" content="https://nzdocumentassist.co.nz/assets/images/notary-coordination-nz-hero.webp">
 
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <style>
 
     .page-hero {
-      padding: 76px 0 68px;
-      background:
-        linear-gradient(135deg, rgba(7,31,63,.98), rgba(11,45,91,.94)),
-        #071f3f;
+      position: relative;
+      overflow: hidden;
+      min-height: 650px;
+      padding: 0;
       color: #fff;
+      background-image: url('/assets/images/notary-coordination-nz-hero.webp');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    .page-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(7,31,63,.97) 0%,
+        rgba(7,31,63,.91) 35%,
+        rgba(7,31,63,.62) 57%,
+        rgba(7,31,63,.24) 78%,
+        rgba(7,31,63,.08) 100%
+      );
+      z-index: 0;
+    }
+
+    .page-hero > .wrap {
+      position: relative;
+      z-index: 1;
+      width: min(92%,1180px);
+      padding-top: 62px;
+      padding-bottom: 62px;
     }
 
     .breadcrumbs {
@@ -58,21 +87,24 @@
       color: #fff;
       font-size: clamp(42px,5vw,64px);
       line-height: 1.03;
+      max-width: 760px;
+      text-shadow: 0 2px 12px rgba(0,0,0,.18);
     }
 
     .page-hero .lead {
-      color: #e4ebf3;
-      text-shadow: none;
+      color: #eef3f8;
       font-size: 19px;
-      max-width: 740px;
+      max-width: 700px;
+      text-shadow: 0 1px 3px rgba(0,0,0,.20);
     }
 
     .quote-box {
-      background: #fff;
+      background: rgba(255,255,255,.97);
       color: #34475c;
       border-radius: 20px;
       padding: 30px;
-      box-shadow: 0 20px 50px rgba(0,0,0,.20);
+      box-shadow: 0 20px 50px rgba(0,0,0,.22);
+      backdrop-filter: blur(3px);
     }
 
     .quote-box h2 {
@@ -681,6 +713,60 @@ header .nav-dropdown:focus-within .nav-arrow {
     justify-content: center;
   }
 }
+
+    /* ===== HOMEPAGE-STYLE NOTARY HERO ===== */
+    @media (max-width: 900px) {
+      .page-hero {
+        min-height: 0 !important;
+        padding: 0 !important;
+        background-position: 68% center !important;
+      }
+
+      .page-hero::before {
+        background: linear-gradient(
+          90deg,
+          rgba(7,31,63,.98) 0%,
+          rgba(7,31,63,.94) 52%,
+          rgba(7,31,63,.70) 80%,
+          rgba(7,31,63,.48) 100%
+        );
+      }
+
+      .page-hero > .wrap {
+        padding-top: 36px !important;
+        padding-bottom: 42px !important;
+      }
+
+      .page-hero-grid {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+      }
+
+      .quote-box {
+        max-width: 620px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page-hero {
+        padding: 0 !important;
+        background-position: 72% center !important;
+      }
+
+      .page-hero > .wrap {
+        padding-top: 30px !important;
+        padding-bottom: 36px !important;
+      }
+
+      .page-hero h1 {
+        font-size: 39px !important;
+      }
+
+      .quote-box {
+        padding: 24px !important;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -710,6 +796,11 @@ header .nav-dropdown:focus-within .nav-arrow {
         "url": "https://nzdocumentassist.co.nz/notary-public-auckland-help/",
         "name": "Notary Public Auckland Help | Notary Coordination NZ",
         "description": "Administrative assistance coordinating notary appointments and overseas document processing.",
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://nzdocumentassist.co.nz/assets/images/notary-coordination-nz-hero.webp",
+          "caption": "Notary coordination assistance for New Zealand documents being used overseas"
+        },
         "isPartOf": {
           "@id": "https://nzdocumentassist.co.nz/#website"
         }
@@ -719,6 +810,7 @@ header .nav-dropdown:focus-within .nav-arrow {
         "@id": "https://nzdocumentassist.co.nz/notary-public-auckland-help/#service",
         "name": "Notary Appointment Coordination",
         "serviceType": "Notary appointment and overseas document administrative coordination",
+        "image": "https://nzdocumentassist.co.nz/assets/images/notary-coordination-nz-hero.webp",
         "provider": {
           "@id": "https://nzdocumentassist.co.nz/#organization"
         },
@@ -1902,6 +1994,10 @@ header .nav-dropdown:focus-within .nav-arrow {
 
       <a href="/notary-public-auckland-help/">
         Notary Coordination
+      </a>
+
+      <a href="/courier-document-return/">
+        Courier &amp; Document Return
       </a>
 
     </div>
