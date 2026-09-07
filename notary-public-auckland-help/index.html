@@ -669,6 +669,18 @@ header .nav-dropdown:focus-within .nav-arrow {
   }
 
 }
+    /* Force mobile menu button to show on phones */
+.mobile-menu-toggle {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobile-menu-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
   </style>
 
   <script type="application/ld+json">
