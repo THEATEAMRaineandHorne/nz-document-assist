@@ -22,9 +22,6 @@
 <link rel="icon" type="image/webp" href="/assets/images/nz-document-assist-icon.webp">
 <link rel="stylesheet" href="/assets/css/style.css">
 
-
-<!-- ===== STRUCTURED DATA ===== -->
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -111,10 +108,7 @@
 }
 </script>
 
-
 <style>
-
-/* ===== NAVIGATION ===== */
 
 header .nav {
   min-height:74px;
@@ -232,9 +226,6 @@ header .nav-quote {
   display:none;
 }
 
-
-/* ===== HERO ===== */
-
 .pagehero {
   background:#071f3f;
   color:#fff;
@@ -256,7 +247,7 @@ header .nav-quote {
 }
 
 .pagehero .hero-lead {
-  max-width:790px;
+  max-width:800px;
   font-size:20px;
   line-height:1.55;
   color:#e7edf5;
@@ -271,9 +262,6 @@ header .nav-quote {
 .breadcrumbs a {
   color:#fff;
 }
-
-
-/* ===== CONTENT ===== */
 
 .content {
   max-width:920px;
@@ -291,8 +279,32 @@ header .nav-quote {
   padding-top:38px!important;
 }
 
+.pain-box {
+  margin:34px 0;
+  padding:30px;
+  border-radius:18px;
+  background:#f5f7fa;
+  border:1px solid #e1e6ec;
+}
 
-/* ===== TRUST STRIP ===== */
+.pain-box h2 {
+  margin-top:0;
+}
+
+.pain-list {
+  margin:22px 0 0;
+  padding-left:22px;
+}
+
+.pain-list li {
+  margin-bottom:11px;
+}
+
+.pain-close {
+  margin-top:22px;
+  font-weight:700;
+  color:#0c2442;
+}
 
 .trust-grid {
   display:grid;
@@ -320,9 +332,6 @@ header .nav-quote {
   margin:0;
 }
 
-
-/* ===== PRINCIPLES ===== */
-
 .principles {
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -342,9 +351,6 @@ header .nav-quote {
   color:#0c2442;
 }
 
-
-/* ===== INFO BOX ===== */
-
 .info-box {
   margin:30px 0;
   padding:26px;
@@ -356,9 +362,6 @@ header .nav-quote {
 .info-box strong {
   color:#0c2442;
 }
-
-
-/* ===== SERVICE BOX ===== */
 
 .service-box {
   margin:34px 0;
@@ -383,9 +386,6 @@ header .nav-quote {
   font-weight:700;
 }
 
-
-/* ===== NOTICE ===== */
-
 .notice {
   margin:32px 0;
   padding:24px 28px;
@@ -402,9 +402,6 @@ header .nav-quote {
 .notice p {
   color:#263b52!important;
 }
-
-
-/* ===== CTA ===== */
 
 .final-cta {
   margin-top:42px;
@@ -429,9 +426,6 @@ header .nav-quote {
   margin-top:12px;
 }
 
-
-/* ===== FOOTER ===== */
-
 footer .foot img.footer-logo {
   width:380px!important;
   height:auto!important;
@@ -443,9 +437,6 @@ footer .foot img.footer-logo {
 footer .foot > div:first-child {
   min-width:380px;
 }
-
-
-/* ===== MOBILE ===== */
 
 @media (max-width:900px) {
 
@@ -545,9 +536,6 @@ footer .foot > div:first-child {
     transform:rotate(180deg);
   }
 
-
-  /* Hero */
-
   .pagehero {
     padding-top:34px!important;
     padding-bottom:44px!important;
@@ -568,12 +556,13 @@ footer .foot > div:first-child {
     padding-top:28px!important;
   }
 
-
-  /* Content */
-
   .trust-grid,
   .principles {
     grid-template-columns:1fr;
+  }
+
+  .pain-box {
+    padding:25px;
   }
 
   .final-cta {
@@ -587,9 +576,6 @@ footer .foot > div:first-child {
     margin:20px auto 0!important;
     text-align:center!important;
   }
-
-
-  /* Footer */
 
   footer .foot {
     display:grid!important;
@@ -633,7 +619,6 @@ footer .foot > div:first-child {
 
 }
 
-
 @media (max-width:520px) {
 
   .pagehero h1 {
@@ -666,8 +651,6 @@ footer .foot > div:first-child {
 
 <body>
 
-
-<!-- ===== HEADER ===== -->
 
 <header>
 
@@ -756,11 +739,8 @@ Get a Quote
 </header>
 
 
-
 <main>
 
-
-<!-- ===== HERO ===== -->
 
 <section class="pagehero">
 
@@ -789,9 +769,9 @@ Making Overseas Document Administration Easier to Manage
 
 <p class="hero-lead">
 
-NZ Document Assist is an independent New Zealand administrative service
-created to help people organise the practical steps involved when New
-Zealand documents need to be prepared for use overseas.
+NZ Document Assist helps take the administrative burden out of preparing
+New Zealand documents for overseas use — especially when the process
+involves several different steps, providers and requirements.
 
 </p>
 
@@ -800,9 +780,6 @@ Zealand documents need to be prepared for use overseas.
 </section>
 
 
-
-<!-- ===== CONTENT ===== -->
-
 <section class="section">
 
 <div class="wrap content">
@@ -810,21 +787,79 @@ Zealand documents need to be prepared for use overseas.
 
 <p class="lead">
 
-Overseas document processes can involve several different organisations,
-requirements and stages. Our role is to help make the administrative
-side easier to understand, organise and manage.
+If you have ever been told that a document needs to be notarised,
+apostilled, authenticated or translated, you may already know how quickly
+a simple request can turn into a confusing process.
 
 </p>
 
 
 <p>
 
-Instead of leaving you to coordinate every practical step separately,
-NZ Document Assist can help manage the agreed administrative workflow
-and keep you updated along the way.
+Our role is to help coordinate the practical administrative steps so you
+do not have to manage every stage by yourself.
 
 </p>
 
+
+<div class="pain-box">
+
+<h2>
+Why Overseas Document Processes Can Be So Frustrating
+</h2>
+
+<p>
+
+One set of documents can involve several different organisations,
+professionals and requirements.
+
+</p>
+
+<p>
+
+You may find yourself trying to work out:
+
+</p>
+
+<ul class="pain-list">
+
+<li>whether you need an apostille or authentication</li>
+
+<li>whether your document needs to be notarised first</li>
+
+<li>whether the original document is required</li>
+
+<li>whether a certified or translated version is needed</li>
+
+<li>which organisation needs to receive the document next</li>
+
+<li>how to safely send important original documents between providers</li>
+
+<li>how long each separate stage may take</li>
+
+<li>which fees belong to the government, notary, translator or courier</li>
+
+<li>whether the overseas organisation will accept the finished document</li>
+
+</ul>
+
+<p>
+
+And if one stage is missed or completed in the wrong order, it can mean
+extra emails, extra appointments, repeat courier costs or delays when the
+documents may already be needed urgently.
+
+</p>
+
+<p class="pain-close">
+
+NZ Document Assist helps coordinate those practical steps so you do not
+have to chase every provider, organise every handover and keep track of
+the entire process on your own.
+
+</p>
+
+</div>
 
 
 <div class="trust-grid">
@@ -883,31 +918,41 @@ clear quote before agreed work begins.
 
 
 <h2>
-Why NZ Document Assist Exists
+A Single Point of Contact for the Administrative Process
 </h2>
 
 
 <p>
 
-People are often told that a document needs an apostille,
-authentication, notarisation, translation or another formality before
-it can be accepted overseas.
+The frustrating part of overseas document preparation is often not one
+individual task. It is having to coordinate several separate tasks with
+different people and organisations.
 
 </p>
 
 
 <p>
 
-The difficulty is that the process can involve different authorities,
-independent professionals and document-handling stages.
+You may need to contact a Notary Public, organise an apostille or
+authentication, arrange a translation, send original documents by
+courier and then make sure everything reaches the correct destination.
 
 </p>
 
 
 <p>
 
-NZ Document Assist was created to provide a single administrative point
-of contact for the practical coordination of those steps.
+NZ Document Assist was created to provide one administrative point of
+contact for the practical coordination of those steps.
+
+</p>
+
+
+<p>
+
+Instead of repeatedly working out what happens next and arranging every
+handover yourself, you can ask us to coordinate the agreed administrative
+workflow.
 
 </p>
 
@@ -959,7 +1004,7 @@ multi-step overseas document cases
 
 
 <h2>
-How We Approach Your Documents
+The Goal Is Simple: Less Chasing, Less Guesswork
 </h2>
 
 
@@ -969,13 +1014,14 @@ How We Approach Your Documents
 <div class="principle">
 
 <h3>
-Clear Before Complicated
+Less Time Working Out What Comes Next
 </h3>
 
 <p>
 
-We aim to explain the administrative process in straightforward language
-rather than making an already unfamiliar process feel more complicated.
+Instead of trying to piece together several separate administrative
+stages yourself, we help organise the workflow we have agreed to
+coordinate.
 
 </p>
 
@@ -985,7 +1031,23 @@ rather than making an already unfamiliar process feel more complicated.
 <div class="principle">
 
 <h3>
-Transparent Fees
+Fewer Separate Providers to Chase
+</h3>
+
+<p>
+
+Where several organisations are involved, we can help coordinate the
+practical handovers and keep you updated on the stages we are managing.
+
+</p>
+
+</div>
+
+
+<div class="principle">
+
+<h3>
+Clearer Costs
 </h3>
 
 <p>
@@ -1002,31 +1064,14 @@ applicable.
 <div class="principle">
 
 <h3>
-Careful Coordination
+Less Uncertainty
 </h3>
 
 <p>
 
-Important documents can move through several different stages. We focus
-on organising the agreed administrative workflow and keeping track of
-what happens next.
-
-</p>
-
-</div>
-
-
-<div class="principle">
-
-<h3>
-Clear Boundaries
-</h3>
-
-<p>
-
-Where a regulated professional or government authority is required,
-that independent provider performs and remains responsible for its own
-service.
+We aim to explain the administrative process in straightforward language
+and tell you what information or documents are needed for the work we
+have agreed to coordinate.
 
 </p>
 
@@ -1076,13 +1121,60 @@ For example:
 <p>
 
 If your document needs to be notarised, the independent Notary Public
-performs the notarial act. We can help coordinate the appointment and,
-where appropriate, continue helping with the next administrative stage
-such as an apostille, authentication, translation or document return.
+performs the notarial act.
+
+</p>
+
+<p>
+
+We can help coordinate that appointment and, where appropriate, continue
+helping with the next administrative stage such as an apostille,
+authentication, translation or document return.
 
 </p>
 
 </div>
+
+
+
+<h2>
+Why Use a Coordination Service Instead of Doing Everything Yourself?
+</h2>
+
+
+<p>
+
+You can often arrange individual document services yourself.
+
+</p>
+
+
+<p>
+
+The value of NZ Document Assist is not that every individual step is
+impossible to do yourself. It is that you may prefer not to spend your
+time researching requirements, contacting several providers, arranging
+document handovers, tracking original documents and trying to keep the
+whole process moving.
+
+</p>
+
+
+<p>
+
+For someone dealing with an overseas move, employment, study, family
+matter, business requirement or another deadline, that administrative
+work can become a significant distraction.
+
+</p>
+
+
+<p>
+
+Our service is designed for people who would rather have someone
+coordinate the practical process and keep it organised.
+
+</p>
 
 
 
@@ -1192,6 +1284,19 @@ immigration advice.
 
 
 <h3>
+Can I organise these services myself?
+</h3>
+
+<p>
+
+In many cases, yes. Our service is for people who would prefer help
+coordinating the administrative stages rather than researching,
+contacting and managing each provider independently.
+
+</p>
+
+
+<h3>
 Can you help if I do not know whether I need an apostille or authentication?
 </h3>
 
@@ -1209,6 +1314,7 @@ You can also read
 <a href="/how-it-works/">how our document assistance process works</a>.
 
 </p>
+
 
 
 <div class="notice">
@@ -1237,19 +1343,25 @@ a written quote.
 
 
 
-<!-- ===== FINAL CTA ===== -->
-
 <div class="final-cta">
 
 <h2>
-Need Help Organising Your Overseas Documents?
+You Can Organise It Yourself — Or Let Us Help Coordinate It
 </h2>
 
 <p>
 
-Tell us what document you have, where it needs to be used and what you
-have been asked to provide. We can explain what administrative help we
-may be able to coordinate.
+If you would rather not spend your time working out every stage,
+contacting several providers and keeping track of important documents,
+tell us what you need.
+
+</p>
+
+<p>
+
+Send us the document type, destination country and any instructions you
+have received, and we can explain what administrative assistance we may
+be able to coordinate.
 
 </p>
 
@@ -1271,9 +1383,6 @@ Get a Document Quote
 
 </main>
 
-
-
-<!-- ===== FOOTER ===== -->
 
 <footer>
 
@@ -1325,9 +1434,6 @@ prepared for overseas use.
 
 </footer>
 
-
-
-<!-- ===== MOBILE NAVIGATION ===== -->
 
 <script>
 
@@ -1396,12 +1502,7 @@ document.addEventListener('DOMContentLoaded', function () {
               otherDropdown.querySelector('.nav-dropbtn');
 
             if (otherButton) {
-
-              otherButton.setAttribute(
-                'aria-expanded',
-                'false'
-              );
-
+              otherButton.setAttribute('aria-expanded','false');
             }
 
           }
