@@ -14,18 +14,47 @@
   <meta property="og:title" content="New Zealand Apostille Requirements | Complete NZ Guide">
   <meta property="og:description" content="A practical guide to preparing New Zealand documents for apostille and overseas use.">
   <meta property="og:url" content="https://nzdocumentassist.co.nz/new-zealand-apostille-requirements/">
-  <meta property="og:image" content="https://nzdocumentassist.co.nz/assets/images/nz-document-assist-social.webp">
+  <meta property="og:image" content="https://nzdocumentassist.co.nz/assets/images/nz-apostille-requirements-hero.webp">
 
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <style>
 
     .guide-hero {
-      padding: 72px 0 66px;
-      background:
-        linear-gradient(135deg, rgba(7,31,63,.98), rgba(11,45,91,.94)),
-        #071f3f;
+      position: relative;
+      overflow: hidden;
+      min-height: 610px;
+      padding: 0;
       color: #fff;
+      background-image: url('/assets/images/nz-apostille-requirements-hero.webp');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    .guide-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(7,31,63,.97) 0%,
+        rgba(7,31,63,.91) 35%,
+        rgba(7,31,63,.62) 57%,
+        rgba(7,31,63,.24) 78%,
+        rgba(7,31,63,.08) 100%
+      );
+      z-index: 0;
+    }
+
+    .guide-hero > .wrap {
+      position: relative;
+      z-index: 1;
+      width: min(92%,1180px);
+      padding-top: 62px;
+      padding-bottom: 62px;
     }
 
     .breadcrumbs {
@@ -58,21 +87,24 @@
       font-size: clamp(42px,5vw,67px);
       line-height: 1.04;
       margin: 14px 0 20px;
+      max-width: 760px;
+      text-shadow: 0 2px 12px rgba(0,0,0,.18);
     }
 
     .guide-hero .lead {
-      color: #e4ebf3;
-      text-shadow: none;
+      color: #eef3f8;
       font-size: 19px;
-      max-width: 760px;
+      max-width: 720px;
+      text-shadow: 0 1px 3px rgba(0,0,0,.20);
     }
 
     .hero-help {
-      background: #fff;
+      background: rgba(255,255,255,.97);
       color: #34475c;
       border-radius: 20px;
       padding: 30px;
-      box-shadow: 0 20px 50px rgba(0,0,0,.20);
+      box-shadow: 0 20px 50px rgba(0,0,0,.22);
+      backdrop-filter: blur(3px);
     }
 
     .hero-help h2 {
@@ -566,6 +598,60 @@
       }
     }
 
+
+    /* ===== HOMEPAGE-STYLE NZ APOSTILLE REQUIREMENTS HERO ===== */
+    @media (max-width: 900px) {
+      .guide-hero {
+        min-height: 0 !important;
+        padding: 0 !important;
+        background-position: 68% center !important;
+      }
+
+      .guide-hero::before {
+        background: linear-gradient(
+          90deg,
+          rgba(7,31,63,.98) 0%,
+          rgba(7,31,63,.94) 52%,
+          rgba(7,31,63,.70) 80%,
+          rgba(7,31,63,.48) 100%
+        );
+      }
+
+      .guide-hero > .wrap {
+        padding-top: 36px !important;
+        padding-bottom: 42px !important;
+      }
+
+      .guide-hero-grid {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+      }
+
+      .hero-help {
+        max-width: 620px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .guide-hero {
+        padding: 0 !important;
+        background-position: 72% center !important;
+      }
+
+      .guide-hero > .wrap {
+        padding-top: 30px !important;
+        padding-bottom: 36px !important;
+      }
+
+      .guide-hero h1 {
+        font-size: 39px !important;
+      }
+
+      .hero-help {
+        padding: 24px !important;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -594,6 +680,7 @@
         "@id": "https://nzdocumentassist.co.nz/new-zealand-apostille-requirements/#article",
         "headline": "New Zealand Apostille Requirements: Complete Guide",
         "description": "A practical guide to New Zealand apostille requirements, document preparation, originals, notarisation, e-apostilles and overseas use.",
+        "image": "https://nzdocumentassist.co.nz/assets/images/nz-apostille-requirements-hero.webp",
         "mainEntityOfPage": "https://nzdocumentassist.co.nz/new-zealand-apostille-requirements/",
         "author": {
           "@id": "https://nzdocumentassist.co.nz/#organization"
@@ -1950,6 +2037,10 @@
 
       <a href="/notary-public-auckland-help/">
         Notary Coordination
+      </a>
+
+      <a href="/courier-document-return/">
+        Courier &amp; Document Return
       </a>
 
     </div>
