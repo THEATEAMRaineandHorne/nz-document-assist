@@ -202,7 +202,7 @@
       },
       "inLanguage": "en-NZ",
       "datePublished": "2026-09-09T10:05:13+12:00",
-      "dateModified": "2026-09-09T10:05:13+12:00"
+      "dateModified": "2026-09-09T10:25:53+12:00"
     },
     {
       "@type": "Service",
@@ -241,15 +241,45 @@
 }
 </script>
 <style>
-.nav-phone{display:inline-flex;align-items:center;white-space:nowrap;font-weight:800;color:#0b2342;text-decoration:none;margin-left:12px;margin-right:12px}
-.nav-phone:hover{text-decoration:underline}
-@media(max-width:900px){.nav-phone{margin:10px 0;font-size:1.05rem}}
+@media(max-width:900px){}
 .resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:28px 0 42px}
 .resource-card{border:1px solid #dfe5ec;border-radius:16px;padding:24px;background:#fff;box-shadow:0 8px 26px rgba(7,31,63,.06)}
 .resource-card h3{margin-top:0}.resource-card p{margin-bottom:18px}
 .help-strip{background:#f6f2e8;border-left:5px solid #b89a52;border-radius:12px;padding:24px;margin:28px 0}
 .phone-cta{font-weight:800;white-space:nowrap}
 @media(max-width:900px){.resource-grid{grid-template-columns:1fr}}
+</style><style>
+/* STANDARD: phone button must match Get a Quote */
+header .nav-phone-btn,
+header .nav-quote {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:48px;
+  padding:12px 18px;
+  border-radius:14px;
+  white-space:nowrap;
+  text-decoration:none;
+  font-weight:800;
+}
+header .nav-phone-btn svg {
+  width:18px;
+  height:18px;
+  flex:0 0 auto;
+}
+@media (max-width:900px) {
+  header .nav-phone-btn,
+  header .nav-quote { order:3; }
+}
+@media (max-width:620px) {
+  header .nav-phone-btn,
+  header .nav-quote {
+    min-height:44px;
+    padding:10px 12px;
+    font-size:14px;
+  }
+}
 </style></head>
 <body>
 <header>
@@ -279,7 +309,9 @@
 <a href="/about/">About</a>
 <a href="/contact/">Contact</a>
 </nav>
-<a class="btn nav-quote" href="/contact/">Get a Quote</a>
+<a aria-label="Call NZ Document Assist on 022 100 3242" class="btn nav-quote nav-phone-btn" href="tel:+64221003242"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
+<path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"></path>
+</svg> 022 100 3242</a><a class="btn nav-quote" href="/contact/">Get a Quote</a>
 </div>
 </header>
 <main>
