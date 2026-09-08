@@ -19,7 +19,7 @@
 <meta property="og:title" content="Document Translation Coordination NZ | NZ Document Assist">
 <meta property="og:description" content="Administrative help coordinating document translations for overseas use, including related apostille, authentication and notary steps where required.">
 <meta property="og:url" content="https://nzdocumentassist.co.nz/translation-coordination-nz/">
-<meta property="og:image" content="https://nzdocumentassist.co.nz/assets/images/nz-document-assist-social.webp">
+<meta property="og:image" content="https://nzdocumentassist.co.nz/assets/images/translation-coordination-nz-hero.webp">
 
 <link rel="icon" type="image/webp" href="/assets/images/nz-document-assist-icon.webp">
 
@@ -54,6 +54,11 @@
       "@id": "https://nzdocumentassist.co.nz/translation-coordination-nz/#webpage",
       "url": "https://nzdocumentassist.co.nz/translation-coordination-nz/",
       "name": "Document Translation Coordination NZ",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nzdocumentassist.co.nz/assets/images/translation-coordination-nz-hero.webp",
+        "caption": "Translation coordination for New Zealand documents being used overseas"
+      },
       "isPartOf": {
         "@id": "https://nzdocumentassist.co.nz/#website"
       },
@@ -66,6 +71,7 @@
       "@id": "https://nzdocumentassist.co.nz/translation-coordination-nz/#service",
       "name": "Document Translation Coordination",
       "serviceType": "Administrative document translation coordination",
+      "image": "https://nzdocumentassist.co.nz/assets/images/translation-coordination-nz-hero.webp",
       "provider": {
         "@id": "https://nzdocumentassist.co.nz/#organization"
       },
@@ -273,9 +279,40 @@ header .nav-quote {
 /* ===== PAGE CONTENT ===== */
 
 .pagehero {
-  background: #071f3f;
+  position: relative;
+  overflow: hidden;
+  min-height: 560px;
+  padding: 0;
   color: #fff;
-  padding: 64px 0 68px;
+  background-image: url('/assets/images/translation-coordination-nz-hero.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.pagehero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7,31,63,.97) 0%,
+    rgba(7,31,63,.91) 34%,
+    rgba(7,31,63,.60) 56%,
+    rgba(7,31,63,.22) 78%,
+    rgba(7,31,63,.07) 100%
+  );
+  z-index: 0;
+}
+
+.pagehero > .wrap {
+  position: relative;
+  z-index: 1;
+  width: min(92%,1180px);
+  padding-top: 62px;
+  padding-bottom: 62px;
 }
 
 .pagehero .eyebrow {
@@ -288,15 +325,17 @@ header .nav-quote {
 
 .pagehero h1 {
   color: #fff;
-  max-width: 850px;
+  max-width: 760px;
   margin-bottom: 18px;
+  text-shadow: 0 2px 12px rgba(0,0,0,.18);
 }
 
 .pagehero .hero-lead {
-  max-width: 760px;
+  max-width: 700px;
   font-size: 20px;
   line-height: 1.55;
-  color: #e7edf5;
+  color: #eef3f8;
+  text-shadow: 0 1px 3px rgba(0,0,0,.20);
 }
 
 .breadcrumbs {
@@ -628,6 +667,43 @@ footer .foot > div:first-child {
   }
 
 }
+
+/* ===== HOMEPAGE-STYLE TRANSLATION HERO ===== */
+@media (max-width: 900px) {
+  .pagehero {
+    min-height: 0 !important;
+    padding: 0 !important;
+    background-position: 68% center !important;
+  }
+
+  .pagehero::before {
+    background: linear-gradient(
+      90deg,
+      rgba(7,31,63,.98) 0%,
+      rgba(7,31,63,.94) 52%,
+      rgba(7,31,63,.70) 80%,
+      rgba(7,31,63,.48) 100%
+    );
+  }
+
+  .pagehero > .wrap {
+    padding-top: 36px !important;
+    padding-bottom: 42px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .pagehero {
+    padding: 0 !important;
+    background-position: 72% center !important;
+  }
+
+  .pagehero > .wrap {
+    padding-top: 30px !important;
+    padding-bottom: 36px !important;
+  }
+}
+
 </style>
 
 </head>
@@ -1153,8 +1229,16 @@ footer .foot > div:first-child {
   Authentication
 </a>
 
+<a href="/notary-public-auckland-help/">
+  Notary Coordination
+</a>
+
 <a href="/translation-coordination-nz/">
   Translations
+</a>
+
+<a href="/courier-document-return/">
+  Courier &amp; Document Return
 </a>
 
 </div>
