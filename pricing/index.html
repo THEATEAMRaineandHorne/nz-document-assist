@@ -11,13 +11,19 @@
 <meta name="description" content="Clear pricing for apostille coordination, document authentication, notary coordination, translation coordination and overseas document assistance in New Zealand.">
 
 <link rel="canonical" href="https://nzdocumentassist.co.nz/pricing/">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:site_name" content="NZ Document Assist">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Document Assistance Pricing NZ | NZ Document Assist">
 <meta property="og:description" content="See our service fees for apostille, authentication, notary, translation and document coordination in New Zealand.">
 <meta property="og:url" content="https://nzdocumentassist.co.nz/pricing/">
 <meta property="og:image" content="https://nzdocumentassist.co.nz/assets/images/document-assistance-pricing-nz-hero.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Document Assistance Pricing NZ | NZ Document Assist">
+<meta name="twitter:description" content="See our service fees for apostille, authentication, notary, translation and document coordination in New Zealand.">
+<meta name="twitter:image" content="https://nzdocumentassist.co.nz/assets/images/document-assistance-pricing-nz-hero.webp">
 
 <link rel="icon" type="image/webp" href="/assets/images/nz-document-assist-icon.webp">
 <link rel="stylesheet" href="/assets/css/style.css">
@@ -34,7 +40,11 @@
       "@id": "https://nzdocumentassist.co.nz/#organization",
       "name": "NZ Document Assist",
       "url": "https://nzdocumentassist.co.nz/",
-      "logo": "https://nzdocumentassist.co.nz/assets/images/nz-document-assist-logo-primary.webp",
+      "telephone": "+64 22 100 3242",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nzdocumentassist.co.nz/assets/images/nz-document-assist-logo-primary.webp"
+      },
       "description": "Independent administrative assistance for New Zealand documents being prepared for overseas use."
     },
     {
@@ -44,7 +54,8 @@
       "name": "NZ Document Assist",
       "publisher": {
         "@id": "https://nzdocumentassist.co.nz/#organization"
-      }
+      },
+      "inLanguage": "en-NZ"
     },
     {
       "@type": "WebPage",
@@ -59,7 +70,8 @@
       },
       "isPartOf": {
         "@id": "https://nzdocumentassist.co.nz/#website"
-      }
+      },
+      "inLanguage": "en-NZ"
     },
     {
       "@type": "BreadcrumbList",
@@ -756,6 +768,52 @@ footer .foot > div:first-child {
   }
 }
 
+
+/* ===== CURRENT MASTER HEADER STANDARD ===== */
+header .nav{gap:14px!important}
+header .links{gap:14px!important}
+header .nav-phone-btn,header .nav-quote{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:48px!important;
+  padding:12px 17px!important;
+  border-radius:14px!important;
+  white-space:nowrap!important;
+  text-decoration:none!important;
+  font-weight:800!important
+}
+header .nav-phone-btn{gap:7px!important;margin-left:auto!important}
+header .nav-phone-btn svg{width:18px!important;height:18px!important}
+@media(max-width:1100px){
+  header .logo{width:195px!important}
+  header .links{gap:10px!important}
+  header .links>a,header .nav-dropbtn{font-size:13px!important}
+  header .nav-phone-btn,header .nav-quote{padding:11px 13px!important;font-size:13px!important}
+}
+@media(max-width:900px){
+  header .nav-phone-btn{
+    display:inline-flex!important;
+    order:2;
+    margin-left:auto!important;
+    min-height:42px!important;
+    padding:9px 12px!important;
+    font-size:13px!important
+  }
+  header .nav-quote{display:none!important}
+  header .mobile-menu-toggle{order:2;margin-left:8px!important}
+  header .links{order:3}
+}
+@media(max-width:560px){
+  header .nav-phone-btn{
+    font-size:0!important;
+    width:44px!important;
+    min-width:44px!important;
+    padding:0!important
+  }
+  header .nav-phone-btn svg{width:20px!important;height:20px!important}
+}
+
 </style>
 
 </head>
@@ -821,9 +879,12 @@ Resources
 </button>
 
 <div class="nav-dropdown-menu">
-
+<a href="/resources/">All Resources</a>
 <a href="/new-zealand-apostille-requirements/">NZ Apostille Requirements</a>
-
+<a href="/documents-for-overseas-use/">Documents for Overseas Use</a>
+<a href="/apostille-vs-authentication-nz/">Apostille vs Authentication NZ</a>
+<a href="/who-can-certify-documents-nz/">Who Can Certify Documents in NZ?</a>
+<a href="/e-apostille-nz/">Paper vs E-Apostille NZ</a>
 </div>
 
 </div>
@@ -831,7 +892,7 @@ Resources
 
 <a href="/how-it-works/">How It Works</a>
 
-<a href="/pricing/">Pricing</a>
+<a aria-current="page" href="/pricing/">Pricing</a>
 
 <a href="/about/">About</a>
 
@@ -851,6 +912,11 @@ Menu
 
 </button>
 
+
+<a aria-label="Call NZ Document Assist on 022 100 3242" class="btn nav-phone-btn" href="tel:+64221003242">
+<svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"></path></svg>
+Call 022 100 3242
+</a>
 
 <a class="btn nav-quote" href="/contact/">
 Get a Quote
@@ -1638,6 +1704,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </script>
 
+
+<script src="/assets/js/main.js"></script>
 
 </body>
 
