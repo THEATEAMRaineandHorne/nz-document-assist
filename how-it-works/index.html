@@ -771,16 +771,58 @@ header .nav-phone-btn svg{width:18px;height:18px}
 
 .page-date-meta{font-size:14px;line-height:1.6;color:#d8e1ec;margin:14px 0 0}.page-date-meta time{white-space:nowrap}
 
-.process-step a{
-  color:#8b6811!important;
-  text-decoration:underline!important;
-  text-underline-offset:3px;
-  font-weight:800;
-}
-.process-step p[data-visible-links-step]{
-  padding-top:10px;
+
+.process-related{
+  grid-column:1 / -1;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px 10px;
+  margin-top:16px;
+  padding-top:15px;
   border-top:1px solid #e6ebf0;
 }
+.process-related span{
+  font-size:14px;
+  font-weight:800;
+  color:#5f6f82;
+  margin-right:2px;
+}
+.process-related a{
+  display:inline-flex;
+  align-items:center;
+  min-height:34px;
+  padding:6px 11px;
+  border:1px solid #d9e1e9;
+  border-radius:999px;
+  background:#f7f9fb;
+  color:#8b6811!important;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.25;
+  text-decoration:none!important;
+}
+.process-related a:hover{
+  background:#fff8df;
+  border-color:#d6b650;
+}
+@media(max-width:620px){
+  .process-related{
+    gap:7px;
+    margin-top:14px;
+    padding-top:13px;
+  }
+  .process-related span{
+    width:100%;
+    margin-bottom:2px;
+  }
+  .process-related a{
+    font-size:13px;
+    min-height:32px;
+    padding:6px 10px;
+  }
+}
+
 </style>
 
 </head>
@@ -985,9 +1027,7 @@ process you are asking us to coordinate.
 </p>
 
 </div>
-
-
-<p data-visible-links-step="1" style="margin-top:12px"><strong>Learn more: <a href="/documents-for-overseas-use/">Documents for Overseas Use</a> or browse our <a href="/resources/">Resources</a>.</strong></p>
+<div class="process-related"><span>Related guides:</span><a href="/documents-for-overseas-use/">Documents for Overseas Use</a><a href="/resources/">Resources</a></div>
 </div>
 
 
@@ -1019,9 +1059,7 @@ We do not make legal, immigration or government decisions on your behalf.
 </p>
 
 </div>
-
-
-<p data-visible-links-step="2" style="margin-top:12px"><strong>Learn more: <a href="/apostille-vs-authentication-nz/">Apostille vs Authentication NZ</a>, <a href="/apostille-nz/">Apostille NZ</a>, or <a href="/document-authentication-nz/">Document Authentication NZ</a>.</strong></p>
+<div class="process-related"><span>Related guides:</span><a href="/apostille-vs-authentication-nz/">Apostille vs Authentication</a><a href="/apostille-nz/">Apostille NZ</a><a href="/document-authentication-nz/">Document Authentication</a></div>
 </div>
 
 
@@ -1054,9 +1092,7 @@ another provider or authority.
 </p>
 
 </div>
-
-
-<p data-visible-links-step="3" style="margin-top:12px"><strong>Learn more: <a href="/notary-public-auckland-help/">Notary Coordination</a>, <a href="/translation-coordination-nz/">Translation Coordination</a>, and <a href="/new-zealand-apostille-requirements/">NZ Apostille Requirements</a>.</strong></p>
+<div class="process-related"><span>Related guides:</span><a href="/notary-public-auckland-help/">Notary Coordination</a><a href="/translation-coordination-nz/">Translation Coordination</a><a href="/new-zealand-apostille-requirements/">Apostille Requirements</a></div>
 </div>
 
 
@@ -1095,9 +1131,7 @@ administrative stages such as:
 </ul>
 
 </div>
-
-
-<p data-visible-links-step="4" style="margin-top:12px"><strong>Learn more: <a href="/apostille-auckland/">Apostille Auckland</a> and <a href="/courier-document-return/">Courier &amp; Document Return</a>.</strong></p>
+<div class="process-related"><span>Related guides:</span><a href="/apostille-auckland/">Apostille Auckland</a><a href="/courier-document-return/">Courier &amp; Document Return</a></div>
 </div>
 
 
@@ -1131,9 +1165,7 @@ workflow organised.
 </p>
 
 </div>
-
-
-<p data-visible-links-step="5" style="margin-top:12px"><strong>Learn more: see our <a href="/pricing/">Pricing</a> page or <a href="/contact/">Contact NZ Document Assist</a> if you want us to confirm the likely next steps.</strong></p>
+<div class="process-related"><span>Related:</span><a href="/pricing/">Pricing</a><a href="/contact/">Contact Us</a></div>
 </div>
 
 
