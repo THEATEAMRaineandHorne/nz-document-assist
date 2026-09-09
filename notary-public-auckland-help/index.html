@@ -770,7 +770,19 @@ header .nav-dropdown:focus-within .nav-arrow {
       }
     }
 
-  </style>
+  
+    .nav-actions{display:flex;align-items:center;gap:10px;margin-left:auto;flex-shrink:0}
+    .nav-phone{display:inline-flex!important;align-items:center;justify-content:center;min-height:44px;padding:10px 13px;white-space:nowrap}
+    @media(max-width:900px){
+      .nav-actions{gap:7px}
+      .nav-phone{font-size:13px;padding:9px 10px}
+      .nav-quote{padding-left:12px;padding-right:12px}
+    }
+    @media(max-width:760px){
+      .nav-phone{display:none!important}
+    }
+    
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -809,7 +821,7 @@ header .nav-dropdown:focus-within .nav-arrow {
         "@id": "https://nzdocumentassist.co.nz/#website"
       },
       "datePublished": "2026-09-06T18:31:40+12:00",
-      "dateModified": "2026-09-09T17:42:42+12:00"
+      "dateModified": "2026-09-09T17:58:00+12:00"
     },
     {
       "@type": "Service",
@@ -863,10 +875,20 @@ header .nav-dropdown:focus-within .nav-arrow {
 .trust-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:26px 0}
 .trust-card{padding:22px;border:1px solid #e1e7ed;border-radius:14px;background:#f7f9fb}
 .trust-card h3{margin-top:0}
-@media(max-width:1050px){.nav-phone{display:none}}
+
 @media(max-width:900px){.nav-actions{margin-left:auto}.trust-grid{grid-template-columns:1fr}}
 </style>
 
+
+<style id="header-phone-fix">
+@media (min-width:761px){
+  header .nav-actions .nav-phone{
+    display:inline-flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+  }
+}
+</style>
 </head>
 <body>
 <header>
@@ -940,7 +962,7 @@ header .nav-dropdown:focus-within .nav-arrow {
         <p class="page-date-meta">
           Published <time datetime="2026-09-06T18:31:40+12:00">6 September 2026</time>
           <span aria-hidden="true"> · </span>
-          Updated <time datetime="2026-09-09T17:42:42+12:00">9 September 2026</time>
+          Updated <time datetime="2026-09-09T17:58:00+12:00">9 September 2026</time>
         </p>
 </div>
 <aside class="quote-box">
