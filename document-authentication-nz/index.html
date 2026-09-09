@@ -908,7 +908,7 @@ header .nav-dropdown:focus-within .nav-arrow {
         "@id": "https://nzdocumentassist.co.nz/#website"
       },
       "datePublished": "2026-09-06T18:31:40+12:00",
-      "dateModified": "2026-09-09T17:58:00+12:00"
+      "dateModified": "2026-09-09T18:05:35+12:00"
     },
     {
       "@type": "Service",
@@ -1016,14 +1016,43 @@ header .nav-dropdown:focus-within .nav-arrow {
   </style>
 
 
-<style id="header-phone-fix">
-@media (min-width:761px){
-  header .nav-actions .nav-phone{
-    display:inline-flex!important;
-    visibility:visible!important;
-    opacity:1!important;
-  }
+
+<style id="master-homepage-header">
+
+/* MASTER HEADER STANDARD — matches homepage */
+header .nav{gap:14px!important}
+header .links{gap:14px!important}
+header .nav-phone-btn,
+header .nav-quote{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:48px!important;
+  padding:12px 17px!important;
+  border-radius:14px!important;
+  white-space:nowrap!important;
+  text-decoration:none!important;
+  font-weight:800!important;
 }
+header .nav-phone-btn{gap:7px!important;margin-left:auto!important}
+header .nav-phone-btn svg{width:18px!important;height:18px!important}
+@media(max-width:1100px){
+  header .logo{width:195px!important}
+  header .links{gap:10px!important}
+  header .links>a,header .nav-dropbtn{font-size:13px!important}
+  header .nav-phone-btn,header .nav-quote{padding:11px 13px!important;font-size:13px!important}
+}
+@media(max-width:900px){
+  header .nav-phone-btn{display:inline-flex!important;order:2;margin-left:auto!important;min-height:42px!important;padding:9px 12px!important;font-size:13px!important}
+  header .nav-quote{display:none!important}
+  header .mobile-menu-toggle{order:2;margin-left:8px!important}
+  header .links{order:3}
+}
+@media(max-width:560px){
+  header .nav-phone-btn{font-size:0!important;width:44px!important;min-width:44px!important;padding:0!important}
+  header .nav-phone-btn svg{width:20px!important;height:20px!important}
+}
+
 </style>
 </head>
 <body>
@@ -1070,10 +1099,7 @@ header .nav-dropdown:focus-within .nav-arrow {
 <a href="/about/">About</a>
 <a href="/contact/">Contact</a>
 </nav>
-<div class="nav-actions">
-      <a class="nav-phone" href="tel:+64221003242" aria-label="Call NZ Document Assist on 022 100 3242">☎ Call 022 100 3242</a>
-      <a class="btn nav-quote" href="/contact/">Get a Quote</a>
-    </div>
+<a aria-label="Call NZ Document Assist on 022 100 3242" class="btn nav-phone-btn" href="tel:+64221003242"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"></path></svg> Call 022 100 3242</a><a class="btn nav-quote" href="/contact/">Get a Quote</a>
 </div>
 </header>
 <main>
@@ -1099,7 +1125,7 @@ header .nav-dropdown:focus-within .nav-arrow {
         <p class="page-date-meta">
           Published <time datetime="2026-09-06T18:31:40+12:00">6 September 2026</time>
           <span aria-hidden="true"> · </span>
-          Updated <time datetime="2026-09-09T17:58:00+12:00">9 September 2026</time>
+          Updated <time datetime="2026-09-09T18:05:35+12:00">9 September 2026</time>
         </p>
 </div>
 <aside class="quote-box">
