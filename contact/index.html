@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-NZ">
 <head>
@@ -466,6 +467,36 @@ header .nav-quote {
   margin:14px 0 0;
   font-size:13px;
   color:#687789;
+}
+
+.form-status {
+  margin:14px 0 0;
+  font-size:15px;
+  line-height:1.5;
+}
+
+.form-status:empty {
+  display:none;
+}
+
+.form-status-ok {
+  padding:12px 14px;
+  border-radius:10px;
+  background:#e8f5ec;
+  color:#1d5a32;
+  font-weight:700;
+}
+
+.form-status-error {
+  padding:12px 14px;
+  border-radius:10px;
+  background:#fdecec;
+  color:#8a1f1f;
+}
+
+.form-submit:disabled {
+  opacity:.7;
+  cursor:default;
 }
 
 
@@ -1138,7 +1169,9 @@ Give us a few details so we can better understand the administrative
 assistance you may need.
 
 </p>
-<form id="quote-form">
+<form action="https://formspree.io/f/moevywdo" id="quote-form" method="POST">
+<input name="_subject" type="hidden" value="New quote request - NZ Document Assist"/>
+<input autocomplete="off" name="_gotcha" style="display:none" tabindex="-1" type="text"/>
 <div class="form-row">
 <div class="form-group">
 <label for="name">
@@ -1229,16 +1262,10 @@ copies, identity documents or other sensitive personal information. We
 can advise you if documents are required and how they should be provided.
 
 </div>
-<button class="btn form-submit" type="submit">
-
-Prepare My Quote Request
-
-</button>
+<button class="btn form-submit" type="submit">Send My Quote Request</button>
+<div aria-live="polite" class="form-status" id="form-status" role="status"></div>
 <p class="form-note">
-
-The button prepares an email containing the information above for you
-to review before sending it to NZ Document Assist.
-
+Your request comes straight to us. We reply by email with a clear quote before any paid work begins.
 </p>
 </form>
 </div>
@@ -1653,108 +1680,61 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-  /* ===== QUOTE EMAIL BUILDER ===== */
+  /* ===== QUOTE FORM (FORMSPREE) ===== */
 
   const quoteForm =
     document.getElementById('quote-form');
 
-
   if (quoteForm) {
+
+    const statusBox =
+      document.getElementById('form-status');
+
+    const submitBtn =
+      quoteForm.querySelector('.form-submit');
 
     quoteForm.addEventListener('submit', function (event) {
 
       event.preventDefault();
 
-
-      const name =
-        document.getElementById('name').value.trim();
-
-      const email =
-        document.getElementById('email').value.trim();
-
-      const phone =
-        document.getElementById('phone').value.trim();
-
-      const location =
-        document.getElementById('location').value.trim();
-
-      const documentType =
+      const docType =
         document.getElementById('document').value.trim();
-
       const country =
         document.getElementById('country').value.trim();
 
-      const number =
-        document.getElementById('number').value.trim();
+      quoteForm.querySelector('input[name="_subject"]').value =
+        'Quote request - ' + docType + ' - ' + country;
 
-      const organisation =
-        document.getElementById('organisation').value.trim();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      statusBox.className = 'form-status';
+      statusBox.textContent = '';
 
-      const requirements =
-        document.getElementById('requirements').value.trim();
-
-      const deadline =
-        document.getElementById('deadline').value.trim();
-
-      const message =
-        document.getElementById('message').value.trim();
-
-
-      const subject =
-        'Document Quote Request - ' +
-        documentType +
-        ' - ' +
-        country;
-
-
-      const body = [
-
-        'help NZ Document Assist,',
-        '',
-        'I would like a quote for document assistance.',
-        '',
-        'NAME:',
-        name,
-        '',
-        'EMAIL:',
-        email,
-        '',
-        'PHONE:',
-        phone || 'Not provided',
-        '',
-        'LOCATION:',
-        location || 'Not provided',
-        '',
-        'DOCUMENT TYPE:',
-        documentType,
-        '',
-        'DESTINATION COUNTRY:',
-        country,
-        '',
-        'NUMBER OF DOCUMENTS:',
-        number || 'Not provided',
-        '',
-        'RECEIVING ORGANISATION:',
-        organisation || 'Not provided',
-        '',
-        'WHAT I HAVE BEEN TOLD IS REQUIRED:',
-        requirements || 'Not provided / not sure',
-        '',
-        'DEADLINE:',
-        deadline || 'Not provided',
-        '',
-        'ADDITIONAL INFORMATION:',
-        message || 'None',
-        '',
-        'Thank you.'
-
-      ].join('\n');
-
-
-      window.location.href =
-        'mailto:help@nzdocumentassist.co.nz' +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(body);
+      fetch(quoteForm.action, {
+        method: 'POST',
+        body: new FormData(quoteForm),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function (response) {
+        if (response.ok) {
+          quoteForm.reset();
+          statusBox.className = 'form-status form-status-ok';
+          statusBox.textContent =
+            'Thanks - your request has been sent. We will reply by email with the next steps.';
+          submitBtn.textContent = 'Request Sent';
+        } else {
+          throw new Error('Send failed');
+        }
+      })
+      .catch(function () {
+        statusBox.className = 'form-status form-status-error';
+        statusBox.innerHTML =
+          'Sorry, something went wrong sending your request. Please email ' +
+          '<a href="mailto:help@nzdocumentassist.co.nz">help@nzdocumentassist.co.nz</a> ' +
+          'or call <a href="tel:+64221003242">022 100 3242</a>.';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send My Quote Request';
+      });
 
     });
 
