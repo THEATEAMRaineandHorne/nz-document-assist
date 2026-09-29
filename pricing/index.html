@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-NZ">
 <head>
@@ -33,6 +34,7 @@
       "@type": "Organization",
       "@id": "https://nzdocumentassist.co.nz/#organization",
       "name": "NZ Document Assist",
+      "legalName": "NZ Document Assist Limited",
       "url": "https://nzdocumentassist.co.nz/",
       "telephone": "+64 22 100 3242",
       "email": "help@nzdocumentassist.co.nz",
@@ -58,8 +60,8 @@
       "url": "https://nzdocumentassist.co.nz/pricing/",
       "name": "Affordable Apostille & Document Pricing NZ",
       "datePublished": "2026-09-06T18:31:40+12:00",
-      "dateModified": "2026-09-28T19:00:00+13:00",
-      "description": "Clear pricing for NZ Document Assist administrative coordination services including apostille, authentication, notary, translation, courier and multi-step document handling.",
+      "dateModified": "2026-09-30T11:30:00+13:00",
+      "description": "Apostille help from NZ$79 incl. GST. See real all-in examples with DIA and courier fees, a 5-day urgent option and BDM certificate ordering.",
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "url": "https://nzdocumentassist.co.nz/assets/images/document-assistance-pricing-nz-hero.webp",
@@ -97,42 +99,50 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Is the initial document assessment free?",
+          "name": "Is the initial document assessment really free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Tell NZ Document Assist what document you have, the country where it will be used and what the receiving organisation has asked for. We can identify the likely administrative pathway and provide a quote before paid work begins."
+            "text": "Yes. Tell us the document, the country and what you have been asked for. We tell you which steps it needs and send a quote. There is no charge and no obligation."
           }
         },
         {
           "@type": "Question",
-          "name": "Do NZ Document Assist prices include GST?",
+          "name": "Do your prices include GST?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The NZ Document Assist service fees shown on this page include GST."
+            "text": "Yes. All NZ Document Assist fees on this page include GST."
           }
         },
         {
           "@type": "Question",
-          "name": "Are government and third-party fees included?",
+          "name": "What are the government fees?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, unless expressly stated in a written quote. Government, notary, translator, embassy, courier and other independent third-party charges are separate."
+            "text": "The Department of Internal Affairs charges NZ$37 for an apostille, NZ$74 for a category A authentication, NZ$223 for a category B authentication and NZ$120 for its urgent service. Its courier costs NZ$7 within New Zealand and more to overseas addresses, for example NZ$53 to the United Kingdom. A standard BDM certificate is NZ$35."
           }
         },
         {
           "@type": "Question",
-          "name": "Will I receive a quote before work starts?",
+          "name": "Will I know the total before work starts?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Once we understand the administrative work required, NZ Document Assist provides a quote before the agreed paid work begins."
+            "text": "Yes. Your quote shows our fee and every known government, courier and provider cost before any work starts."
           }
         },
         {
           "@type": "Question",
-          "name": "Why do some prices say from?",
+          "name": "How does the urgent service work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The amount of administrative work can vary depending on the number and type of documents, destination country, required providers and number of stages. From pricing shows the starting service fee for a straightforward case."
+            "text": "We lodge your application with DIA's urgent service, which processes apostilles, e-apostilles and category A authentications within 5 working days, and we handle your case first. It costs NZ$49 plus DIA's NZ$120 urgent fee. The application must be complete and cannot include a translation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are Notary Public and translation fees included?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Notaries and translators are independent professionals who charge for their own work. We include their fees in your quote once we know them."
           }
         }
       ]
@@ -235,6 +245,19 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 
 /* ===== PRICE CARDS ===== */
 .pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin:34px 0}
+.example-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin:26px 0 14px}
+.example-card{position:relative;padding:26px;border:1px solid #dfe5eb;border-radius:18px;background:#fff;box-shadow:0 8px 25px rgba(7,31,63,.05)}
+.example-card.featured{border:2px solid #d6ad42}
+.example-card h3{margin:0 0 6px;color:#0c2442;font-size:20px}
+.example-sub{margin:0 0 14px;color:#5a697a;font-size:14px;line-height:1.5}
+.example-table{width:100%;border-collapse:collapse;font-size:15px}
+.example-table td{padding:8px 0;border-bottom:1px solid #eef1f5;color:#263b52}
+.example-table td:last-child{text-align:right;white-space:nowrap;font-weight:700}
+.example-table tr.total td{border-bottom:0;border-top:2px solid #0c2442;padding-top:12px;font-size:18px;font-weight:800;color:#0c2442}
+.example-table tr.total td:last-child{color:#9a7413}
+.example-note{font-size:14px;color:#5a697a;margin:0 0 40px}
+@media (max-width:900px){.example-grid{grid-template-columns:1fr}.example-card{padding:22px}}
+
 .price-card{
   position:relative;padding:28px;border:1px solid #dfe5eb;border-radius:18px;background:#fff;
   box-shadow:0 8px 25px rgba(7,31,63,.05)
@@ -433,8 +456,7 @@ Call 022 100 3242
 <h1>Apostille &amp; Overseas Document Pricing in New Zealand</h1>
 
 <p class="hero-lead">
-Auckland-based document assistance with clear, GST-inclusive pricing and a free initial document assessment.
-Tell us what document you have and where it is going — we’ll help identify the likely administrative pathway and give you a quote before any paid work begins.
+GST-inclusive fees, real example totals with government and courier costs included, and a free assessment before you commit to anything.
 </p>
 
 <div class="hero-actions">
@@ -449,7 +471,7 @@ Auckland-based. Helping clients across New Zealand and overseas.
 <p class="page-date-meta">
 Published <time datetime="2026-09-06T18:31:40+12:00">6 September 2026</time>
 <span aria-hidden="true"> · </span>
-Updated <time datetime="2026-09-28T19:00:00+13:00">28 September 2026</time>
+Updated <time datetime="2026-09-30">30 September 2026</time>
 </p>
 </div>
 </section>
@@ -462,25 +484,9 @@ Updated <time datetime="2026-09-28T19:00:00+13:00">28 September 2026</time>
 <h2>Free Initial Document Assessment</h2>
 
 <p>
-<strong>Not sure whether you need an apostille, authentication, a Notary Public, translation — or something else?</strong>
-That is exactly what the initial assessment is for.
-</p>
-
-<p>
-Send us a few basic details and we will review the information you provide, identify the likely administrative pathway and tell you what we may be able to coordinate.
-There is no charge for this initial assessment and no obligation to proceed.
-</p>
-
-<ul>
-<li>Tell us what New Zealand document you have.</li>
-<li>Tell us which country it will be used in.</li>
-<li>Send us any instructions from the overseas organisation, if you have them.</li>
-<li>Tell us your deadline, if there is one.</li>
-</ul>
-
-<p>
-If we can assist, we will explain the next steps and provide a clear quote before any paid work begins.
-You can then decide whether you would like us to coordinate the process for you.
+Tell us the document, the country it is going to and any instructions
+you have received. We will tell you exactly which steps it needs and send
+you a quote. There is no charge and no obligation to go ahead.
 </p>
 
 <div class="assessment-actions">
@@ -489,249 +495,248 @@ You can then decide whether you would like us to coordinate the process for you.
 </div>
 
 <p class="assessment-note">
-Please do not send original or highly sensitive documents until we have confirmed the appropriate handling method.
+Please do not send original or sensitive documents until we have confirmed how they should be sent.
 </p>
 </div>
 
+<h2>What It Really Costs: Example Totals</h2>
+
 <p class="lead">
-Our prices below are the service fees charged by <strong>NZ Document Assist</strong> for administrative assistance and coordination.
+Most people want to know the full amount, not just our fee. These
+examples include our fee, the government fees and courier for a single,
+straightforward document.
 </p>
 
-<p>
-<strong>All NZ Document Assist prices shown on this page include GST.</strong>
-Government, notary, translator, embassy, courier and other independent third-party charges are separate unless we expressly include them in a written quote.
+<div class="example-grid">
+
+<div class="example-card">
+<h3>Apostille on a certificate you already have</h3>
+<p class="example-sub">Original NZ certificate, returned to you in New Zealand</p>
+<table class="example-table">
+<tr><td>Our apostille service</td><td>$79</td></tr>
+<tr><td>DIA apostille fee</td><td>$37</td></tr>
+<tr><td>DIA courier within NZ</td><td>$7</td></tr>
+<tr><td>Our courier handling</td><td>$25</td></tr>
+<tr class="total"><td>Total</td><td>$148</td></tr>
+</table>
+</div>
+
+<div class="example-card featured">
+<div class="popular-label">Most Popular</div>
+<h3>NZ birth certificate to the UK</h3>
+<p class="example-sub">We order it from BDM, get it apostilled and courier it to the UK</p>
+<table class="example-table">
+<tr><td>Our BDM ordering</td><td>$15</td></tr>
+<tr><td>BDM certificate fee</td><td>$35</td></tr>
+<tr><td>Our apostille service</td><td>$79</td></tr>
+<tr><td>DIA apostille fee</td><td>$37</td></tr>
+<tr><td>DIA courier to the UK</td><td>$53</td></tr>
+<tr><td>Our courier handling</td><td>$25</td></tr>
+<tr class="total"><td>Total</td><td>$244</td></tr>
+</table>
+</div>
+
+<div class="example-card">
+<h3>The same, urgently</h3>
+<p class="example-sub">Birth certificate to the UK, apostille processed within 5 working days</p>
+<table class="example-table">
+<tr><td>Birth certificate to the UK (above)</td><td>$244</td></tr>
+<tr><td>Our urgent service</td><td>$49</td></tr>
+<tr><td>DIA urgent fee</td><td>$120</td></tr>
+<tr class="total"><td>Total</td><td>$413</td></tr>
+</table>
+</div>
+
+<div class="example-card">
+<h3>Authentication (category A country)</h3>
+<p class="example-sub">For countries such as the UAE, Thailand or Malaysia, returned in New Zealand</p>
+<table class="example-table">
+<tr><td>Our authentication service</td><td>$99</td></tr>
+<tr><td>DIA authentication fee</td><td>$74</td></tr>
+<tr><td>DIA courier within NZ</td><td>$7</td></tr>
+<tr><td>Our courier handling</td><td>$25</td></tr>
+<tr class="total"><td>Total</td><td>$205</td></tr>
+</table>
+</div>
+
+</div>
+
+<p class="example-note">
+All amounts in NZ dollars, GST inclusive. Government fees are as published
+by the Department of Internal Affairs at 30 September 2026 and can change.
+Notary and translation fees, where needed, are extra. Your quote shows every
+amount before any work starts.
 </p>
 
-<div class="gst-note">✓ NZ Document Assist service fees shown below include GST</div>
+<h2>Our Service Fees</h2>
 
-<h2>Document Assistance Services and Pricing</h2>
+<div class="gst-note">✓ All NZ Document Assist fees include GST</div>
 
 <div class="pricing-grid">
 
 <div class="price-card featured">
 <div class="popular-label">Popular Service</div>
-<h3>Apostille Coordination</h3>
-<div class="amount">From NZ$79 incl. GST</div>
+<h3>Apostille</h3>
+<div class="amount">From NZ$79</div>
 <p>
-Administrative coordination of the apostille process for eligible New Zealand documents being prepared for overseas use.
+For countries that accept the Hague Apostille. We check your document
+qualifies, prepare the application, lodge it with DIA and track it
+until it is delivered.
 </p>
-<p>
-Depending on the case, this may include checking the information you provide, helping identify the appropriate administrative pathway, coordinating required stages and keeping the process organised through to return.
-</p>
-<p class="extra">Government processing fees and other required third-party costs are additional.</p>
-<p><a href="/apostille-nz/">Learn about Apostille Coordination →</a></p>
+<p class="extra">DIA apostille fee (NZ$37) and courier are additional.</p>
+<p><a href="/apostille-nz/">About our apostille service →</a></p>
 </div>
 
 <div class="price-card">
-<h3>Authentication Coordination</h3>
-<div class="amount">From NZ$99 incl. GST</div>
+<h3>Authentication</h3>
+<div class="amount">From NZ$99</div>
 <p>
-Administrative coordination for New Zealand documents requiring authentication for overseas use.
+For countries that need authentication instead of an apostille. We
+handle the DIA and MFAT steps, and the embassy step where it is needed.
 </p>
-<p class="extra">Government, embassy, consular and other applicable third-party charges are additional.</p>
-<p><a href="/document-authentication-nz/">Learn about Authentication →</a></p>
+<p class="extra">DIA fees (NZ$74 category A, NZ$223 category B), embassy charges and courier are additional.</p>
+<p><a href="/document-authentication-nz/">About authentication →</a></p>
 </div>
 
 <div class="price-card">
-<h3>Notary Appointment Coordination</h3>
-<div class="amount">From NZ$39 incl. GST</div>
+<h3>BDM Certificate Ordering</h3>
+<div class="amount">+ NZ$15</div>
 <p>
-Help coordinating an appointment with an appropriate independent New Zealand Notary Public where notarisation is required.
+We order your New Zealand birth, death, marriage or other certificate
+directly through BDM Online as an approved organisation, so it comes to
+us ready for the next step.
 </p>
-<p class="extra">The independent Notary Public's professional fee is additional.</p>
-<p><a href="/notary-public-auckland-help/">Learn about Notary Coordination →</a></p>
-</div>
-
-<div class="price-card">
-<h3>Translation Coordination</h3>
-<div class="amount">From NZ$39 incl. GST</div>
-<p>
-Administrative coordination with an appropriate independent translation provider where document translation is required.
-</p>
-<p class="extra">The independent translator's fee is additional.</p>
-<p><a href="/translation-coordination-nz/">Learn about Translation Coordination →</a></p>
-</div>
-
-<div class="price-card">
-<h3>Courier &amp; Document Return Coordination</h3>
-<div class="amount">From NZ$25 incl. GST</div>
-<p>
-Administrative coordination of dispatch, tracking, return or onward delivery as part of your document-assistance case.
-</p>
-<p class="extra">Courier, postage and international delivery charges are additional.</p>
-<p><a href="/courier-document-return/">Learn about Courier Coordination →</a></p>
+<p class="extra">BDM certificate fee (NZ$35 for a standard certificate) is additional. We will ask you to sign our <a href="/authority/">online letter of authority</a>.</p>
 </div>
 
 <div class="price-card featured">
-<div class="popular-label">Best Value for Multi-Step Cases</div>
-<h3>Full-Service Document Handling</h3>
-<div class="amount">From NZ$129 incl. GST</div>
+<div class="popular-label">Deadline Coming Up?</div>
+<h3>Urgent Service</h3>
+<div class="amount">+ NZ$49</div>
 <p>
-For cases where you would like us to coordinate several administrative stages rather than arranging each step separately.
+We use DIA's urgent service, which processes apostilles, e-apostilles
+and category A authentications within 5 working days instead of up to
+15, and we put your case first.
 </p>
-<p>
-This can be suitable when a matter involves combinations of apostille or authentication, notary coordination, translation and document return.
-</p>
-<p class="extra">Government, notary, translator, courier and other third-party costs are additional.</p>
+<p class="extra">DIA urgent fee (NZ$120) is additional. Not available when translation is needed.</p>
 </div>
 
 <div class="price-card">
-<h3>Complex / International Multi-Step Case</h3>
-<div class="amount">From NZ$179 incl. GST</div>
+<h3>Notary Appointment</h3>
+<div class="amount">From NZ$39</div>
 <p>
-Administrative coordination for more involved overseas document matters requiring multiple stages, documents, providers or onward arrangements.
+When your document needs notarising first, we arrange the appointment
+with an independent Notary Public and take care of the next step.
 </p>
-<p class="extra">Third-party authority, embassy, notary, translator, courier and other external costs are additional where required.</p>
+<p class="extra">The Notary Public's own fee is additional.</p>
+<p><a href="/notary-public-auckland-help/">About notary appointments →</a></p>
 </div>
 
 <div class="price-card">
-<h3>Priority Administration</h3>
-<div class="amount">+ NZ$50 incl. GST</div>
+<h3>Translation</h3>
+<div class="amount">From NZ$39</div>
 <p>
-Priority handling of administrative work performed directly by NZ Document Assist, where available.
+When the destination country needs a translation, we arrange it with
+an independent translator and fit it into the right step.
 </p>
-<p class="extra">
-Priority administration does not mean faster government, notary, translator, embassy, courier or other third-party processing.
+<p class="extra">The translator's fee is additional.</p>
+<p><a href="/translation-coordination-nz/">About translation →</a></p>
+</div>
+
+<div class="price-card">
+<h3>Courier &amp; Document Return</h3>
+<div class="amount">From NZ$25</div>
+<p>
+We arrange and track the courier for your documents, back to you or on
+to wherever they need to go.
 </p>
+<p class="extra">Courier and postage charges are additional.</p>
+<p><a href="/courier-document-return/">About courier and return →</a></p>
+</div>
+
+<div class="price-card featured">
+<div class="popular-label">Best Value for Several Steps</div>
+<h3>Full-Service Handling</h3>
+<div class="amount">From NZ$129</div>
+<p>
+One fee when your document needs several steps, such as notary,
+apostille or authentication, translation and delivery.
+</p>
+<p class="extra">Government, notary, translator and courier costs are additional.</p>
+</div>
+
+<div class="price-card">
+<h3>Complex or Multi-Country Cases</h3>
+<div class="amount">Priced by quote</div>
+<p>
+For several documents, several countries, category B embassy work or
+estate and adoption paperwork. Every case is different, so we look at
+yours and send a fixed quote before any work starts.
+</p>
+<p><a href="/contact/">Ask for a quote →</a></p>
 </div>
 
 </div>
-
-<div class="info-box">
-<strong>Not sure which service applies to you?</strong>
-<p>
-Do not choose a paid service just by guessing.
-Start with the <strong>free initial document assessment</strong>.
-Tell us what document you have, the destination country and what the receiving organisation has asked for.
-We can help identify the likely next step before you decide whether to proceed.
-</p>
-<p><a href="/contact/"><strong>Ask for a free assessment →</strong></a></p>
-</div>
-
-<div class="third-party-box">
-<h2>What Is Not Included in These Prices?</h2>
-
-<p>
-Our advertised prices are for <strong>NZ Document Assist's administrative assistance and coordination.</strong>
-</p>
-
-<p>Depending on your case, separate charges may apply for services provided by others, including:</p>
-
-<ul>
-<li>government processing fees</li>
-<li>Notary Public fees</li>
-<li>translator fees</li>
-<li>embassy or consular charges</li>
-<li>courier, postage and international delivery charges</li>
-<li>other independent professional or third-party services</li>
-</ul>
-
-<p>
-Where known and relevant, we aim to make the distinction between our fee and external charges clear in your quote before paid work begins.
-</p>
-</div>
-
-<h2>Why Do Some Prices Say “From”?</h2>
-<p>
-A straightforward case involving one document and one administrative stage can require considerably less work than a matter involving several documents, different destination requirements or multiple independent providers.
-</p>
-<p>
-“From” pricing shows the starting NZ Document Assist service fee while allowing us to quote fairly for the actual administrative work required.
-</p>
 
 <h2>Frequently Asked Questions About Pricing</h2>
 
 <div class="faq-item">
 <h3>Is the initial document assessment really free?</h3>
 <p>
-Yes. There is no NZ Document Assist charge for the initial assessment. We use the information you provide to understand the document, destination and likely administrative pathway. If paid assistance is appropriate, we provide a quote before you decide whether to proceed.
+Yes. Tell us the document, the country and what you have been asked for. We tell you which steps it needs and send a quote. There is no charge and no obligation.
 </p>
 </div>
 
 <div class="faq-item">
 <h3>Do your prices include GST?</h3>
 <p>
-Yes. The NZ Document Assist service fees shown on this page include GST.
+Yes. All NZ Document Assist fees on this page include GST.
 </p>
 </div>
 
 <div class="faq-item">
-<h3>Are government fees included?</h3>
+<h3>What are the government fees?</h3>
 <p>
-No, unless we expressly include them in a written quote. Government charges are separate from the NZ Document Assist service fee.
+The Department of Internal Affairs charges NZ$37 for an apostille, NZ$74 for a category A authentication, NZ$223 for a category B authentication and NZ$120 for its urgent service. Its courier costs NZ$7 within New Zealand and more to overseas addresses, for example NZ$53 to the United Kingdom. A standard BDM certificate is NZ$35.
 </p>
 </div>
 
 <div class="faq-item">
-<h3>Are Notary Public fees included?</h3>
+<h3>Will I know the total before work starts?</h3>
 <p>
-No. A Notary Public is an independent professional and charges separately for their own service.
+Yes. Your quote shows our fee and every known government, courier and provider cost before any work starts.
 </p>
 </div>
 
 <div class="faq-item">
-<h3>Are translation fees included?</h3>
+<h3>How does the urgent service work?</h3>
 <p>
-No, unless expressly stated in your written quote. Our Translation Coordination fee covers our administrative coordination. The independent translator's fee is separate.
+We lodge your application with DIA's urgent service, which processes apostilles, e-apostilles and category A authentications within 5 working days, and we handle your case first. It costs NZ$49 plus DIA's NZ$120 urgent fee. The application must be complete and cannot include a translation.
 </p>
 </div>
 
 <div class="faq-item">
-<h3>Can you tell me the likely total cost before I start?</h3>
+<h3>Are Notary Public and translation fees included?</h3>
 <p>
-Where the required stages and external charges are reasonably clear, we will explain the expected NZ Document Assist fee and known third-party costs before paid work begins. Some external charges can vary depending on the document, provider or destination requirements.
-</p>
-</div>
-
-<div class="faq-item">
-<h3>Can you coordinate the whole process for me?</h3>
-<p>
-In many cases, yes. If your matter involves several administrative stages, ask us about Full-Service Document Handling. We can explain what we may be able to coordinate and provide a quote based on the work involved.
-</p>
-</div>
-
-<div class="faq-item">
-<h3>Does Priority Administration make government processing faster?</h3>
-<p>
-No. Priority Administration applies only to work performed directly by NZ Document Assist. We do not control the processing times of government authorities, notaries, translators, embassies, couriers or other independent providers.
-</p>
-</div>
-
-<div class="info-box">
-<strong>Helpful guides before you contact us:</strong>
-<p>
-If you want to understand the process first, see
-<a href="/apostille-vs-authentication-nz/">Apostille vs Authentication NZ</a>,
-<a href="/new-zealand-apostille-requirements/">NZ Apostille Requirements</a>,
-<a href="/documents-for-overseas-use/">Documents for Overseas Use</a> or
-<a href="/how-it-works/">How It Works</a>.
-</p>
-<p>
-If you are in Auckland, you can also see our
-<a href="/apostille-auckland/">Apostille Auckland assistance page</a>.
+No. Notaries and translators are independent professionals who charge for their own work. We include their fees in your quote once we know them.
 </p>
 </div>
 
 <div class="notice">
-<strong>Important service information</strong>
+<strong>Please note</strong>
 <p>
-NZ Document Assist provides independent administrative document assistance, coordination and logistics services only.
-We are not a government agency, law firm, Notary Public, Justice of the Peace service or licensed immigration adviser, and we do not provide legal or immigration advice.
-</p>
-<p>
-Independent third-party fees are separate unless expressly included in a written quote.
+NZ Document Assist Limited is an independent company, not a government agency. We are not a law firm, Notary Public or licensed immigration adviser, and we do not give legal or immigration advice.
 </p>
 </div>
 
 <div class="final-cta">
-<h2>Not Sure What You Need? Start With a Free Assessment.</h2>
+<h2>Get Your Exact Price</h2>
 <p>
-Tell us what document you have, where it needs to be used and what the receiving organisation has asked for.
-We will review the information you provide and, if we can assist, explain the likely next step and quote before any paid work begins.
+Send us the document and the country it is going to. We will tell you exactly what it needs and send you a clear quote.
 </p>
 
 <div class="cta-actions">
-<a class="btn" href="/contact/">Ask for My Free Assessment</a>
+<a class="btn" href="/contact/">Get a Free Quote</a>
 <a class="btn" href="tel:+64221003242">Call 022 100 3242</a>
 </div>
 </div>
