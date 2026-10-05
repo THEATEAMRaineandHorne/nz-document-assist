@@ -4,19 +4,19 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Online Letter of Authority | NZ Document Assist</title>
-<meta content="Securely authorise NZ Document Assist to order, apostille and courier your New Zealand documents. Complete and sign online in about 5 minutes." name="description"/>
+<meta content="Securely authorise NZ Document Assist to order, notarise, apostille and courier your New Zealand documents, request your criminal record, or book a notary or JP. Complete and sign online in about 5 minutes." name="description"/>
 <link href="https://nzdocumentassist.co.nz/authority/" rel="canonical"/>
 <meta content="noindex,nofollow" name="robots"/>
 <meta content="en_NZ" property="og:locale"/>
 <meta content="NZ Document Assist" property="og:site_name"/>
 <meta content="website" property="og:type"/>
 <meta content="Online Letter of Authority | NZ Document Assist" property="og:title"/>
-<meta content="Securely authorise NZ Document Assist to order, apostille and courier your New Zealand documents. Complete and sign online in about 5 minutes." property="og:description"/>
+<meta content="Securely authorise NZ Document Assist to order, notarise, apostille and courier your New Zealand documents, request your criminal record, or book a notary or JP. Complete and sign online in about 5 minutes." property="og:description"/>
 <meta content="https://nzdocumentassist.co.nz/authority/" property="og:url"/>
 <meta content="https://nzdocumentassist.co.nz/assets/images/nz-document-assist-authorization-1400.webp" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Online Letter of Authority | NZ Document Assist" name="twitter:title"/>
-<meta content="Securely authorise NZ Document Assist to order, apostille and courier your New Zealand documents. Complete and sign online in about 5 minutes." name="twitter:description"/>
+<meta content="Securely authorise NZ Document Assist to order, notarise, apostille and courier your New Zealand documents, request your criminal record, or book a notary or JP. Complete and sign online in about 5 minutes." name="twitter:description"/>
 <meta content="https://nzdocumentassist.co.nz/assets/images/nz-document-assist-authorization-1400.webp" name="twitter:image"/>
 <link href="/assets/images/nz-document-assist-icon.webp" rel="icon" type="image/webp"/>
 <link rel="preload" as="image" type="image/webp" href="/assets/images/nz-document-assist-authorization-1400.webp" imagesrcset="/assets/images/nz-document-assist-authorization-640.webp 640w, /assets/images/nz-document-assist-authorization-960.webp 960w, /assets/images/nz-document-assist-authorization-1400.webp 1400w" imagesizes="100vw"/>
@@ -907,6 +907,7 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 .auth-submit{ width:100%; font-size:1.05rem; padding:16px; border:0; cursor:pointer; }
 .auth-submit[disabled]{ opacity:.6; cursor:wait; }
 .auth-hp{ position:absolute; left:-9999px; }
+.auth-wrap [hidden]{ display:none !important; }
 .auth-invalid{ border-color:#a3261e !important; }
 .auth-done h2{ margin-bottom:8px; }
 .auth-summary{ border:1px solid #e3e6ea; border-radius:12px; padding:6px 18px; margin:0 0 18px; background:#fff; }
@@ -989,6 +990,9 @@ Get a Quote
 <div class="auth-choice">
 <label class="auth-radio"><input type="radio" name="request_type" value="Order a NZ certificate and apostille it" data-type="order" required/> <span><strong>Order a New Zealand certificate and apostille it</strong><small>We order your birth, marriage or death certificate from DIA, have it apostilled and send it where it needs to go.</small></span></label>
 <label class="auth-radio"><input type="radio" name="request_type" value="Apostille a document I already have" data-type="apostille"/> <span><strong>Apostille a document I already have</strong><small>For example, your Ministry of Justice criminal record, a degree or a notarised document.</small></span></label>
+<label class="auth-radio"><input type="radio" name="request_type" value="Request my criminal record from the Ministry of Justice and apostille it" data-type="moj"/> <span><strong>Request my criminal record from the Ministry of Justice and apostille it</strong><small>We request your criminal record from the Ministry of Justice on your behalf, then have it apostilled for use overseas.</small></span></label>
+<label class="auth-radio"><input type="radio" name="request_type" value="Notarise and apostille a copy of my passport" data-type="passport"/> <span><strong>Notarise and apostille a copy of my passport</strong><small>You send us your original passport. We take it to a New Zealand notary public for a certified colour copy, courier your passport back to you, and have the copy apostilled.</small></span></label>
+<label class="auth-radio"><input type="radio" name="request_type" value="Book a notary public or JP appointment" data-type="notary"/> <span><strong>Book a notary public or JP appointment</strong><small>For example, a parent's travel consent letter, a statutory declaration or a signature to be witnessed. We book and coordinate the appointment for you.</small></span></label>
 </div>
 <div class="form-row auth-if-order">
 <div class="form-group"><label for="cert_type">Certificate to order *</label>
@@ -996,11 +1000,32 @@ Get a Quote
 <div class="form-group"><label for="cert_qty">How many copies? *</label><input id="cert_qty" name="certificate_copies" type="number" min="1" value="1"/></div>
 </div>
 <div class="form-group auth-if-apostille"><label for="doc_desc">Which document(s) do you want apostilled? *</label><textarea id="doc_desc" name="documents_to_apostille" rows="2" placeholder="e.g. Ministry of Justice criminal record issued 20 September 2026"></textarea></div>
+<div class="auth-if-moj">
+<div class="form-group"><label for="other_names">Any other names you have used</label><input id="other_names" name="other_names_used" placeholder="e.g. maiden name, previous married name"/></div>
+<p class="auth-note">The Ministry of Justice needs to confirm your identity. After you submit, we'll ask you for a photo of your passport or driver licence, and may send you the Ministry's own consent form to sign.</p>
+</div>
+<div class="auth-if-passport">
+<div class="auth-id-note"><strong>Please don't post your passport yet.</strong> Once we've confirmed your job and payment, we'll email you our address and how to send it by tracked courier.</div>
+<label class="auth-check"><input type="checkbox" id="passport_ok" name="passport_understood" value="Yes"/> <span>I understand I will be without my passport while it is in transit and with the notary, and I will not book travel until it has been returned to me. My passport is current (not expired).</span></label>
+</div>
+<div class="auth-if-notary">
+<div class="form-group"><label for="notary_doc">Which document needs to be signed, witnessed or certified? *</label><textarea id="notary_doc" name="notary_document" rows="2" placeholder="e.g. Father's consent letter for our child to travel to Singapore and the Philippines"></textarea></div>
+<div class="form-row">
+<div class="form-group"><label for="notary_kind">Notary public or JP? *</label>
+<select id="notary_kind" name="notary_or_jp"><option value="">Choose…</option><option>Notary public</option><option>Justice of the Peace (JP)</option><option>Not sure, please advise</option></select></div>
+<div class="form-group"><label for="signers">Full name of everyone who will sign *</label><input id="signers" name="people_signing" placeholder="e.g. Shane Robert Tremain"/></div>
+</div>
+<div class="form-group"><label for="notary_times">Preferred days and times for the appointment</label><textarea id="notary_times" name="preferred_appointment_times" rows="2" placeholder="e.g. weekday mornings this week, or after 4pm"></textarea></div>
+<p class="auth-note">Everyone signing must attend in person with photo ID (passport or driver licence). Please don't sign the document before the appointment. JPs don't charge for their services; our fee covers booking and coordinating the appointment.</p>
+</div>
 <div class="form-row">
 <div class="form-group"><label for="country">Country the document is going to *</label><input id="country" name="destination_country" required/></div>
-<div class="form-group"><label for="urgent">DIA processing *</label>
+<div class="form-group auth-if-dia"><label for="urgent">DIA processing *</label>
 <select id="urgent" name="dia_service" required><option value="">Choose…</option><option>Standard (about 15 working days)</option><option>Urgent (5 working days, extra DIA fee)</option><option>Not sure, please advise</option></select></div>
 </div>
+<div class="form-group auth-if-dia"><label for="apostille_format">Paper or e-apostille? *</label>
+<select id="apostille_format" name="apostille_format"><option value="">Choose…</option><option value="Paper apostille">Paper apostille (couriered)</option><option value="E-apostille">E-apostille (emailed PDF)</option><option value="Not sure, please advise">Not sure, please advise</option></select>
+<p class="auth-note">Please check with the overseas authority which one they accept before choosing.</p></div>
 </fieldset>
 
 <fieldset class="auth-step">
@@ -1029,8 +1054,9 @@ Get a Quote
 <div class="form-group"><label for="home_address">Your current address *</label><textarea id="home_address" name="current_address" rows="2" autocomplete="street-address" required></textarea></div>
 </fieldset>
 
-<fieldset class="auth-step">
-<legend><span class="auth-num">3</span> Where should we send the finished document?</legend>
+<fieldset class="auth-step auth-if-delivery">
+<legend><span class="auth-num">3</span> <span id="delivery-title">Where should we send the finished document?</span></legend>
+<p class="auth-note auth-if-passport">This is where we'll courier your original passport back to you, and the paper apostille if you chose one. An e-apostille is emailed.</p>
 <p class="auth-note">Couriers need a street address, not a PO box, and a phone number for the person receiving it.</p>
 <div class="form-row">
 <div class="form-group"><label for="rcpt_name">Recipient's full name *</label><input id="rcpt_name" name="deliver_to_name" required/></div>
@@ -1054,14 +1080,17 @@ Get a Quote
 <p>I authorise <strong>NZ Document Assist</strong> to act as my agent for this request only, and to:</p>
 <ul>
 <li class="auth-if-order">apply to Births, Deaths and Marriages (Department of Internal Affairs) for the certificate(s) named above, and receive them on my behalf;</li>
-<li>apply to the DIA Authentication Unit for an apostille or authentication of my document(s), using the processing option I have chosen;</li>
-<li>arrange courier delivery of the finished document(s) to the address in section 3;</li>
-<li>give my personal information to DIA, the courier and the recipient named above, only as needed to complete these steps.</li>
+<li class="auth-if-moj">request my criminal record information from the Ministry of Justice and receive it on my behalf;</li>
+<li class="auth-if-passport">receive and hold my original passport, take it to a New Zealand notary public to certify a colour copy, and return my passport to me by tracked courier;</li>
+<li class="auth-if-notary">book an appointment with a notary public or Justice of the Peace for the document named above, and share the details needed for that appointment with them;</li>
+<li class="auth-if-dia">apply to the DIA Authentication Unit for an apostille or authentication of my document(s), using the processing option I have chosen;</li>
+<li class="auth-if-delivery">arrange courier delivery of the finished document(s) to the address in section 3;</li>
+<li>give my personal information only to the agencies and providers needed to complete these steps, such as DIA, the Ministry of Justice, a notary public or JP, the courier and the recipient named above.</li>
 </ul>
-<p>This authority ends once my document(s) have been delivered, or earlier if I withdraw it in writing.</p>
+<p>This authority ends once my request has been completed, or earlier if I withdraw it in writing.</p>
 </div>
 <label class="auth-check"><input type="checkbox" name="authority_given" value="Yes" required/> <span>I confirm I am the person named in section 2, the details I have given are true and correct, and I give the authority above.</span></label>
-<label class="auth-check"><input type="checkbox" name="fees_agreed" value="Yes" required/> <span>I agree to pay the government, courier and service fees set out in the written estimate NZ Document Assist has given me.</span></label>
+<label class="auth-check"><input type="checkbox" name="fees_agreed" value="Yes" required/> <span>I agree to pay the fees set out in the written estimate NZ Document Assist has given me, and I agree to the <a href="/terms/" target="_blank" rel="noopener">Terms of Service</a>.</span></label>
 <label class="auth-check"><input type="checkbox" name="privacy_agreed" value="Yes" required/> <span>I have read the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>. I understand my details are used only for this request, are held securely (including with an overseas form-processing provider) and are deleted when no longer needed.</span></label>
 </fieldset>
 
@@ -1337,7 +1366,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* Paste your Formspree form ID here (the part after formspree.io/f/) */
   var FORMSPREE_ID = 'moevywdo';
   var ENDPOINT = 'https://formspree.io/f/' + FORMSPREE_ID;
-  var AUTHORITY_VERSION = 'Letter of Authority v1 (29 Sep 2026)';
+  var AUTHORITY_VERSION = 'Letter of Authority v2 (5 Oct 2026)';
 
   var form = document.getElementById('authority-form');
   if(!form) return;
@@ -1356,6 +1385,23 @@ document.addEventListener('DOMContentLoaded', function () {
     form.querySelectorAll('.auth-if-order').forEach(function(el){ el.hidden = !isOrder; });
     form.querySelectorAll('.auth-if-apostille').forEach(function(el){ el.hidden = t !== 'apostille'; });
     form.querySelectorAll('.auth-if-marriage').forEach(function(el){ el.hidden = !needsEvent; });
+    var fmt = document.getElementById('apostille_format').value;
+    var usesDia = t !== '' && t !== 'notary';
+    var needsDelivery = t !== 'notary' && !(fmt === 'E-apostille' && (t === 'apostille' || t === 'moj'));
+    form.querySelectorAll('.auth-if-moj').forEach(function(el){ el.hidden = t !== 'moj'; });
+    form.querySelectorAll('.auth-if-passport').forEach(function(el){ el.hidden = t !== 'passport'; });
+    form.querySelectorAll('.auth-if-notary').forEach(function(el){ el.hidden = t !== 'notary'; });
+    form.querySelectorAll('.auth-if-dia').forEach(function(el){ el.hidden = !usesDia; });
+    form.querySelectorAll('.auth-if-delivery').forEach(function(el){ el.hidden = !needsDelivery; });
+    document.getElementById('delivery-title').textContent = t === 'passport' ? 'Where should we return your passport?' : 'Where should we send the finished document?';
+    document.getElementById('urgent').required = usesDia;
+    document.getElementById('apostille_format').required = usesDia;
+    document.getElementById('passport_ok').required = t === 'passport';
+    document.getElementById('notary_doc').required = t === 'notary';
+    document.getElementById('notary_kind').required = t === 'notary';
+    document.getElementById('signers').required = t === 'notary';
+    var n = 0;
+    form.querySelectorAll('.auth-step').forEach(function(fs){ if(!fs.hidden){ n++; fs.querySelector('.auth-num').textContent = n; } });
     document.getElementById('spouse').closest('.form-group').hidden = !(needsEvent && cert !== 'Death certificate');
     document.getElementById('cert_type').required = isOrder;
     document.getElementById('pob').required = isOrder;
@@ -1365,6 +1411,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   form.querySelectorAll('input[name="request_type"]').forEach(function(r){ r.addEventListener('change', toggle); });
   document.getElementById('cert_type').addEventListener('change', toggle);
+  document.getElementById('apostille_format').addEventListener('change', toggle);
   var preset = params.get('type');
   if(preset){ var p = form.querySelector('input[data-type="'+preset+'"]'); if(p){ p.checked = true; } }
   toggle();
