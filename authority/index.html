@@ -990,6 +990,7 @@ Get a Quote
 <legend><span class="auth-num">1</span> What would you like us to do?</legend>
 <div class="auth-choice">
 <label class="auth-radio"><input type="radio" name="request_type" value="Order a NZ certificate and apostille or authenticate it" data-type="order" required/> <span><strong>Order a New Zealand certificate and apostille or authenticate it</strong><small>We order the birth, marriage or death certificate, have it apostilled or authenticated (including any embassy legalisation) and send it where it needs to go.</small></span></label>
+<label class="auth-radio"><input type="radio" name="request_type" value="Order a NZ certificate and post it to me (no apostille)" data-type="certonly"/> <span><strong>Order a New Zealand certificate and post it to me</strong><small>We order the birth, marriage or death certificate from Births, Deaths and Marriages and post or courier it to you. No apostille or authentication.</small></span></label>
 <label class="auth-radio"><input type="radio" name="request_type" value="Apostille or authenticate a document I already have" data-type="apostille"/> <span><strong>Apostille or authenticate a document I already have</strong><small>For example, your Ministry of Justice criminal record, a degree or a notarised document.</small></span></label>
 <label class="auth-radio"><input type="radio" name="request_type" value="Request my criminal record from the Ministry of Justice and apostille it" data-type="moj"/> <span><strong>Request my criminal record from the Ministry of Justice and apostille it</strong><small>We request your criminal record from the Ministry of Justice on your behalf, then have it apostilled for use overseas.</small></span></label>
 <label class="auth-radio"><input type="radio" name="request_type" value="Notarise and apostille a copy of my passport" data-type="passport"/> <span><strong>Notarise and apostille a copy of my passport</strong><small>You send us your original passport. We take it to a New Zealand notary public for a certified colour copy, courier your passport back to you, and have the copy apostilled.</small></span></label>
@@ -1020,7 +1021,7 @@ Get a Quote
 <p class="auth-note">Everyone signing must attend in person with photo ID (passport or driver licence). Please don't sign the document before the appointment. JPs don't charge for their services; our fee covers booking and coordinating the appointment.</p>
 </div>
 <div class="form-row">
-<div class="form-group"><label for="country">Country (or countries) the document is going to *</label><input id="country" name="destination_country" placeholder="e.g. Netherlands and United Arab Emirates" required/></div>
+<div class="form-group" id="country-group"><label for="country">Country (or countries) the document is going to *</label><input id="country" name="destination_country" placeholder="e.g. Netherlands and United Arab Emirates" required/></div>
 <div class="form-group auth-if-dia"><label for="urgent">DIA processing *</label>
 <select id="urgent" name="dia_service" required><option value="">Choose…</option><option>Standard (about 15 working days)</option><option>Urgent (5 working days, extra DIA fee)</option><option>Not sure, please advise</option></select></div>
 </div>
@@ -1388,7 +1389,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* Paste your Formspree form ID here (the part after formspree.io/f/) */
   var FORMSPREE_ID = 'moevywdo';
   var ENDPOINT = 'https://formspree.io/f/' + FORMSPREE_ID;
-  var AUTHORITY_VERSION = 'Letter of Authority v4 (14 Oct 2026)';
+  var AUTHORITY_VERSION = 'Letter of Authority v5 (14 Oct 2026)';
 
   var form = document.getElementById('authority-form');
   if(!form) return;
@@ -1402,20 +1403,23 @@ document.addEventListener('DOMContentLoaded', function () {
   function currentType(){ var r = form.querySelector('input[name="request_type"]:checked'); return r ? r.dataset.type : ''; }
   function toggle(){
     var t = currentType(), cert = document.getElementById('cert_type').value;
-    var isOrder = t === 'order';
+    var certOnly = t === 'certonly';
+    var isOrder = t === 'order' || certOnly;
     var needsEvent = isOrder && cert && cert !== 'Birth certificate';
     form.querySelectorAll('.auth-if-order').forEach(function(el){ el.hidden = !isOrder; });
     form.querySelectorAll('.auth-if-apostille').forEach(function(el){ el.hidden = t !== 'apostille'; });
     form.querySelectorAll('.auth-if-marriage').forEach(function(el){ el.hidden = !needsEvent; });
     var fmt = document.getElementById('apostille_format').value;
-    var usesDia = t !== '' && t !== 'notary';
+    var usesDia = t !== '' && t !== 'notary' && !certOnly;
     var needsDelivery = t !== 'notary' && !(fmt === 'E-apostille' && (t === 'apostille' || t === 'moj'));
     form.querySelectorAll('.auth-if-moj').forEach(function(el){ el.hidden = t !== 'moj'; });
     form.querySelectorAll('.auth-if-passport').forEach(function(el){ el.hidden = t !== 'passport'; });
     form.querySelectorAll('.auth-if-notary').forEach(function(el){ el.hidden = t !== 'notary'; });
     form.querySelectorAll('.auth-if-dia').forEach(function(el){ el.hidden = !usesDia; });
     form.querySelectorAll('.auth-if-delivery').forEach(function(el){ el.hidden = !needsDelivery; });
-    document.getElementById('delivery-title').textContent = t === 'passport' ? 'Where should we return your passport?' : 'Where should we send the finished document?';
+    document.getElementById('delivery-title').textContent = t === 'passport' ? 'Where should we return your passport?' : certOnly ? 'Where should we send the certificate?' : 'Where should we send the finished document?';
+    document.getElementById('country-group').hidden = certOnly;
+    document.getElementById('country').required = !certOnly;
     document.getElementById('urgent').required = usesDia;
     document.getElementById('apostille_format').required = usesDia;
     document.getElementById('passport_ok').required = t === 'passport';
