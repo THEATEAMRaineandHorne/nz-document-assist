@@ -422,7 +422,7 @@
           "name": "What details do I need to order?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The full name on the certificate, the date and place of the birth, marriage or death, and for a birth certificate the parents' names. If you're unsure of a detail, give your best information and we'll check it with you."
+            "text": "To get your price, just the certificate type, how many copies and where it's going. After you approve, our online letter of authority asks once for the full name, the date and place of the birth, marriage or death, and for a birth certificate the parents' names. If you're unsure of a detail, give your best information and we'll check it with you."
           }
         }
       ]
@@ -502,7 +502,6 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:3px solid rgba(214,173,66,.18);border-color:#b88b20}
 .form-group textarea{min-height:100px;resize:vertical}
 .form-help{display:block;margin-top:6px;color:#687789;font-size:13px;line-height:1.45}
-.form-section{margin:8px 0 14px;padding-top:14px;border-top:1px solid #e6ebf0;color:#071f3f;font-weight:900;font-size:17px}
 .form-warning{margin:6px 0 24px;padding:18px 20px;background:#fff8e5;border-left:4px solid #d6ad42;border-radius:0 12px 12px 0;color:#263b52;font-size:14px}
 .form-warning p{margin:6px 0 0}
 .form-submit{border:0;cursor:pointer;font-family:inherit;font-size:16px;width:100%;min-height:56px}
@@ -581,16 +580,15 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 <p>Need a birth certificate that shows a name change, or more than one certificate? Choose it in the form and we'll quote it all in. See <a href="/name-change-birth-certificate-nz/">name change birth certificates</a>.</p>
 
 <div class="order-box" id="order">
-<h2>Order your certificate</h2>
-<p>Fill in what you know. We check the details, confirm one all-in price and send you a secure payment link. Nothing is ordered until you've approved and paid.</p>
+<h2>Start your order</h2>
+<p>It takes under a minute. Tell us which certificate and where it's going, and we'll email your <strong>all-in price</strong>, a secure payment link and a link to our online letter of authority, where you add the certificate details once. Nothing is ordered until you've approved and paid.</p>
 <form action="https://formspree.io/f/moevywdo" id="order-form" method="POST">
 <input name="_subject" type="hidden" value="Certificate order - NZ Document Assist"/>
 <input name="form_source" type="hidden" value="Order a Certificate page"/>
 <input autocomplete="off" name="_gotcha" style="display:none" tabindex="-1" type="text"/>
-<div class="form-section">The certificate</div>
 <div class="form-row">
 <div class="form-group">
-<label for="cert-type">Certificate type *</label>
+<label for="cert-type">Certificate *</label>
 <select id="cert-type" name="certificate_type" required>
 <option value="">Please select</option>
 <option value="Birth certificate">Birth certificate</option>
@@ -606,48 +604,6 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 <input id="copies" min="1" max="20" name="copies" required type="number" value="1"/>
 </div>
 </div>
-<div class="form-group">
-<label for="cert-name" id="cert-name-label">Full name on the certificate *</label>
-<input id="cert-name" name="name_on_certificate" placeholder="First, middle and last names at the time" required type="text"/>
-</div>
-<div class="form-row">
-<div class="form-group">
-<label for="event-date" id="event-date-label">Date of birth, marriage or death *</label>
-<input id="event-date" name="event_date" placeholder="e.g. 14 March 1985, or approximate" required type="text"/>
-</div>
-<div class="form-group">
-<label for="event-place" id="event-place-label">Place in New Zealand <span class="optional">(if known)</span></label>
-<input id="event-place" name="event_place" placeholder="e.g. Auckland, Christchurch" type="text"/>
-</div>
-</div>
-<div class="form-row" id="parents-group" hidden>
-<div class="form-group">
-<label for="mother">Mother's / parent's full name <span class="optional">(incl. maiden name)</span></label>
-<input id="mother" name="parent_1" type="text"/>
-</div>
-<div class="form-group">
-<label for="father">Father's / other parent's full name <span class="optional">(if listed)</span></label>
-<input id="father" name="parent_2" type="text"/>
-</div>
-</div>
-<div class="form-group" id="spouse-group" hidden>
-<label for="spouse">Full name of the other party to the marriage or civil union</label>
-<input id="spouse" name="spouse_name" type="text"/>
-</div>
-<div class="form-group">
-<label for="relationship">Your relationship to the person on the certificate *</label>
-<select id="relationship" name="relationship" required>
-<option value="">Please select</option>
-<option value="It's my own certificate">It's my own certificate</option>
-<option value="My child">My child</option>
-<option value="My parent">My parent</option>
-<option value="My spouse or partner">My spouse or partner</option>
-<option value="Executor, administrator or lawyer">Executor, administrator or lawyer</option>
-<option value="Other family member">Other family member</option>
-<option value="Other">Other</option>
-</select>
-</div>
-<div class="form-section">Where it's going</div>
 <div class="form-row">
 <div class="form-group">
 <label for="cert-use">Where will it be used? *</label>
@@ -666,13 +622,8 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 <div class="form-group" id="org-group" hidden>
 <label for="organisation">Who has asked for it? <span class="optional">(optional)</span></label>
 <input id="organisation" name="organisation" placeholder="e.g. embassy, bank, pension office, lawyer" type="text"/>
-<span class="form-help">Overseas offices usually need an apostille or authentication. We confirm what's needed before you pay.</span>
+<span class="form-help">Overseas offices usually need an apostille or authentication. We confirm what's needed and include it in your price.</span>
 </div>
-<div class="form-group">
-<label for="address">Delivery address *</label>
-<textarea id="address" name="delivery_address" placeholder="Street, suburb, city, postcode and country" required></textarea>
-</div>
-<div class="form-section">Your details</div>
 <div class="form-row">
 <div class="form-group">
 <label for="name">Your name *</label>
@@ -694,18 +645,17 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 </div>
 </div>
 <div class="form-group">
-<label for="message">Anything else we should know? <span class="optional">(optional)</span></label>
-<textarea id="message" name="message" placeholder="e.g. a name change, an older record, or several certificates"></textarea>
+<label for="message">Anything else? <span class="optional">(optional)</span></label>
+<textarea id="message" name="message" placeholder="e.g. a name change, an older record, or paste the instructions you were given"></textarea>
 </div>
-<div class="form-warning"><strong>Please don't include passport, licence or card numbers.</strong><p>We'll only ask for what's needed, through our secure letter of authority.</p></div>
-<button class="btn form-submit" type="submit">Send My Order</button>
+<button class="btn form-submit" type="submit">Get My Price</button>
 <div aria-live="polite" class="form-status" id="form-status" role="status"></div>
-<p class="form-note">We reply by email with your all-in price and a secure payment link. Nothing is ordered until you approve and pay. <a href="/privacy-policy/">Privacy policy</a> · <a href="/terms/">Terms</a>.</p>
+<p class="form-note">No personal details needed yet. We reply by email with your all-in price and next steps. <a href="/privacy-policy/">Privacy policy</a> · <a href="/terms/">Terms</a>.</p>
 </form>
 </div>
 
 <h2>What happens after you order</h2>
-<ol class="nda-flow" aria-label="What happens after you order"><li>We check your details<small>And confirm one all-in price by email.</small></li><li>Approve and pay<small>Secure card payment link.</small></li><li>Sign our authority<small>A short <a href="/authority/">online letter of authority</a>.</small></li><li>We order the certificate<small>Directly, as an approved BDM Online organisation.</small></li><li class="opt">Apostille, if it's going overseas<small>Checked first, so it isn't sent back.</small></li><li>Delivered to you<small>Posted in NZ or couriered overseas.</small></li></ol>
+<ol class="nda-flow" aria-label="What happens after you order"><li>Tell us what you need<small>The short form above.</small></li><li>Your price and payment link<small>One all-in total by email.</small></li><li>Add the details and sign<small>Once, in our <a href="/authority/">online letter of authority</a>.</small></li><li>We order the certificate<small>Directly, as an approved BDM Online organisation.</small></li><li class="opt">Apostille, if it's going overseas<small>Checked first, so it isn't sent back.</small></li><li>Delivered to you<small>Posted in NZ or couriered overseas.</small></li></ol>
 
 <h2>What it costs</h2>
 <table class="nda-table"><thead><tr><th>Your order</th><th>All in from</th></tr></thead><tbody>
@@ -724,7 +674,7 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 <li>A certificate sent overseas without the apostille or authentication it needed</li>
 <li>A visa office wanting a certificate issued in the last 6 or 12 months</li>
 </ul>
-<div class="note-box"><strong>Not sure what you've been asked for?</strong> Paste the instructions into the form. We read them before anything is ordered and tell you exactly what fits.</div>
+<div class="note-box"><strong>Not sure what you've been asked for?</strong> Paste the instructions into the order form. We read them before anything is ordered and tell you exactly what fits.</div>
 
 <div class="related-guides-clean"><h3>Going overseas? Related guides</h3><div class="related-guides-grid">
 <a href="/apostille-birth-certificate-nz/"><strong>Birth certificate apostille</strong><span>Ordered, apostilled and sent anywhere.</span></a>
@@ -742,7 +692,7 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 <div class="nda-faq"><h3>Does it need an apostille?</h3><p>If the certificate is going to an overseas government, court, bank or embassy, it usually does, or it needs authentication instead. Tell us the country and who asked for it and we'll confirm before you pay. For use in New Zealand, the certificate on its own is normally enough.</p></div>
 <div class="nda-faq"><h3>How long does it take?</h3><p>Certificates posted within New Zealand usually arrive in about a week to ten days. If an apostille is needed, allow about 3 weeks in total, or about 1 week with the urgent service where eligible. Tell us your deadline and we'll tell you straight away whether it's achievable.</p></div>
 <div class="nda-faq"><h3>Can I order a certificate for someone else?</h3><p>Often, yes, for example for a child, a parent or an estate. Tell us your relationship to the person on the certificate. If anything extra is needed, we'll tell you before you pay.</p></div>
-<div class="nda-faq"><h3>What details do I need to order?</h3><p>The full name on the certificate, the date and place of the birth, marriage or death, and for a birth certificate the parents' names. If you're unsure of a detail, give your best information and we'll check it with you.</p></div>
+<div class="nda-faq"><h3>What details do I need to order?</h3><p>To get your price, just the certificate type, how many copies and where it's going. After you approve, our online letter of authority asks once for the full name, the date and place of the birth, marriage or death, and for a birth certificate the parents' names. If you're unsure of a detail, give your best information and we'll check it with you.</p></div>
 
 <div class="nda-sources"><h2>Sources</h2><p>Checked against official New Zealand Government information on 14 October 2026.</p><ul>
 <li><a href="https://www.govt.nz/assets/Documents/Family-and-whanau/Request-for-NZ-death-certificate-or-printout-form-BDM93D.pdf" rel="noopener" target="_blank">Request for NZ death certificate or printout (BDM93D)</a>, govt.nz</li>
@@ -834,39 +784,24 @@ document.addEventListener('DOMContentLoaded', function () {
   var type = document.getElementById('cert-type');
   var use = document.getElementById('cert-use');
   var country = document.getElementById('country');
-  var groups = {
-    parents: document.getElementById('parents-group'),
-    spouse: document.getElementById('spouse-group'),
-    country: document.getElementById('country-group'),
-    org: document.getElementById('org-group')
-  };
-  var nameLabel = document.getElementById('cert-name-label');
-  var dateLabel = document.getElementById('event-date-label');
+  var countryGroup = document.getElementById('country-group');
+  var orgGroup = document.getElementById('org-group');
   var statusBox = document.getElementById('form-status');
   var btn = form.querySelector('.form-submit');
 
   function update() {
-    var t = type.value;
-    var birth = t.indexOf('Birth') === 0;
-    var marriage = t === 'Marriage certificate' || t === 'Civil union certificate';
-    var death = t === 'Death certificate';
-    groups.parents.hidden = !birth;
-    groups.spouse.hidden = !marriage;
-    nameLabel.textContent = marriage ? 'Full name of one party (as at the marriage) *' : 'Full name on the certificate *';
-    dateLabel.textContent = birth ? 'Date of birth *' : marriage ? 'Date of marriage or civil union *' : death ? 'Date of death *' : 'Date of birth, marriage or death *';
     var overseas = use.value === 'Overseas';
-    groups.country.hidden = !overseas;
-    groups.org.hidden = use.value === 'New Zealand' || use.value === '';
+    countryGroup.hidden = !overseas;
+    orgGroup.hidden = use.value === 'New Zealand' || use.value === '';
     country.required = overseas;
     country.disabled = !overseas;
   }
-  type.addEventListener('change', update);
   use.addEventListener('change', update);
   window.addEventListener('pageshow', update);
   update();
 
   document.querySelectorAll('.cert-pick a[data-cert]').forEach(function (a) {
-    a.addEventListener('click', function () { type.value = a.getAttribute('data-cert'); update(); });
+    a.addEventListener('click', function () { type.value = a.getAttribute('data-cert'); });
   });
 
   form.addEventListener('submit', function (e) {
@@ -881,14 +816,14 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!r.ok) throw new Error('Send failed');
         form.reset(); update();
         statusBox.className = 'form-status form-status-ok';
-        statusBox.textContent = 'Thanks - your order has been sent. We will email you your all-in price and a secure payment link shortly.';
-        btn.textContent = 'Order Sent';
+        statusBox.textContent = 'Thanks - we have your order. We will email your all-in price, a secure payment link and a link to add the certificate details.';
+        btn.textContent = 'Sent';
         if (typeof gtag === 'function') { gtag('event', 'generate_lead', { form: 'order_certificate' }); }
       })
       .catch(function () {
         statusBox.className = 'form-status form-status-error';
         statusBox.innerHTML = 'Sorry, something went wrong sending your order. Please email <a href="mailto:help@nzdocumentassist.co.nz">help@nzdocumentassist.co.nz</a> or call <a href="tel:+64221003242">022 100 3242</a>.';
-        btn.disabled = false; btn.textContent = 'Send My Order';
+        btn.disabled = false; btn.textContent = 'Get My Price';
       });
   });
 });
