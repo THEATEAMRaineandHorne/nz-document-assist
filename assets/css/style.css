@@ -551,3 +551,18 @@ footer {
   }
 
 }
+
+/* ===== Order a Certificate menu link ===== */
+header .links > a.nav-order{color:#9a7413!important;font-weight:800!important}
+header .links > a.nav-order:hover{color:#071f3f!important}
+@media (max-width:900px){
+  header .links > a.nav-order{background:#fff8e5;border-left:4px solid #d6ad42;border-radius:8px;padding-left:12px!important;margin:4px 0}
+}
+/* Medium laptop screens: keep the menu on one line */
+@media (min-width:901px) and (max-width:1300px){
+  html body header .wrap.nav a.nav-quote{display:none!important}
+}
+@media (min-width:901px) and (max-width:1140px){
+  html body header .wrap.nav a.nav-phone-btn{font-size:0!important;width:46px!important;min-width:46px!important;padding:0!important;gap:0!important}
+  html body header .wrap.nav a.nav-phone-btn svg{width:20px!important;height:20px!important}
+}
