@@ -1053,6 +1053,9 @@ Get a Quote
 <div class="form-group"><label for="parent1" data-self="Mother's / parent's full name at your birth" data-child="Mother's / parent's full name at the child's birth">Mother's / parent's full name at your birth</label><input id="parent1" name="parent_1_name_at_birth"/></div>
 <div class="form-group"><label for="parent2" data-self="Father's / other parent's full name at your birth" data-child="Father's / other parent's full name at the child's birth">Father's / other parent's full name at your birth</label><input id="parent2" name="parent_2_name_at_birth"/></div>
 </div>
+<div class="form-row auth-if-order">
+<div class="form-group"><label for="maiden" data-self="Mother's maiden name (her surname before marriage)" data-child="Child's mother's maiden name (her surname before marriage)">Mother's maiden name (her surname before marriage)</label><input id="maiden" name="mothers_maiden_name" placeholder="Leave blank if it's the same as above"/></div>
+</div>
 <div class="form-row auth-if-marriage">
 <div class="form-group"><label for="spouse">Spouse or partner's full name *</label><input id="spouse" name="spouse_full_name"/></div>
 <div class="form-group"><label for="event_date">Date and place of marriage / civil union / death *</label><input id="event_date" name="event_date_and_place" placeholder="e.g. 14 February 2015, Auckland"/></div>
@@ -1385,7 +1388,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* Paste your Formspree form ID here (the part after formspree.io/f/) */
   var FORMSPREE_ID = 'moevywdo';
   var ENDPOINT = 'https://formspree.io/f/' + FORMSPREE_ID;
-  var AUTHORITY_VERSION = 'Letter of Authority v3 (9 Oct 2026)';
+  var AUTHORITY_VERSION = 'Letter of Authority v4 (14 Oct 2026)';
 
   var form = document.getElementById('authority-form');
   if(!form) return;
@@ -1501,6 +1504,28 @@ document.addEventListener('DOMContentLoaded', function () {
     data.append('signed_from', navigator.userAgent);
     // drop fields hidden for this request type
     form.querySelectorAll('input, select, textarea').forEach(function(el){ if(el.name && !visible(el)) data.delete(el.name); });
+
+    // clearer field names in the email we receive
+    var KEYS = {
+      parent_1_name_at_birth: 'mother_or_parent1_full_name_at_birth',
+      parent_2_name_at_birth: 'father_or_parent2_full_name_at_birth'
+    };
+    var CHILD_KEYS = {
+      full_name: 'full_name_child',
+      name_at_birth: 'name_at_birth_child',
+      date_of_birth: 'date_of_birth_child',
+      place_of_birth: 'place_of_birth_child',
+      other_names_used: 'other_names_used_child',
+      parent_1_name_at_birth: 'mother_or_parent1_full_name_at_birth_child',
+      parent_2_name_at_birth: 'father_or_parent2_full_name_at_birth_child',
+      mothers_maiden_name: 'mothers_maiden_name_child',
+      email: 'email_parent_guardian',
+      phone: 'phone_parent_guardian',
+      current_address: 'current_address_parent_guardian'
+    };
+    var renamed = new FormData();
+    data.forEach(function(v, k){ renamed.append((isChild() && CHILD_KEYS[k]) || KEYS[k] || k, v); });
+    data = renamed;
 
     var btn = document.getElementById('auth-submit');
     btn.disabled = true; btn.textContent = 'Submitting…';
