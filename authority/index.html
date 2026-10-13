@@ -909,6 +909,8 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 .auth-submit[disabled]{ opacity:.6; cursor:wait; }
 .auth-hp{ position:absolute; left:-9999px; }
 .auth-wrap [hidden]{ display:none !important; }
+.auth-paid{background:#e8f5ec;border:1px solid #b9dfc5;border-left:5px solid #2f8a4c;border-radius:12px;padding:16px 18px;margin:0 0 22px;color:#1d4a2c;font-size:16px;line-height:1.5}
+.auth-paid strong{color:#16502b}
 .auth-invalid{ border-color:#a3261e !important; }
 .auth-done h2{ margin-bottom:8px; }
 .auth-summary{ border:1px solid #e3e6ea; border-radius:12px; padding:6px 18px; margin:0 0 18px; background:#fff; }
@@ -985,6 +987,8 @@ Get a Quote
 <form id="authority-form" novalidate>
 <input type="text" name="_gotcha" class="auth-hp" tabindex="-1" autocomplete="off" aria-hidden="true"/>
 <input type="hidden" name="reference" id="ref-field"/>
+<input type="hidden" name="payment_status" id="payment-field"/>
+<div class="auth-paid" id="auth-paid" hidden><strong>Payment received, thank you.</strong> One last step: add the certificate details and sign below. It takes about 2 minutes, and we order your certificate as soon as it's in.</div>
 
 <fieldset class="auth-step">
 <legend><span class="auth-num">1</span> What would you like us to do?</legend>
@@ -1113,7 +1117,7 @@ Get a Quote
 <p>This authority ends once my request has been completed, or earlier if I withdraw it in writing.</p>
 </div>
 <label class="auth-check"><input type="checkbox" name="authority_given" value="Yes" required/> <span id="confirm-text" data-self="I confirm I am the person named in section 2, the details I have given are true and correct, and I give the authority above." data-child="I confirm I am the parent or legal guardian of the child named in section 2, I have the right to act for them in this request, the details I have given are true and correct, and I give the authority above on the child's behalf.">I confirm I am the person named in section 2, the details I have given are true and correct, and I give the authority above.</span></label>
-<label class="auth-check"><input type="checkbox" name="fees_agreed" value="Yes" required/> <span>I agree to pay the fees set out in the written estimate NZ Document Assist has given me, and I agree to the <a href="/terms/" target="_blank" rel="noopener">Terms of Service</a>.</span></label>
+<label class="auth-check"><input type="checkbox" name="fees_agreed" value="Yes" required/> <span id="fees-text">I agree to pay the fees set out in the written estimate NZ Document Assist has given me, and I agree to the <a href="/terms/" target="_blank" rel="noopener">Terms of Service</a>.</span></label>
 <label class="auth-check"><input type="checkbox" name="privacy_agreed" value="Yes" required/> <span>I have read the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>. I understand my details are used only for this request, are held securely (including with an overseas form-processing provider) and are deleted when no longer needed.</span></label>
 </fieldset>
 
@@ -1399,6 +1403,14 @@ document.addEventListener('DOMContentLoaded', function () {
   if(params.get('ref')) document.getElementById('ref-field').value = params.get('ref');
   if(params.get('name')) document.getElementById('full_name').value = params.get('name');
   if(params.get('country')) document.getElementById('country').value = params.get('country');
+  var CERTS = {birth:'Birth certificate', marriage:'Marriage certificate', civil:'Civil union certificate', death:'Death certificate'};
+  if(params.get('cert') && CERTS[params.get('cert')]) document.getElementById('cert_type').value = CERTS[params.get('cert')];
+  var PAID = params.get('paid') === '1';
+  if(PAID){
+    document.getElementById('auth-paid').hidden = false;
+    document.getElementById('payment-field').value = 'Paid online by card (Stripe)';
+    document.getElementById('fees-text').innerHTML = 'I confirm I have paid for this order online, and I agree to the <a href="/terms/" target="_blank" rel="noopener">Terms of Service</a>.';
+  }
 
   function currentType(){ var r = form.querySelector('input[name="request_type"]:checked'); return r ? r.dataset.type : ''; }
   function toggle(){
@@ -1501,7 +1513,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var data = new FormData(form);
     var name = document.getElementById('full_name').value.trim();
     var signer = isChild() ? document.getElementById('guardian_name').value.trim() : name;
-    data.append('_subject', 'Letter of Authority signed – ' + name + (isChild() ? ' (signed by parent/guardian ' + signer + ')' : ''));
+    data.append('_subject', (PAID ? 'PAID – ' : '') + 'Letter of Authority signed – ' + name + (isChild() ? ' (signed by parent/guardian ' + signer + ')' : ''));
     data.append('_replyto', document.getElementById('email').value.trim());
     data.append('authority_version', AUTHORITY_VERSION);
     data.append('signed_at', today.toISOString());

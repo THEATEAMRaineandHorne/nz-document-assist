@@ -358,7 +358,7 @@
           "name": "How do I order a New Zealand birth certificate?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Fill in the order form on this page. We confirm one all-in price, you sign our short online letter of authority and pay, and we order the official certificate for you as an approved BDM Online organisation. It's posted to you from NZ$79 all in, or sent overseas."
+            "text": "For delivery in New Zealand, choose the certificate on this page and pay securely online, NZ$79 all in. You're then taken straight to a short online form to add the certificate details and sign our letter of authority, and we order the official certificate for you as an approved BDM Online organisation. Sending it overseas? Ask for a price first."
           }
         },
         {
@@ -422,7 +422,7 @@
           "name": "What details do I need to order?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "To get your price, just the certificate type, how many copies and where it's going. After you approve, our online letter of authority asks once for the full name, the date and place of the birth, marriage or death, and for a birth certificate the parents' names. If you're unsure of a detail, give your best information and we'll check it with you."
+            "text": "After paying, our online form asks for the full name on the certificate, the date and place of the birth, marriage or death, and for a birth certificate the parents' names, plus where to send it. It takes about 2 minutes. If you're unsure of a detail, give your best information and we'll check it with you."
           }
         }
       ]
@@ -493,6 +493,17 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 .cert-pick b{display:block;color:#9a7413;font-size:22px;margin-top:10px}
 .order-box{border:2px solid #d6ad42;border-radius:20px;padding:30px;margin:34px 0;background:#fff;box-shadow:0 14px 40px rgba(7,31,63,.08);scroll-margin-top:110px}
 .order-box h2{margin-top:0!important}
+.pay-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0 14px}
+.pay-card{display:flex;flex-direction:column;border:2px solid #e1e7ed;border-radius:16px;padding:20px;background:#fff;box-shadow:0 8px 24px rgba(7,31,63,.05)}
+.pay-card h3{margin:0 0 6px!important;font-size:20px!important;color:#071f3f}
+.pay-card p{margin:0 0 12px;color:#5a6a7d;font-size:14px;line-height:1.45;flex:1}
+.pay-card .price{display:block;color:#9a7413;font-size:26px;font-weight:900;margin-bottom:12px}
+.pay-card .price small{display:block;font-size:13px;color:#5a697a;font-weight:700;margin-top:2px}
+.pay-card .btn{display:flex;align-items:center;justify-content:center;min-height:52px;text-align:center;text-decoration:none!important;color:#071f3f}
+.pay-meta{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:#334a62;margin:4px 0 0}
+.pay-meta span:before{content:"✓ ";color:#9a7413;font-weight:900}
+.quote-box{border:1px solid #dfe5eb;border-radius:20px;padding:30px;margin:30px 0;background:#f8fafc;scroll-margin-top:110px}
+.quote-box h2{margin-top:0!important;font-size:28px!important}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .form-group[hidden]{display:none!important}
 .form-group{margin-bottom:20px}
@@ -511,7 +522,7 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 .form-status:empty{display:none}
 .form-status-ok{padding:12px 14px;border-radius:10px;background:#e8f5ec;color:#1d5a32;font-weight:700}
 .form-status-error{padding:12px 14px;border-radius:10px;background:#fdecec;color:#8a1f1f}
-@media(max-width:900px){.cert-pick{grid-template-columns:1fr}.order-box{padding:22px}}
+@media(max-width:900px){.cert-pick,.pay-grid{grid-template-columns:1fr}.order-box,.quote-box{padding:22px}}
 @media(max-width:640px){.form-row{grid-template-columns:1fr;gap:0}}
 </style>
 </head>
@@ -561,27 +572,30 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 <p class="hero-lead">Tell us whose certificate you need and where it's going. We order the official certificate for you and post it to you in New Zealand or courier it overseas. No logins, no office visits, and you don't need to be in New Zealand.</p>
 <p class="indep-note">NZ Document Assist Limited is an independent company and an approved BDM Online organisation. We are not Births, Deaths and Marriages.</p>
 <p class="page-date-meta">Published: <time datetime="2026-10-14">14 October 2026</time></p>
-<div class="hero-actions"><a class="btn" href="#order">Order a Certificate</a><a class="btn btn-outline" href="tel:+64221003242">Call 022 100 3242</a></div>
+<div class="hero-actions"><a class="btn" href="#order">Order &amp; Pay Online</a><a class="btn btn-outline" href="tel:+64221003242">Call 022 100 3242</a></div>
 </div>
-<div class="hero-help"><span class="eyebrow">Approved BDM Online organisation</span><h2>From NZ$79 all in</h2><p>Birth, marriage or death certificate, ordered for you and posted to a New Zealand address. Certificate fee, our service, postage and GST all included. Going overseas? We quote one all-in price before you pay.</p><a class="btn" href="#order">Start My Order</a></div>
+<div class="hero-help"><span class="eyebrow">Approved BDM Online organisation</span><h2>From NZ$79 all in</h2><p>Birth, marriage or death certificate, ordered for you and posted to a New Zealand address. Certificate fee, our service, postage and GST all included. Pay online in a minute, then add the details. Going overseas? We quote one all-in price first.</p><a class="btn" href="#order">Order &amp; Pay NZ$79</a></div>
 </div>
 </div>
 </section>
 <section class="article-section">
 <div class="wrap article-layout">
-<article class="article"><div class="nda-answer"><span class="nda-label">How we help</span><p>We order <strong>official New Zealand birth, marriage and death certificates</strong> for you as an approved BDM Online organisation. Fill in the short form below, we confirm <strong>one all-in price</strong>, and the certificate is <strong>posted to you in New Zealand from NZ$79</strong> or couriered anywhere in the world. If it's going overseas, we can also get it <strong>apostilled or authenticated</strong> so it's accepted first time.</p><div class="nda-facts"><div><span>Posted in NZ</span><b>From NZ$79</b></div><div><span>Delivery in NZ</span><b>About 7–10 days</b></div><div><span>With apostille</span><b>About 3 weeks</b></div><div><span>To the UK, apostilled</span><b>From NZ$244</b></div></div></div><div class="nda-cred"><b>Handled by our document specialist</b><span>15 years&#8217; consular experience</span><span>Approved BDM Online organisation</span><span>NZ Document Assist Limited</span></div>
-
-<h2>Which certificate do you need?</h2>
-<div class="cert-pick">
-<a href="#order" data-cert="Birth certificate"><strong>Birth certificate</strong><span>For a passport, visa, citizenship, school, a bank or family records.</span><b>From NZ$79</b></a>
-<a href="#order" data-cert="Marriage certificate"><strong>Marriage certificate</strong><span>For a name change, visa, residency, a bank or a divorce overseas.</span><b>From NZ$79</b></a>
-<a href="#order" data-cert="Death certificate"><strong>Death certificate</strong><span>For an estate, insurer, KiwiSaver, a bank or a pension overseas.</span><b>From NZ$79</b></a>
-</div>
-<p>Need a birth certificate that shows a name change, or more than one certificate? Choose it in the form and we'll quote it all in. See <a href="/name-change-birth-certificate-nz/">name change birth certificates</a>.</p>
+<article class="article"><div class="nda-answer"><span class="nda-label">How we help</span><p>We order <strong>official New Zealand birth, marriage and death certificates</strong> for you as an approved BDM Online organisation. For delivery in New Zealand, <strong>pay online, NZ$79 all in</strong>, then add the details in a 2-minute form. Going overseas? We confirm <strong>one all-in price</strong> first and courier it anywhere in the world. If it's going overseas, we can also get it <strong>apostilled or authenticated</strong> so it's accepted first time.</p><div class="nda-facts"><div><span>Posted in NZ</span><b>From NZ$79</b></div><div><span>Delivery in NZ</span><b>About 7–10 days</b></div><div><span>With apostille</span><b>About 3 weeks</b></div><div><span>To the UK, apostilled</span><b>From NZ$244</b></div></div></div><div class="nda-cred"><b>Handled by our document specialist</b><span>15 years&#8217; consular experience</span><span>Approved BDM Online organisation</span><span>NZ Document Assist Limited</span></div>
 
 <div class="order-box" id="order">
-<h2>Start your order</h2>
-<p>It takes under a minute. Tell us which certificate and where it's going, and we'll email your <strong>all-in price</strong>, a secure payment link and a link to our online letter of authority, where you add the certificate details once. Nothing is ordered until you've approved and paid.</p>
+<h2>Order and pay online</h2>
+<p>For a certificate posted to a <strong>New Zealand address</strong>. Choose your certificate, pay securely, and you'll go straight to a short form to add the certificate details and sign. We order it as soon as that's in.</p>
+<div class="pay-grid">
+<div class="pay-card"><h3>Birth certificate</h3><p>For a passport, school, a bank, KiwiSaver or your own records.</p><span class="price">NZ$79 <small>all in, posted in NZ</small></span><a class="btn stripe-pay" data-cert="Birth certificate" href="https://buy.stripe.com/3cIeVfexFaY6eDf1zUes001" rel="noopener">Pay NZ$79</a></div>
+<div class="pay-card"><h3>Marriage certificate</h3><p>For a name change, a bank, insurance or a lawyer.</p><span class="price">NZ$79 <small>all in, posted in NZ</small></span><a class="btn stripe-pay" data-cert="Marriage certificate" href="https://buy.stripe.com/aFabJ34X5giqamZceyes002" rel="noopener">Pay NZ$79</a></div>
+<div class="pay-card"><h3>Death certificate</h3><p>For an estate, insurer, KiwiSaver, a bank or a lawyer.</p><span class="price">NZ$79 <small>all in, posted in NZ</small></span><a class="btn stripe-pay" data-cert="Death certificate" href="https://buy.stripe.com/4gMcN7gFN8PYeDf1zUes003" rel="noopener">Pay NZ$79</a></div>
+</div>
+<div class="pay-meta"><span>Secure card payment by Stripe</span><span>More than one copy? Change the quantity at checkout</span><span>Certificate fee, postage and GST included</span></div>
+</div>
+
+<div class="quote-box" id="quote">
+<h2>Sending it overseas? Get your all-in price</h2>
+<p>Need an apostille or authentication, overseas delivery, a name change birth certificate, a civil union certificate or the urgent service? Tell us what you need and we'll email <strong>one all-in price</strong> and a payment link, usually the same day.</p>
 <form action="https://formspree.io/f/moevywdo" id="order-form" method="POST">
 <input name="_subject" type="hidden" value="Certificate order - NZ Document Assist"/>
 <input name="form_source" type="hidden" value="Order a Certificate page"/>
@@ -655,7 +669,7 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 </div>
 
 <h2>What happens after you order</h2>
-<ol class="nda-flow" aria-label="What happens after you order"><li>Tell us what you need<small>The short form above.</small></li><li>Your price and payment link<small>One all-in total by email.</small></li><li>Add the details and sign<small>Once, in our <a href="/authority/">online letter of authority</a>.</small></li><li>We order the certificate<small>Directly, as an approved BDM Online organisation.</small></li><li class="opt">Apostille, if it's going overseas<small>Checked first, so it isn't sent back.</small></li><li>Delivered to you<small>Posted in NZ or couriered overseas.</small></li></ol>
+<ol class="nda-flow" aria-label="What happens after you order"><li>Pay securely online<small>NZ$79 all in, or your quoted price if overseas.</small></li><li>Add the details and sign<small>Our 2-minute <a href="/authority/">online letter of authority</a>.</small></li><li>We order the certificate<small>Directly, as an approved BDM Online organisation.</small></li><li class="opt">Apostille, if it's going overseas<small>Checked first, so it isn't sent back.</small></li><li>Delivered to you<small>Posted in NZ or couriered overseas.</small></li></ol>
 
 <h2>What it costs</h2>
 <table class="nda-table"><thead><tr><th>Your order</th><th>All in from</th></tr></thead><tbody>
@@ -674,7 +688,7 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 <li>A certificate sent overseas without the apostille or authentication it needed</li>
 <li>A visa office wanting a certificate issued in the last 6 or 12 months</li>
 </ul>
-<div class="note-box"><strong>Not sure what you've been asked for?</strong> Paste the instructions into the order form. We read them before anything is ordered and tell you exactly what fits.</div>
+<div class="note-box"><strong>Not sure what you've been asked for?</strong> Paste the instructions into the price request form. We read them before anything is ordered and tell you exactly what fits.</div>
 
 <div class="related-guides-clean"><h3>Going overseas? Related guides</h3><div class="related-guides-grid">
 <a href="/apostille-birth-certificate-nz/"><strong>Birth certificate apostille</strong><span>Ordered, apostilled and sent anywhere.</span></a>
@@ -684,7 +698,7 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 </div></div>
 
 <h2>Frequently asked questions</h2>
-<div class="nda-faq"><h3>How do I order a New Zealand birth certificate?</h3><p>Fill in the order form on this page. We confirm one all-in price, you sign our short online letter of authority and pay, and we order the official certificate for you as an approved BDM Online organisation. It's posted to you from NZ$79 all in, or sent overseas.</p></div>
+<div class="nda-faq"><h3>How do I order a New Zealand birth certificate?</h3><p>For delivery in New Zealand, choose the certificate on this page and pay securely online, NZ$79 all in. You're then taken straight to a short online form to add the certificate details and sign our letter of authority, and we order the official certificate for you as an approved BDM Online organisation. Sending it overseas? Ask for a price first.</p></div>
 <div class="nda-faq"><h3>How much does a NZ certificate cost through you?</h3><p>A birth, marriage or death certificate ordered and posted to a New Zealand address is from NZ$79 all in, including the certificate fee, our service, NZ postage and GST. Overseas delivery, apostilles, urgent service and multiple copies are quoted all in before you pay.</p></div>
 <div class="nda-faq"><h3>Are you part of the New Zealand Government?</h3><p>No. NZ Document Assist Limited is an independent company and an approved BDM Online organisation. The certificate itself is the official certificate issued by Births, Deaths and Marriages.</p></div>
 <div class="nda-faq"><h3>Is the certificate official?</h3><p>Yes. We order the official certificate from Births, Deaths and Marriages. It is the same legal document, not a copy or a printout.</p></div>
@@ -692,7 +706,7 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 <div class="nda-faq"><h3>Does it need an apostille?</h3><p>If the certificate is going to an overseas government, court, bank or embassy, it usually does, or it needs authentication instead. Tell us the country and who asked for it and we'll confirm before you pay. For use in New Zealand, the certificate on its own is normally enough.</p></div>
 <div class="nda-faq"><h3>How long does it take?</h3><p>Certificates posted within New Zealand usually arrive in about a week to ten days. If an apostille is needed, allow about 3 weeks in total, or about 1 week with the urgent service where eligible. Tell us your deadline and we'll tell you straight away whether it's achievable.</p></div>
 <div class="nda-faq"><h3>Can I order a certificate for someone else?</h3><p>Often, yes, for example for a child, a parent or an estate. Tell us your relationship to the person on the certificate. If anything extra is needed, we'll tell you before you pay.</p></div>
-<div class="nda-faq"><h3>What details do I need to order?</h3><p>To get your price, just the certificate type, how many copies and where it's going. After you approve, our online letter of authority asks once for the full name, the date and place of the birth, marriage or death, and for a birth certificate the parents' names. If you're unsure of a detail, give your best information and we'll check it with you.</p></div>
+<div class="nda-faq"><h3>What details do I need to order?</h3><p>After paying, our online form asks for the full name on the certificate, the date and place of the birth, marriage or death, and for a birth certificate the parents' names, plus where to send it. It takes about 2 minutes. If you're unsure of a detail, give your best information and we'll check it with you.</p></div>
 
 <div class="nda-sources"><h2>Sources</h2><p>Checked against official New Zealand Government information on 14 October 2026.</p><ul>
 <li><a href="https://www.govt.nz/assets/Documents/Family-and-whanau/Request-for-NZ-death-certificate-or-printout-form-BDM93D.pdf" rel="noopener" target="_blank">Request for NZ death certificate or printout (BDM93D)</a>, govt.nz</li>
@@ -700,14 +714,14 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 <li><a href="https://www.govt.nz/browse/passports-citizenship-and-identity/proving-and-protecting-your-identity/service-timeframes/" rel="noopener" target="_blank">Service timeframes</a>, govt.nz</li>
 </ul></div>
 <p class="nda-disclaimer">NZ Document Assist Limited is an independent company and an approved BDM Online organisation. We are not Births, Deaths and Marriages, the Department of Internal Affairs or any government agency, and our price includes our service fee on top of the government certificate fee. We are not a law firm or licensed immigration adviser and do not give legal or immigration advice.</p></article>
-<aside class="sidebar"><div class="side-card"><h3>Order a certificate</h3><p style="font-size:30px;font-weight:900;color:#9a7413;margin:0;">From NZ$79</p><p style="font-size:14px;color:#5a697a;">Birth, marriage or death certificate, ordered for you and posted in New Zealand, all in.</p><a class="btn" href="#order">Start My Order</a><p style="margin:14px 0 0;font-size:14px;color:#5a697a;">Or call <a href="tel:+64221003242" style="color:#9a7413;font-weight:800;">022 100 3242</a></p></div><div class="side-card"><h3>Sending it overseas?</h3><p style="font-size:30px;font-weight:900;color:#9a7413;margin:0;">From NZ$244</p><p style="font-size:14px;color:#5a697a;">Birth certificate ordered, apostilled and couriered to the UK, all in.</p><a href="/pricing/">See pricing</a></div><div class="side-card"><h3>Related guides</h3><a href="/apostille-birth-certificate-nz/">Birth certificate apostille</a><a href="/apostille-marriage-certificate-nz/">Marriage certificate apostille</a><a href="/death-certificate-nz/">Death certificate NZ</a><a href="/name-change-birth-certificate-nz/">Name change birth certificate</a><a href="/certificate-no-impediment-nz/">Certificate of No Impediment</a></div><div class="side-card"><h3>Our services</h3><a href="/apostille-nz/">Apostille NZ</a><a href="/document-authentication-nz/">Document Authentication</a><a href="/notary-public-auckland-help/">Notary + Apostille</a><a href="/translation-coordination-nz/">Translation</a><a href="/courier-document-return/">Courier &amp; Document Return</a></div></aside>
+<aside class="sidebar"><div class="side-card"><h3>Order a certificate</h3><p style="font-size:30px;font-weight:900;color:#9a7413;margin:0;">From NZ$79</p><p style="font-size:14px;color:#5a697a;">Birth, marriage or death certificate, ordered for you and posted in New Zealand, all in.</p><a class="btn" href="#order">Order &amp; Pay Online</a><p style="margin:14px 0 0;font-size:14px;color:#5a697a;">Or call <a href="tel:+64221003242" style="color:#9a7413;font-weight:800;">022 100 3242</a></p></div><div class="side-card"><h3>Sending it overseas?</h3><p style="font-size:30px;font-weight:900;color:#9a7413;margin:0;">From NZ$244</p><p style="font-size:14px;color:#5a697a;">Birth certificate ordered, apostilled and couriered to the UK, all in.</p><a href="#quote">Get my price</a></div><div class="side-card"><h3>Related guides</h3><a href="/apostille-birth-certificate-nz/">Birth certificate apostille</a><a href="/apostille-marriage-certificate-nz/">Marriage certificate apostille</a><a href="/death-certificate-nz/">Death certificate NZ</a><a href="/name-change-birth-certificate-nz/">Name change birth certificate</a><a href="/certificate-no-impediment-nz/">Certificate of No Impediment</a></div><div class="side-card"><h3>Our services</h3><a href="/apostille-nz/">Apostille NZ</a><a href="/document-authentication-nz/">Document Authentication</a><a href="/notary-public-auckland-help/">Notary + Apostille</a><a href="/translation-coordination-nz/">Translation</a><a href="/courier-document-return/">Courier &amp; Document Return</a></div></aside>
 </div>
 </section>
 <section class="cta-section">
 <div class="wrap">
 <h2>Need a New Zealand certificate?</h2>
-<p>Tell us whose certificate and where it's going. We confirm one all-in price, order it and deliver it.</p>
-<a class="btn" href="#order">Order a Certificate</a>
+<p>Posted in New Zealand? Pay online now, NZ$79 all in. Going overseas? We confirm one all-in price first.</p>
+<a class="btn" href="#order">Order &amp; Pay Online</a>
 <p style="margin-top:16px;"><a href="tel:+64221003242" style="color:#f0ce61;font-weight:800;">Or call 022 100 3242</a></p>
 </div>
 </section>
@@ -800,8 +814,17 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('pageshow', update);
   update();
 
-  document.querySelectorAll('.cert-pick a[data-cert]').forEach(function (a) {
-    a.addEventListener('click', function () { type.value = a.getAttribute('data-cert'); });
+  document.querySelectorAll('a.stripe-pay').forEach(function (a) {
+    a.addEventListener('click', function (ev) {
+      if (typeof gtag === 'function') { gtag('event', 'begin_checkout', { item_name: a.getAttribute('data-cert'), value: 79, currency: 'NZD' }); }
+      if (a.href.indexOf('REPLACE') !== -1) {
+        /* payment link not set yet: send them to the price request form instead */
+        ev.preventDefault();
+        type.value = a.getAttribute('data-cert');
+        use.value = 'New Zealand'; update();
+        document.getElementById('quote').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   });
 
   form.addEventListener('submit', function (e) {
