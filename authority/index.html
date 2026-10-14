@@ -998,6 +998,7 @@ Get a Quote
 <label class="auth-radio"><input type="radio" name="request_type" value="Order a NZ certificate and post it to me (no apostille)" data-type="certonly"/> <span><strong>Order a New Zealand certificate and post it to me</strong><small>We order the birth, marriage or death certificate from Births, Deaths and Marriages and post or courier it to you. No apostille or authentication.</small></span></label>
 <label class="auth-radio"><input type="radio" name="request_type" value="Apostille or authenticate a document I already have" data-type="apostille"/> <span><strong>Apostille or authenticate a document I already have</strong><small>For example, your Ministry of Justice criminal record, a degree or a notarised document.</small></span></label>
 <label class="auth-radio"><input type="radio" name="request_type" value="Request my criminal record from the Ministry of Justice and apostille it" data-type="moj"/> <span><strong>Request my criminal record from the Ministry of Justice and apostille it</strong><small>We request your criminal record from the Ministry of Justice on your behalf, then have it apostilled for use overseas.</small></span></label>
+<label class="auth-radio"><input type="radio" name="request_type" value="Request my NZ criminal record only (no apostille)" data-type="mojonly"/> <span><strong>Request my New Zealand criminal record (no apostille)</strong><small>We request your criminal record from the Ministry of Justice as a registered third party and email you the result.</small></span></label>
 <label class="auth-radio"><input type="radio" name="request_type" value="Notarise and apostille a copy of my passport" data-type="passport"/> <span><strong>Notarise and apostille a copy of my passport</strong><small>You send us your original passport. We take it to a New Zealand notary public for a certified colour copy, courier your passport back to you, and have the copy apostilled.</small></span></label>
 <label class="auth-radio"><input type="radio" name="request_type" value="Book a notary public or JP appointment" data-type="notary"/> <span><strong>Book a notary public or JP appointment</strong><small>For example, a parent's travel consent letter, a statutory declaration or a signature to be witnessed. We book and coordinate the appointment for you.</small></span></label>
 </div>
@@ -1008,6 +1009,11 @@ Get a Quote
 </div>
 <div class="form-group auth-if-apostille"><label for="doc_desc">Which document(s) do you want apostilled or authenticated? *</label><textarea id="doc_desc" name="documents_to_apostille" rows="2" placeholder="e.g. Ministry of Justice criminal record issued 20 September 2026"></textarea></div>
 <div class="auth-if-moj">
+<div class="form-row">
+<div class="form-group"><label for="record_version">Which record do you need? *</label>
+<select id="record_version" name="record_version"><option value="">Choose…</option><option>Standard record (Clean Slate applies)</option><option>Full record, including concealed convictions (only where the law allows)</option><option>Not sure, please advise</option></select></div>
+<div class="form-group"><label for="pob_moj">Place of birth (town or city, and country) *</label><input id="pob_moj" name="place_of_birth_record" placeholder="e.g. Auckland, New Zealand"/></div>
+</div>
 <div class="form-group"><label for="other_names">Any other names you have used</label><input id="other_names" name="other_names_used" placeholder="e.g. maiden name, previous married name"/></div>
 <p class="auth-note">The Ministry of Justice needs to confirm your identity. After you submit, we'll ask you for a photo of your passport or driver licence, and may send you the Ministry's own consent form to sign.</p>
 </div>
@@ -1395,7 +1401,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* Paste your Formspree form ID here (the part after formspree.io/f/) */
   var FORMSPREE_ID = 'moevywdo';
   var ENDPOINT = 'https://formspree.io/f/' + FORMSPREE_ID;
-  var AUTHORITY_VERSION = 'Letter of Authority v5 (14 Oct 2026)';
+  var AUTHORITY_VERSION = 'Letter of Authority v6 (14 Oct 2026)';
 
   var form = document.getElementById('authority-form');
   if(!form) return;
@@ -1418,22 +1424,26 @@ document.addEventListener('DOMContentLoaded', function () {
   function toggle(){
     var t = currentType(), cert = document.getElementById('cert_type').value;
     var certOnly = t === 'certonly';
+    var recordOnly = t === 'mojonly';
+    var isMoj = t === 'moj' || recordOnly;
     var isOrder = t === 'order' || certOnly;
     var needsEvent = isOrder && cert && cert !== 'Birth certificate';
     form.querySelectorAll('.auth-if-order').forEach(function(el){ el.hidden = !isOrder; });
     form.querySelectorAll('.auth-if-apostille').forEach(function(el){ el.hidden = t !== 'apostille'; });
     form.querySelectorAll('.auth-if-marriage').forEach(function(el){ el.hidden = !needsEvent; });
     var fmt = document.getElementById('apostille_format').value;
-    var usesDia = t !== '' && t !== 'notary' && !certOnly;
-    var needsDelivery = t !== 'notary' && !(fmt === 'E-apostille' && (t === 'apostille' || t === 'moj'));
-    form.querySelectorAll('.auth-if-moj').forEach(function(el){ el.hidden = t !== 'moj'; });
+    var usesDia = t !== '' && t !== 'notary' && !certOnly && !recordOnly;
+    var needsDelivery = t !== 'notary' && !recordOnly && !(fmt === 'E-apostille' && (t === 'apostille' || t === 'moj'));
+    form.querySelectorAll('.auth-if-moj').forEach(function(el){ el.hidden = !isMoj; });
+    document.getElementById('record_version').required = isMoj;
+    document.getElementById('pob_moj').required = isMoj;
     form.querySelectorAll('.auth-if-passport').forEach(function(el){ el.hidden = t !== 'passport'; });
     form.querySelectorAll('.auth-if-notary').forEach(function(el){ el.hidden = t !== 'notary'; });
     form.querySelectorAll('.auth-if-dia').forEach(function(el){ el.hidden = !usesDia; });
     form.querySelectorAll('.auth-if-delivery').forEach(function(el){ el.hidden = !needsDelivery; });
     document.getElementById('delivery-title').textContent = t === 'passport' ? 'Where should we return your passport?' : certOnly ? 'Where should we send the certificate?' : 'Where should we send the finished document?';
-    document.getElementById('country-group').hidden = certOnly;
-    document.getElementById('country').required = !certOnly;
+    document.getElementById('country-group').hidden = certOnly || recordOnly;
+    document.getElementById('country').required = !(certOnly || recordOnly);
     document.getElementById('urgent').required = usesDia;
     document.getElementById('apostille_format').required = usesDia;
     document.getElementById('passport_ok').required = t === 'passport';
