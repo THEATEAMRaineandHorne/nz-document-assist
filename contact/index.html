@@ -1559,7 +1559,10 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .then(function (response) {
         if (response.ok) {
-          quoteForm.reset();
+        if (typeof window.fbq === 'function') {
+        window.fbq('track', 'Lead');
+       }
+  quoteForm.reset();
           updateDestination();
           statusBox.className = 'form-status form-status-ok';
           statusBox.textContent =
