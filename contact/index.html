@@ -459,6 +459,27 @@ header .nav-quote {
   line-height:1.45;
 }
 
+.form-more {
+  margin:0 0 22px;
+  border:1px solid #cbd4de;
+  border-radius:10px;
+  background:#fbfcfd;
+}
+.form-more summary {
+  cursor:pointer;
+  padding:13px 14px;
+  color:#0c2442;
+  font-weight:800;
+  font-size:15px;
+}
+.form-more summary:focus-visible {
+  outline:3px solid rgba(214,173,66,.35);
+  border-radius:10px;
+}
+.form-more-body {
+  padding:4px 14px 0;
+}
+
 .form-warning {
   margin:6px 0 24px;
   padding:18px 20px;
@@ -1119,58 +1140,26 @@ We arrange certificate ordering, apostilles, authentication, notary appointments
 Request a Document Quote
 </h2>
 <p class="form-intro">
-Complete the required fields marked *. Add any instructions or deadline to help us prepare your quote.
+Just four quick details are required (marked *). Not sure what you need? That is fine, we will work it out with you.
 </p>
 <form action="https://formspree.io/f/moevywdo" id="quote-form" method="POST">
 <input name="_subject" type="hidden" value="New quote request - NZ Document Assist"/>
 <input autocomplete="off" name="_gotcha" style="display:none" tabindex="-1" type="text"/>
 <div class="form-row">
 <div class="form-group">
-<label for="name">
-Your name *
-</label>
+<label for="name">Your name *</label>
 <input autocomplete="name" id="name" name="name" required="" type="text"/>
 </div>
 <div class="form-group">
-<label for="email">
-Your email *
-</label>
+<label for="email">Your email *</label>
 <input autocomplete="email" id="email" name="email" required="" type="email"/>
 </div>
 </div>
-<div class="form-row">
 <div class="form-group">
-<label for="phone">
-Phone number
-<span class="optional">(optional)</span>
-</label>
-<input autocomplete="tel" id="phone" name="phone" type="tel"/>
-</div>
-<div class="form-group">
-<label for="location">
-Where are you based?
-<span class="optional">(optional)</span>
-</label>
-<input id="location" name="location" placeholder="e.g. Auckland, Wellington, overseas" type="text"/>
-</div>
-</div>
-<div class="form-group">
-<label for="document">
-Which document do you need help with? *
-</label>
+<label for="document">Which document do you need help with? *</label>
 <input id="document" name="document" placeholder="e.g. Birth certificate, degree, power of attorney" required="" type="text"/>
 </div>
 <div class="form-row">
-<div class="form-group">
-<label for="document-status">Do you already have the document? *</label>
-<select id="document-status" name="document_status" required>
-<option value="">Please select</option>
-<option value="Yes">Yes</option>
-<option value="No, I need it ordered">No, I need it ordered</option>
-<option value="Some documents only">I have some of the documents</option>
-<option value="Not sure">Not sure</option>
-</select>
-</div>
 <div class="form-group">
 <label for="document-use">Where will it be used? *</label>
 <select id="document-use" name="document_use" required>
@@ -1180,48 +1169,60 @@ Which document do you need help with? *
 <option value="Not sure">Not sure</option>
 </select>
 </div>
-</div>
-<div class="form-row">
 <div class="form-group" id="country-group">
 <label for="country">Destination country <span class="optional">(if known)</span></label>
 <input id="country" name="country" placeholder="e.g. Portugal, or several countries" type="text"/>
+</div>
+</div>
+<div class="form-group">
+<label for="requirements">What have you been asked for? <span class="optional">(optional)</span></label>
+<textarea id="requirements" name="requirements" placeholder="Paste the instructions, or just describe it in your own words. Not sure? Leave it blank."></textarea>
+</div>
+<details class="form-more">
+<summary>Add more details <span class="optional">(optional)</span></summary>
+<div class="form-more-body">
+<div class="form-row">
+<div class="form-group">
+<label for="document-status">Do you already have the document? <span class="optional">(optional)</span></label>
+<select id="document-status" name="document_status">
+<option value="">Please select</option>
+<option value="Yes">Yes</option>
+<option value="No, I need it ordered">No, I need it ordered</option>
+<option value="Some documents only">I have some of the documents</option>
+<option value="Not sure">Not sure</option>
+</select>
 </div>
 <div class="form-group">
 <label for="number">Number of documents <span class="optional">(optional)</span></label>
 <input id="number" min="1" name="number" placeholder="e.g. 2" type="number"/>
 </div>
 </div>
+<div class="form-row">
 <div class="form-group">
-<label for="organisation">
-Who has asked for the document?
-<span class="optional">(optional)</span>
-</label>
-<input id="organisation" name="organisation" placeholder="e.g. bank, lawyer, employer or embassy" type="text"/>
+<label for="phone">Phone or WhatsApp <span class="optional">(optional)</span></label>
+<input autocomplete="tel" id="phone" name="phone" placeholder="Include country code, e.g. +44" type="tel"/>
 </div>
 <div class="form-group">
-<label for="requirements">
-What have you been told is required? <span class="optional">(optional)</span>
-</label>
-<textarea id="requirements" name="requirements" placeholder="Paste the instructions, or describe what you have been asked to provide."></textarea>
-<span class="form-help">
-For example: apostille, authentication, notarisation, translation,
-certified copy or another requirement.
-</span>
+<label for="location">Where are you based? <span class="optional">(optional)</span></label>
+<input id="location" name="location" placeholder="e.g. London, Sydney, Auckland" type="text"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="organisation">Who has asked for the document? <span class="optional">(optional)</span></label>
+<input id="organisation" name="organisation" placeholder="e.g. bank, employer or embassy" type="text"/>
 </div>
 <div class="form-group">
-<label for="deadline">
-Do you have a deadline?
-<span class="optional">(optional)</span>
-</label>
-<input id="deadline" name="deadline" placeholder="e.g. Your appointment or submission date" type="text"/>
+<label for="deadline">Do you have a deadline? <span class="optional">(optional)</span></label>
+<input id="deadline" name="deadline" placeholder="e.g. appointment date" type="text"/>
+</div>
 </div>
 <div class="form-group">
-<label for="message">
-Anything else we should know?
-<span class="optional">(optional)</span>
-</label>
-<textarea id="message" name="message" placeholder="Tell us anything else that may help us understand your situation."></textarea>
+<label for="message">Anything else we should know? <span class="optional">(optional)</span></label>
+<textarea id="message" name="message" placeholder="Anything that may help us understand your situation."></textarea>
 </div>
+</div>
+</details>
 <div class="form-warning">
 <strong>Describe your documents in this first enquiry.</strong>
 <p>Please leave out passport numbers and sensitive personal details. We will explain how to provide documents if needed.</p>
@@ -1559,10 +1560,17 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .then(function (response) {
         if (response.ok) {
-        if (typeof window.fbq === 'function') {
-        window.fbq('track', 'Lead');
-       }
-  quoteForm.reset();
+          if (typeof window.fbq === 'function') {
+            window.fbq('track', 'Lead');
+          }
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'generate_lead', {
+              form_name: 'quote_form',
+              document_type: docType,
+              destination: country
+            });
+          }
+          quoteForm.reset();
           updateDestination();
           statusBox.className = 'form-status form-status-ok';
           statusBox.textContent =
