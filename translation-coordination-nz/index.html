@@ -22,7 +22,8 @@
 <link href="/assets/images/nz-document-assist-icon.webp" rel="icon" type="image/webp"/>
 <link href="/assets/css/style.css" rel="stylesheet"/>
 <!-- ===== STRUCTURED DATA ===== -->
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -33,7 +34,40 @@
       "logo": "https://nzdocumentassist.co.nz/assets/images/nz-document-assist-logo-primary.webp",
       "description": "Independent administrative assistance for New Zealand documents being prepared for overseas use.",
       "telephone": "+64 22 100 3242",
-      "email": "help@nzdocumentassist.co.nz"
+      "email": "help@nzdocumentassist.co.nz",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+64 22 100 3242",
+        "email": "help@nzdocumentassist.co.nz",
+        "contactType": "customer service",
+        "areaServed": "Worldwide",
+        "availableLanguage": "English",
+        "hoursAvailable": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "13:00"
+          }
+        ]
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "NZBN",
+        "value": "9429053965790"
+      }
     },
     {
       "@type": "WebSite",
@@ -138,7 +172,8 @@
       ]
     }
   ]
-}</script>
+}
+</script>
 <style>
 
 /* ===== PAGE NAVIGATION ===== */
@@ -864,7 +899,7 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
   Menu
 
 </button>
-<a aria-label="Call NZ Document Assist on 022 100 3242" class="btn nav-phone-btn" href="tel:+64221003242"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"></path></svg> Call 022 100 3242</a>
+<a aria-label="Call NZ Document Assist on +64 22 100 3242" class="btn nav-phone-btn" href="tel:+64221003242"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"></path></svg> Call +64 22 100 3242</a>
 <a class="btn nav-quote" href="/contact/">
   Get a Quote
 </a>
@@ -886,7 +921,7 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 <p class="hero-lead">We arrange independent translation providers for NZ documents used overseas and coordinate any required apostille, authentication, notary and delivery steps.</p>
 <div class="hero-actions">
 <a class="btn" href="/contact/">Tell Us What You Need</a>
-<a class="btn btn-light" href="tel:+64221003242">Call 022 100 3242</a>
+<a class="btn btn-light" href="tel:+64221003242">Call +64 22 100 3242</a>
 </div>
 <p class="page-date-meta">
   Published: <time datetime="2026-09-06">6 September 2026</time>
@@ -910,7 +945,7 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 <h2>Frequently asked questions</h2>
 <h3>How long does a document translation take?</h3><p>Timing depends on the language, document length, provider availability and certification requirements. Tell us your deadline so we can request an estimate before work starts.</p><h3>Can I use a translation I already have?</h3><p>Share the receiving office’s requirements and details of the existing translation. Its format and certification must meet those requirements; a replacement may not be necessary.</p><h3>Can you help if I live outside Auckland?</h3><p>Yes. We coordinate documents by email, phone and courier throughout NZ. Auckland clients can also request in-person assistance by appointment.</p><p class="source-note">Official guidance checked 12 October 2026: <a href="https://www.govt.nz/browse/passports-citizenship-and-identity/proving-and-protecting-your-identity/use-your-nz-documents-overseas/">DIA translation fees and urgent eligibility</a> and <a href="https://www.govt.nz/browse/passports-citizenship-and-identity/proving-and-protecting-your-identity/use-your-nz-documents-overseas/authentication-unit-document-requirements/">translation and notarisation requirements</a>.</p>
 <div class="notice"><strong>Our role</strong><p>NZ Document Assist provides administrative document assistance and coordination. We are not a government agency, law firm, Notary Public or licensed immigration adviser, and do not provide legal or immigration advice.</p></div>
-<h2>Request a translation coordination quote</h2><p>Tell us the document type, languages, destination and deadline. Include the receiving office’s instructions.</p><p><a class="btn" href="/contact/">Get a Quote</a></p><p>Call <a href="tel:+64221003242">022 100 3242</a></p>
+<h2>Request a translation coordination quote</h2><p>Tell us the document type, languages, destination and deadline. Include the receiving office’s instructions.</p><p><a class="btn" href="/contact/">Get a Quote</a></p><p>Call <a href="tel:+64221003242">+64 22 100 3242</a></p>
 </div></section>
 </main>
 <!-- ===== FOOTER ===== -->
@@ -919,7 +954,9 @@ header .nav-phone-btn svg{width:18px!important;height:18px!important}
 <div>
 <img alt="NZ Document Assist - Apostille and Overseas Document Assistance" class="footer-logo" height="168" src="/assets/images/nz-document-assist-logo-dark-bg.webp" width="460"/>
 <p>Apostille &amp; Overseas Document Assistance throughout New Zealand.</p>
-<p>NZ Document Assist Limited<br/><a href="mailto:help@nzdocumentassist.co.nz">help@nzdocumentassist.co.nz</a> <a href="tel:+64221003242">022 100 3242</a></p>
+<p>NZ Document Assist Limited<br/>NZBN 9429053965790</p>
+<p><a href="mailto:help@nzdocumentassist.co.nz">help@nzdocumentassist.co.nz</a><a href="tel:+64221003242">+64 22 100 3242</a><a href="https://wa.me/64221003242?text=Hi%20NZ%20Document%20Assist%2C%20I%20need%20help%20with%20a%20document." target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','whatsapp_click');if(window.fbq)fbq('track','Contact');">WhatsApp us</a></p>
+<p class="foot-hours">Mon–Fri 8:30am–6pm · Sat 9am–1pm<br/>New Zealand time</p>
 </div>
 <div>
 <strong>Services</strong>
@@ -1035,5 +1072,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 </script>
+<a class="wa-float" href="https://wa.me/64221003242?text=Hi%20NZ%20Document%20Assist%2C%20I%20need%20help%20with%20a%20document." target="_blank" rel="noopener" aria-label="Message NZ Document Assist on WhatsApp" onclick="if(window.gtag)gtag('event','whatsapp_click');if(window.fbq)fbq('track','Contact');"><svg aria-hidden="true" viewBox="0 0 32 32" width="26" height="26" fill="currentColor"><path d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.98L4 29l8.27-1.58a12.1 12.1 0 0 0 3.77.6C22.68 28.02 28 22.66 28 16.05 28 9.44 22.68 3 16.04 3Zm0 22.86c-1.19 0-2.35-.19-3.45-.56l-.6-.2-4.9.94.97-4.68-.22-.62a9.84 9.84 0 0 1-1.6-5.4c0-5.43 4.4-9.84 9.8-9.84 5.4 0 9.8 4.41 9.8 9.84 0 5.42-4.4 10.52-9.8 10.52Zm5.38-7.37c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.67.15-.2.29-.77.96-.94 1.16-.17.2-.35.22-.64.07-.29-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.67-1.6-.91-2.2-.24-.57-.49-.5-.67-.5h-.57c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44 0 1.43 1.05 2.82 1.19 3.02.15.2 2.06 3.14 4.98 4.4.7.3 1.24.48 1.67.62.7.22 1.34.19 1.84.12.56-.08 1.74-.71 1.98-1.4.25-.69.25-1.28.17-1.4-.07-.12-.27-.2-.56-.34Z"/></svg><span>WhatsApp us</span></a>
 </body>
 </html>
