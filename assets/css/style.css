@@ -566,3 +566,38 @@ header .links > a.nav-order:hover{color:#071f3f!important}
   html body header .wrap.nav a.nav-phone-btn{font-size:0!important;width:46px!important;min-width:46px!important;padding:0!important;gap:0!important}
   html body header .wrap.nav a.nav-phone-btn svg{width:20px!important;height:20px!important}
 }
+
+/* =========================
+   WHATSAPP FLOATING BUTTON
+========================= */
+.wa-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px 12px 14px;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(7, 31, 63, .25);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.wa-float:hover,
+.wa-float:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(7, 31, 63, .3);
+  color: #fff;
+}
+@media (max-width: 640px) {
+  .wa-float { right: 14px; bottom: 14px; padding: 13px; }
+  .wa-float span { display: none; }
+}
+@media print { .wa-float { display: none; } }
+
+.foot-hours { font-size: 14px; opacity: .85; }
