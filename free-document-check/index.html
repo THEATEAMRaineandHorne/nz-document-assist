@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+    <script src="/analytics.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Free Document Check Before You Pay | NZ Document Assist</title>
+<meta content="Free check of your NZ documents before anything is ordered or lodged. Send a photo and the request you were given. We tell you if it will be accepted overseas." name="description"/>
+<link href="https://nzdocumentassist.co.nz/free-document-check/" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="en_NZ" property="og:locale"/>
+<meta content="NZ Document Assist" property="og:site_name"/>
+<meta content="Free Document Check Before You Pay | NZ Document Assist" property="og:title"/>
+<meta content="Free check of your NZ documents before anything is ordered or lodged. Send a photo and the request you were given. We tell you if it will be accepted overseas." property="og:description"/>
+<meta content="https://nzdocumentassist.co.nz/free-document-check/" property="og:url"/>
+<meta content="https://nzdocumentassist.co.nz/assets/images/document-assistance-process-nz-hero.webp" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Free Document Check Before You Pay | NZ Document Assist" name="twitter:title"/>
+<meta content="Free check of your NZ documents before anything is ordered or lodged. Send a photo and the request you were given. We tell you if it will be accepted overseas." name="twitter:description"/>
+<meta content="https://nzdocumentassist.co.nz/assets/images/document-assistance-process-nz-hero.webp" name="twitter:image"/>
+<link href="/assets/images/nz-document-assist-icon.webp" rel="icon" type="image/webp"/>
+<link href="/assets/css/style.css" rel="stylesheet"/>
+<style>
+    .guide-hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 610px;
+      padding: 0;
+      color: #fff;
+      background-image: url('/assets/images/document-assistance-process-nz-hero.webp');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+    }
+    .guide-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg,rgba(7,31,63,.97) 0%,rgba(7,31,63,.92) 36%,rgba(7,31,63,.66) 58%,rgba(7,31,63,.28) 79%,rgba(7,31,63,.10) 100%);
+      z-index: 0;
+    }
+    .guide-hero > .wrap {
+      position: relative;
+      z-index: 1;
+      width: min(92%,1180px);
+      padding-top: 62px;
+      padding-bottom: 62px;
+    }
+    .breadcrumbs { font-size:14px; margin-bottom:24px; color:#d8e1ec; }
+    .breadcrumbs a { color:#f0ce61; }
+    .guide-hero-grid { display:grid; grid-template-columns:1.18fr .82fr; gap:50px; align-items:center; }
+    .guide-label { color:#f0ce61; text-transform:uppercase; letter-spacing:.09em; font-weight:800; font-size:14px; }
+    .guide-hero h1 { color:#fff; font-size:clamp(42px,5vw,67px); line-height:1.04; margin:14px 0 20px; max-width:780px; text-shadow:0 2px 12px rgba(0,0,0,.18); }
+    .guide-hero .lead { color:#eef3f8; font-size:19px; max-width:720px; text-shadow:0 1px 3px rgba(0,0,0,.20); }
+    .hero-help { background:rgba(255,255,255,.97); color:#34475c; border-radius:20px; padding:30px; box-shadow:0 20px 50px rgba(0,0,0,.22); backdrop-filter:blur(3px); }
+    .hero-help h2 { color:#071f3f; margin:0 0 12px; font-size:29px; }
+    .hero-help .btn { display:flex; align-items:center; justify-content:center; text-align:center; margin-top:20px; min-height:56px; }
+
+    .content-grid { display:grid; grid-template-columns:minmax(0,2fr) minmax(280px,.8fr); gap:50px; align-items:start; }
+    .article h2 { color:#071f3f; font-size:34px; line-height:1.18; margin-top:54px; }
+    .article h2:first-child { margin-top:0; }
+    .article h3 { color:#0b2d5b; font-size:23px; margin-top:28px; }
+    .article p,.article li { color:#43556a; }
+    .article a { color:#8b6811; text-decoration:underline; text-underline-offset:3px; }
+    .quick-answer { background:#f7f9fb; border-left:5px solid #d4af37; border-radius:0 14px 14px 0; padding:24px 26px; margin:28px 0; }
+    .quick-answer strong { color:#071f3f; }
+    .note-box { background:#fff9e8; border:1px solid #ead79c; border-radius:14px; padding:22px 24px; margin:28px 0; }
+    .note-box strong { color:#071f3f; }
+    .check-list { list-style:none; padding:0; margin:24px 0; }
+    .check-list li { position:relative; padding:12px 0 12px 30px; border-bottom:1px solid #e6ebf0; }
+    .check-list li:before { content:"✓"; position:absolute; left:0; color:#9a7413; font-weight:900; }
+    .warning-list { list-style:none; padding:0; }
+    .warning-list li { position:relative; padding:10px 0 10px 30px; }
+    .warning-list li:before { content:"!"; position:absolute; left:0; top:11px; width:20px; height:20px; border-radius:50%; background:#d4af37; color:#071f3f; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:900; }
+    .compare { width:100%; border-collapse:collapse; margin:26px 0; }
+    .compare th,.compare td { border:1px solid #dfe5eb; padding:15px; vertical-align:top; text-align:left; }
+    .compare th { background:#071f3f; color:#fff; }
+    .document-cards { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin:26px 0; }
+    .document-card { border:1px solid #e1e7ed; border-radius:15px; padding:22px; background:#fff; }
+    .document-card h3 { margin:0 0 8px; font-size:20px; }
+    .document-card p { margin-bottom:0; }
+    .country-box { background:#071f3f; color:#fff; border-radius:18px; padding:28px; margin:32px 0; }
+    .country-box h3 { color:#fff; margin-top:0; }
+    .country-box p { color:#dce5ef; }
+    .country-box a { color:#f0ce61; }
+    .process { display:grid; gap:16px; margin:28px 0; }
+    .process-step { display:grid; grid-template-columns:48px 1fr; gap:16px; background:#fff; border:1px solid #e1e7ed; border-radius:14px; padding:20px; }
+    .process-number { width:42px; height:42px; border-radius:50%; background:#071f3f; color:#f0ce61; display:flex; align-items:center; justify-content:center; font-weight:900; }
+    .process-step h3 { margin:0 0 5px; font-size:20px; }
+    .process-step p { margin:0; }
+    .faq-item { padding:22px 0; border-bottom:1px solid #e2e7ed; }
+    .faq-item h3 { margin:0 0 9px; color:#071f3f; }
+    .faq-item p { margin-bottom:0; }
+    .source-note { background:#f7f9fb; border:1px solid #e1e7ed; border-radius:14px; padding:20px 22px; margin:40px 0 0; font-size:14px; color:#5d6e80; }
+    .sidebar { position:sticky; top:110px; }
+    .side-card { border:1px solid #e2e7ed; border-radius:16px; padding:24px; margin-bottom:20px; background:#fff; box-shadow:0 10px 30px rgba(7,31,63,.06); }
+    .side-card h2,.side-card h3 { color:#071f3f; margin-top:0; }
+    .side-card > a:not(.btn) { display:block; padding:9px 0; color:#8b6811; font-weight:700; }
+    .side-card .btn { width:100%; min-height:56px; display:flex; align-items:center; justify-content:center; text-align:center; padding:14px 20px; color:#071f3f; text-decoration:none; font-weight:800; }
+    .cta-section { background:#071f3f; color:#fff; padding:60px 0; text-align:center; }
+    .cta-section h2 { margin-top:0; color:#fff; font-size:38px; }
+    .cta-section p { color:#d8e1ec; max-width:760px; margin:0 auto 26px; }
+
+    header .nav { min-height:74px; gap:20px; }
+    header .logo { width:225px; height:auto; }
+    header .links { display:flex!important; align-items:center!important; gap:17px!important; }
+    header .links > a { font-size:14px!important; white-space:nowrap; }
+    header .nav-dropdown { position:relative!important; display:flex!important; align-items:center!important; }
+    header .nav-dropbtn { appearance:none; -webkit-appearance:none; border:0!important; outline:0; background:transparent!important; color:#0c2442!important; font-family:inherit!important; font-size:14px!important; font-weight:700!important; line-height:1!important; padding:12px 0!important; margin:0!important; cursor:pointer; display:flex!important; align-items:center!important; gap:5px!important; }
+    header .nav-arrow { display:inline-block; font-size:11px; line-height:1; transition:transform .2s ease; }
+    header .nav-dropdown-menu { position:absolute!important; top:calc(100% + 8px)!important; left:-20px!important; display:block!important; width:max-content!important; min-width:270px!important; max-width:340px!important; margin:0!important; padding:10px!important; background:#fff!important; border:1px solid #e3e8ee!important; border-radius:14px!important; box-shadow:0 18px 45px rgba(7,31,63,.16)!important; opacity:0!important; visibility:hidden!important; pointer-events:none!important; transform:translateY(8px); transition:opacity .18s ease,transform .18s ease,visibility .18s ease; z-index:9999!important; }
+    header .nav-dropdown-menu a { display:block!important; width:100%!important; padding:12px 14px!important; margin:0!important; color:#0c2442!important; background:transparent!important; font-size:15px!important; font-weight:700!important; line-height:1.3!important; white-space:nowrap!important; text-decoration:none!important; border-radius:8px!important; }
+    header .nav-dropdown-menu a:hover { background:#f5f7fa!important; color:#9a7413!important; }
+    header .nav-dropdown:hover .nav-dropdown-menu,header .nav-dropdown:focus-within .nav-dropdown-menu { opacity:1!important; visibility:visible!important; pointer-events:auto!important; transform:translateY(0)!important; }
+    header .nav-dropdown:hover .nav-arrow,header .nav-dropdown:focus-within .nav-arrow { transform:rotate(180deg); }
+    .mobile-menu-toggle { display:none; }
+    header .nav-quote { padding:12px 18px; }
+    footer .foot img.footer-logo { width:380px!important; height:auto!important; max-width:100%!important; object-fit:contain!important; display:block; }
+    footer .foot > div:first-child { min-width:380px; }
+
+    @media (max-width:1050px) {
+      header .logo { width:205px; }
+      header .links { gap:15px!important; }
+      footer .foot > div:first-child { min-width:0; }
+    }
+    @media (max-width:900px) {
+      header .nav { position:relative; flex-wrap:wrap; }
+      .mobile-menu-toggle { display:inline-flex; order:2; margin-left:auto; align-items:center; justify-content:center; border:1px solid #d9e0e8; border-radius:9px; padding:9px 12px; background:#fff; color:#071f3f; font-weight:800; }
+      header .nav-quote { order:3; }
+      header .links { order:4; display:none!important; width:100%; flex-direction:column!important; align-items:stretch!important; gap:0!important; padding:10px 0 16px; }
+      header .nav.mobile-open .links { display:flex!important; }
+      header .links > a,header .nav-dropbtn { width:100%; padding:13px 4px!important; font-size:15px!important; justify-content:space-between; }
+      header .nav-dropdown { display:block!important; }
+      header .nav-dropdown-menu { position:static!important; width:100%!important; max-width:none!important; min-width:0!important; padding:0 0 0 12px!important; border:0!important; box-shadow:none!important; border-radius:0!important; opacity:1!important; visibility:visible!important; pointer-events:auto!important; transform:none!important; display:none!important; }
+      header .nav-dropdown.mobile-open .nav-dropdown-menu { display:block!important; }
+      .guide-hero { min-height:0!important; padding:0!important; background-position:68% center!important; }
+      .guide-hero::before { background:linear-gradient(90deg,rgba(7,31,63,.98) 0%,rgba(7,31,63,.94) 52%,rgba(7,31,63,.70) 80%,rgba(7,31,63,.48) 100%); }
+      .guide-hero > .wrap { padding-top:36px!important; padding-bottom:42px!important; }
+      .guide-hero-grid,.content-grid { grid-template-columns:1fr!important; gap:28px!important; }
+      .hero-help { max-width:620px; }
+      .sidebar { position:static; }
+      .document-cards { grid-template-columns:1fr; }
+      .compare { display:block; overflow-x:auto; }
+    }
+    @media (max-width:520px) {
+      .guide-hero { background-position:72% center!important; }
+      .guide-hero > .wrap { padding-top:30px!important; padding-bottom:36px!important; }
+      .guide-hero h1 { font-size:39px!important; }
+      .hero-help { padding:24px!important; }
+      .article h2 { font-size:29px; }
+      .compare { font-size:14px; }
+      .compare th,.compare td { padding:10px; }
+      footer .foot img.footer-logo { width:290px!important; }
+    }
+  
+/* ===== 9-10 UPGRADE COMPONENTS ===== */
+.article-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:44px;align-items:start;padding-top:46px;padding-bottom:60px}
+.article-layout .sidebar{position:sticky;top:100px}
+.nda-answer{background:#071f3f;color:#fff;border-radius:18px;padding:28px 30px;margin:0 0 26px}
+.nda-answer .nda-label{display:inline-block;background:#d6ad42;color:#071f3f;font-weight:900;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:5px 12px;margin-bottom:12px}
+.nda-answer p{color:#e8eef5!important;font-size:18px;line-height:1.6;margin:0}
+.nda-answer strong{color:#fff}
+.nda-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0 0}
+.nda-facts div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:12px 14px}
+.nda-facts span{display:block;font-size:12px;color:#c9d6e4;text-transform:uppercase;letter-spacing:.06em;font-weight:800}
+.nda-facts b{display:block;color:#f0ce61;font-size:17px;margin-top:4px;line-height:1.3}
+.nda-cred{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;border:1px solid #e1e7ed;background:#f7f9fb;border-radius:12px;padding:12px 16px;margin:0 0 34px;font-size:14px;color:#334a62}
+.nda-cred b{color:#071f3f}
+.nda-cred span:before{content:"✓ ";color:#9a7413;font-weight:900}
+.nda-flow{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin:22px 0 30px;padding:0;list-style:none;counter-reset:nf}
+.nda-flow li{counter-increment:nf;flex:1 1 150px;position:relative;background:#fff;border:2px solid #071f3f;border-radius:14px;padding:14px 14px 14px 14px;color:#071f3f!important;font-weight:800;font-size:15px;line-height:1.35}
+.nda-flow li:before{content:counter(nf);display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#d6ad42;color:#071f3f;font-weight:900;margin-bottom:8px}
+.nda-flow li small{display:block;font-weight:600;color:#5a697a;font-size:13px;margin-top:4px}
+.nda-flow li.opt{border-style:dashed;border-color:#9aa8b8}
+.nda-cost-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:22px 0 10px}
+.nda-cost{border:1px solid #dfe5eb;border-radius:16px;padding:20px 20px 16px;background:#fff;box-shadow:0 8px 24px rgba(7,31,63,.05)}
+.nda-cost.feat{border:2px solid #d6ad42}
+.nda-cost h3{margin:0 0 4px!important;font-size:18px!important;color:#071f3f}
+.nda-cost .sub{margin:0 0 10px;font-size:13px;color:#5a697a}
+.nda-cost table{width:100%;border-collapse:collapse;font-size:15px}
+.nda-cost td{padding:7px 0;border-bottom:1px solid #eef1f5;color:#263b52}
+.nda-cost td:last-child{text-align:right;white-space:nowrap;font-weight:700}
+.nda-cost tr.t td{border-bottom:0;border-top:2px solid #071f3f;padding-top:10px;font-size:18px;font-weight:900;color:#071f3f}
+.nda-cost tr.t td:last-child{color:#9a7413}
+.nda-note{font-size:13px;color:#5a697a;margin:6px 0 0}
+.nda-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px}
+.nda-table th,.nda-table td{border:1px solid #dfe5eb;padding:11px 13px;text-align:left;vertical-align:top}
+.nda-table th{background:#071f3f;color:#fff}
+.nda-faq{padding:18px 0;border-bottom:1px solid #e2e7ed}
+.nda-faq h3{margin:0 0 8px!important;color:#071f3f;font-size:20px!important}
+.nda-faq p{margin:0}
+.nda-sources{background:#f7f9fb;border:1px solid #e1e7ed;border-radius:14px;padding:20px 22px;margin:40px 0 0;font-size:14px;color:#4c5e72}
+.nda-sources h2{font-size:18px!important;margin:0 0 8px!important}
+.nda-sources ul{margin:8px 0 0;padding-left:18px}
+.nda-sources li{margin:4px 0}
+.nda-disclaimer{font-size:13px;color:#6a7889;border-top:1px solid #e2e7ed;margin-top:30px;padding-top:14px}
+@media(max-width:900px){.article-layout{grid-template-columns:1fr;gap:26px}.article-layout .sidebar{position:static}.nda-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.nda-cost-grid{grid-template-columns:1fr}.nda-table{display:block;overflow-x:auto}.nda-answer{padding:22px}.nda-answer p{font-size:17px}}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nzdocumentassist.co.nz/#organization",
+      "name": "NZ Document Assist",
+      "legalName": "NZ Document Assist Limited",
+      "url": "https://nzdocumentassist.co.nz/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nzdocumentassist.co.nz/assets/images/nz-document-assist-logo-primary.webp"
+      },
+      "telephone": "+64 22 100 3242",
+      "email": "help@nzdocumentassist.co.nz",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Auckland",
+        "addressRegion": "Auckland",
+        "addressCountry": "NZ"
+      },
+      "areaServed": "NZ",
+      "description": "Apostille, authentication, BDM certificate ordering, notary, translation and courier for New Zealand documents used overseas. Approved BDM Online organisation.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+64 22 100 3242",
+        "email": "help@nzdocumentassist.co.nz",
+        "contactType": "customer service",
+        "areaServed": "Worldwide",
+        "availableLanguage": "English",
+        "hoursAvailable": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "13:00"
+          }
+        ]
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "NZBN",
+        "value": "9429053965790"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nzdocumentassist.co.nz/#website",
+      "url": "https://nzdocumentassist.co.nz/",
+      "name": "NZ Document Assist",
+      "publisher": {
+        "@id": "https://nzdocumentassist.co.nz/#organization"
+      },
+      "inLanguage": "en-NZ"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nzdocumentassist.co.nz/free-document-check/#webpage",
+      "url": "https://nzdocumentassist.co.nz/free-document-check/",
+      "name": "Free Document Check Before You Pay | NZ Document Assist",
+      "description": "Free check of your NZ documents before anything is ordered or lodged. Send a photo and the request you were given. We tell you if it will be accepted overseas.",
+      "inLanguage": "en-NZ",
+      "isPartOf": {
+        "@id": "https://nzdocumentassist.co.nz/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://nzdocumentassist.co.nz/free-document-check/#breadcrumbs"
+      },
+      "datePublished": "2026-10-21T18:00:00+13:00",
+      "dateModified": "2026-10-21T18:00:00+13:00",
+      "lastReviewed": "2026-10-21",
+      "reviewedBy": {
+        "@id": "https://nzdocumentassist.co.nz/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://nzdocumentassist.co.nz/free-document-check/#article"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nzdocumentassist.co.nz/assets/images/document-assistance-process-nz-hero.webp"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://nzdocumentassist.co.nz/free-document-check/#article",
+      "headline": "Free Document Check: Know It Will Be Accepted Before You Pay Anyone",
+      "description": "Free check of your NZ documents before anything is ordered or lodged. Send a photo and the request you were given. We tell you if it will be accepted overseas.",
+      "author": {
+        "@id": "https://nzdocumentassist.co.nz/#organization"
+      },
+      "publisher": {
+        "@id": "https://nzdocumentassist.co.nz/#organization"
+      },
+      "datePublished": "2026-10-21T18:00:00+13:00",
+      "dateModified": "2026-10-21T18:00:00+13:00",
+      "inLanguage": "en-NZ",
+      "image": "https://nzdocumentassist.co.nz/assets/images/document-assistance-process-nz-hero.webp",
+      "mainEntityOfPage": {
+        "@id": "https://nzdocumentassist.co.nz/free-document-check/#webpage"
+      }
+    },
+    {
+      "name": "Free document check",
+      "serviceType": "Free document check for NZ documents used overseas",
+      "areaServed": "Worldwide",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "NZD",
+        "price": "0",
+        "description": "Free check of a New Zealand document against the overseas request, with no obligation.",
+        "url": "https://nzdocumentassist.co.nz/free-document-check/"
+      },
+      "description": "A free, no-obligation check of New Zealand documents before they are ordered, apostilled or sent overseas: version, date, names, signatory and apostille or authentication route.",
+      "@type": "Service",
+      "@id": "https://nzdocumentassist.co.nz/free-document-check/#service",
+      "provider": {
+        "@id": "https://nzdocumentassist.co.nz/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nzdocumentassist.co.nz/free-document-check/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the document check really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We check your document and the request you were given at no cost, and you’re under no obligation to use us afterwards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents can you check?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any New Zealand document going overseas: birth, marriage, death and name change certificates, criminal record checks, degrees and transcripts, powers of attorney, court and divorce orders, and notarised or certified copies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly will I hear back?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Within 2 business hours, Monday to Saturday (Saturday until 1pm), New Zealand time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I send my document for a check?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Send a photo of the document and the request you were given by WhatsApp on +64 22 100 3242, by email to help@nzdocumentassist.co.nz, or through our contact form."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you check documents from another country?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. We only check New Zealand documents. A document issued by another country has to be certified or apostilled by that country."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you check documents for a visa or citizenship application?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We check your NZ documents against the list the visa office or registry gave you. The decision on the application is theirs, and we don’t give immigration advice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if something is wrong?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We tell you exactly what’s wrong and what’s needed. If you’d like us to fix it, we send one all-in price first and only start once you say yes."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nzdocumentassist.co.nz/free-document-check/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nzdocumentassist.co.nz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How It Works",
+          "item": "https://nzdocumentassist.co.nz/how-it-works/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Free Document Check",
+          "item": "https://nzdocumentassist.co.nz/free-document-check/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style id="birth-cert-final-standard">
+.page-date-meta{margin:16px 0 0;color:#d8e1ec;font-size:14px;line-height:1.6}
+.page-date-meta time{white-space:nowrap}
+header .nav{gap:14px!important}
+header .links{gap:14px!important}
+header .nav-phone-btn,header .nav-quote{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  min-height:48px!important;padding:12px 17px!important;border-radius:14px!important;
+  white-space:nowrap!important;text-decoration:none!important;font-weight:800!important
+}
+header .nav-phone-btn{gap:7px!important;margin-left:auto!important}
+header .nav-phone-btn svg{width:18px!important;height:18px!important}
+@media(max-width:1100px){
+  header .logo{width:195px!important} header .links{gap:10px!important}
+  header .links>a,header .nav-dropbtn{font-size:13px!important}
+  header .nav-phone-btn,header .nav-quote{padding:11px 13px!important;font-size:13px!important}
+}
+@media(max-width:900px){
+  header .nav-phone-btn{display:inline-flex!important;order:2;margin-left:auto!important;min-height:42px!important;padding:9px 12px!important;font-size:13px!important}
+  header .nav-quote{display:none!important}
+  header .mobile-menu-toggle{order:2;margin-left:8px!important}
+  header .links{order:3}
+}
+@media(max-width:560px){
+  header .nav-phone-btn{font-size:0!important;width:44px!important;min-width:44px!important;padding:0!important}
+  header .nav-phone-btn svg{width:20px!important;height:20px!important}
+}
+.related-guides-clean{margin:38px 0 22px;padding:26px;border:1px solid #e1e7ed;border-radius:18px;background:#f8fafc}
+.related-guides-clean h3{margin:0 0 16px;color:#071f3f}
+.related-guides-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.related-guides-grid a{display:block;padding:17px 18px;border:1px solid #dfe5eb;border-radius:13px;background:#fff;text-decoration:none!important}
+.related-guides-grid a:hover{border-color:#d4af37;background:#fffdf6}
+.related-guides-grid strong{display:block;color:#0c2442;margin-bottom:5px}
+.related-guides-grid span{display:block;color:#5a6a7d;font-size:14px;line-height:1.45}
+@media(max-width:700px){.related-guides-grid{grid-template-columns:1fr}}
+</style>
+<style>
+.nda-promise{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 34px}
+.nda-promise div{border:1px solid #e1e7ed;border-top:4px solid #d6ad42;border-radius:12px;padding:16px 16px 14px;background:#fff}
+.nda-promise b{display:block;color:#071f3f;font-size:16px;margin-bottom:4px}
+.nda-promise span{display:block;color:#5a697a;font-size:14px;line-height:1.45}
+.nda-timeline{list-style:none;margin:24px 0 30px;padding:0;border-left:3px solid #d6ad42}
+.nda-timeline li{position:relative;padding:4px 0 18px 26px}
+.nda-timeline li:before{content:"";position:absolute;left:-9px;top:8px;width:15px;height:15px;border-radius:50%;background:#071f3f;border:3px solid #fff;box-shadow:0 0 0 2px #d6ad42}
+.nda-timeline .when{display:inline-block;background:#071f3f;color:#f0ce61;font-weight:900;font-size:12px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:4px 11px;margin-bottom:6px}
+.nda-timeline b{display:block;color:#071f3f;font-size:17px}
+.nda-timeline p{margin:4px 0 0;color:#43556a}
+.nda-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:22px 0 30px}
+.nda-path{border:2px solid #071f3f;border-radius:16px;padding:22px;background:#fff}
+.nda-path.alt{border-color:#d6ad42;background:#fffdf6}
+.nda-path .tag{display:inline-block;font-size:12px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;color:#9a7413;margin-bottom:6px}
+.nda-path h3{margin:0 0 8px!important;font-size:21px!important;color:#071f3f}
+.nda-path ul{margin:10px 0 0;padding-left:18px}
+.nda-path li{margin:5px 0}
+.nda-stop{background:#071f3f;color:#e8eef5;border-radius:16px;padding:22px 24px;margin:26px 0}
+.nda-stop strong{color:#f0ce61}
+.nda-gen{display:grid;gap:12px;margin:22px 0 30px}
+.nda-gen-row{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:start;border:1px solid #e1e7ed;border-radius:14px;padding:16px 18px;background:#fff}
+.nda-gen-row .who{font-weight:900;color:#071f3f}
+.nda-gen-row .who small{display:block;font-weight:700;color:#9a7413;font-size:12px;text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
+.nda-gen-row p{margin:0}
+@media(max-width:900px){.nda-promise,.nda-paths{grid-template-columns:1fr}.nda-gen-row{grid-template-columns:1fr;gap:6px}}
+
+.nda-decode{display:grid;gap:12px;margin:20px 0 30px}
+.nda-decode-row{display:grid;grid-template-columns:1fr 34px 1fr;align-items:stretch;gap:0}
+.nda-decode-row .ask{border:1px solid #e1e7ed;border-radius:14px 0 0 14px;padding:15px 17px;background:#f6f8fb}
+.nda-decode-row .ask small,.nda-decode-row .doc small{display:block;font-size:11px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;color:#5a697a;margin-bottom:4px}
+.nda-decode-row .ask q{font-style:italic;color:#071f3f;font-weight:700}
+.nda-decode-row .arrow{display:flex;align-items:center;justify-content:center;background:#071f3f;color:#f0ce61;font-weight:900}
+.nda-decode-row .doc{border:2px solid #d6ad42;border-left:0;border-radius:0 14px 14px 0;padding:15px 17px;background:#fffdf6}
+.nda-decode-row .doc small{color:#9a7413}
+.nda-decode-row .doc b{display:block;color:#071f3f}
+.nda-decode-row .doc span{display:block;font-size:14px;color:#43556a;margin-top:3px}
+@media(max-width:900px){.nda-decode-row{grid-template-columns:1fr}.nda-decode-row .ask{border-radius:14px 14px 0 0}.nda-decode-row .arrow{padding:4px}.nda-decode-row .arrow span{display:inline-block;transform:rotate(90deg)}.nda-decode-row .doc{border-left:2px solid #d6ad42;border-top:0;border-radius:0 0 14px 14px}}
+.nda-list{margin:16px 0 28px;padding-left:20px}
+.nda-list li{margin:8px 0}
+.nda-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0 30px}
+.nda-checks div{border:1px solid #e1e7ed;border-left:4px solid #d6ad42;border-radius:12px;padding:16px 18px;background:#fff}
+.nda-checks b{display:block;color:#071f3f;font-size:17px;margin-bottom:4px}
+.nda-checks span{display:block;color:#43556a;font-size:15px;line-height:1.5}
+@media(max-width:700px){.nda-checks{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+<a aria-label="NZ Document Assist home" href="/">
+<img alt="NZ Document Assist - Apostille and Overseas Document Assistance" class="logo" height="201" src="/assets/images/nz-document-assist-logo-primary.webp" width="550"/>
+</a>
+<button aria-controls="main-navigation" aria-expanded="false" aria-label="Open menu" class="mobile-menu-toggle" type="button">Menu</button>
+<nav aria-label="Main navigation" class="links" id="main-navigation">
+<a href="/">Home</a>
+<a class="nav-order" href="/order-certificate-nz/">Order a Certificate</a>
+<div class="nav-dropdown">
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropbtn" type="button">Services <span class="nav-arrow">▾</span></button>
+<div class="nav-dropdown-menu">
+<a href="/apostille-nz/">Apostille NZ</a>
+<a href="/document-authentication-nz/">Document Authentication</a>
+<a href="/notary-public-auckland-help/">Notary Coordination</a>
+<a href="/translation-coordination-nz/">Translation Coordination</a>
+<a href="/courier-document-return/">Courier &amp; Document Return</a>
+</div>
+</div>
+<div class="nav-dropdown">
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropbtn" type="button">Resources <span class="nav-arrow">▾</span></button>
+<div class="nav-dropdown-menu"><a href="/resources/">All Resources</a><a href="/new-zealand-apostille-requirements/">NZ Apostille Requirements</a><a href="/documents-for-overseas-use/">Documents for Overseas Use</a><a href="/apostille-vs-authentication-nz/">Apostille vs Authentication NZ</a><a href="/who-can-certify-documents-nz/">Who Can Certify Documents in NZ?</a><a href="/e-apostille-nz/">Paper vs E-Apostille NZ</a></div>
+</div>
+<a href="/how-it-works/">How It Works</a>
+<a href="/pricing/">Pricing</a>
+<a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+</nav>
+<a aria-label="Call NZ Document Assist on +64 22 100 3242" class="btn nav-phone-btn" href="tel:+64221003242">
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"></path></svg>
+      Call +64 22 100 3242
+    </a>
+<a class="btn nav-quote" href="/contact/">Get a Quote</a>
+</div>
+</header>
+<main>
+<section class="guide-hero">
+<div class="wrap">
+<div class="breadcrumbs"><a href="/">Home</a> › <a href="/how-it-works/">How It Works</a> › Free Document Check</div>
+<div class="guide-hero-grid">
+<div>
+<div class="guide-label">Free · No obligation · Reply within 2 business hours</div>
+<h1>Free Document Check: Know It Will Be Accepted Before You Pay Anyone</h1>
+<p class="hero-lead">Send us a photo of your document and the email or checklist from whoever asked for it. Our document specialist checks it against what they need and tells you, in plain words, what&#8217;s right, what&#8217;s missing and what it will cost to sort. No obligation, no jargon.</p>
+<p class="page-date-meta">Published: <time datetime="2026-10-21">21 October 2026</time></p>
+<div class="hero-actions"><a class="btn" href="https://wa.me/64221003242?text=Hi%20NZ%20Document%20Assist%2C%20I%27d%20like%20a%20free%20document%20check." target="_blank" rel="noopener">Send It on WhatsApp</a><a class="btn btn-outline" href="/contact/">Use the Contact Form</a></div>
+</div>
+<div class="hero-help"><span class="eyebrow">Free document check</span><h2>Send a photo. Get a straight answer.</h2><p>WhatsApp or email a photo of the document and the request you were given. We reply within 2 business hours, Monday to Saturday, NZ time.</p><a class="btn" href="mailto:help@nzdocumentassist.co.nz?subject=Free%20document%20check">Email help@nzdocumentassist.co.nz</a></div>
+</div>
+</div>
+</section>
+<section class="article-section">
+<div class="wrap article-layout">
+<article class="article"><div class="nda-answer"><span class="nda-label">How we help</span><p><strong>NZ Document Assist checks your New Zealand documents for free before you pay anything.</strong> Send a photo of the document and the request you were given. Our document specialist, with 15 years&#8217; consular experience, checks the <strong>version, the date, the names, who signed or certified it</strong> and whether the country needs an <strong>apostille or authentication</strong>. You get a plain answer, what needs fixing, and one all-in price if you want us to take care of it. The check is <strong>free with no obligation</strong>, and we reply within <strong>2 business hours</strong>.</p><div class="nda-facts"><div><span>Cost</span><b>Free</b></div><div><span>Obligation</span><b>None</b></div><div><span>Reply</span><b>Within 2 business hours</b></div><div><span>Send it by</span><b>WhatsApp, email or form</b></div></div></div><div class="nda-cred"><b>Handled by our document specialist</b><span>15 years&#8217; consular experience</span><span>Approved BDM Online organisation</span><span>NZ Document Assist Limited</span></div>
+<h2>What we check</h2>
+<p>These are the six things that decide whether a NZ document is accepted overseas. We check every one, so you don&#8217;t have to know what to look for.</p>
+<div class="nda-checks"><div><b>1. The right document</b><span>The certificate the office wants, not a printout, extract or keepsake version.</span></div><div><b>2. Recent enough</b><span>Many offices only accept documents issued in the last 6 or 12 months.</span></div><div><b>3. Names that match</b><span>Your certificate, passport and application all link up, including any name change.</span></div><div><b>4. Signed by the right person</b><span>Some documents need a Notary Public. A JP certification won&#8217;t do for those.</span></div><div><b>5. Apostille or authentication</b><span>The right one for the country it&#8217;s going to, and paper or e-apostille.</span></div><div><b>6. Nothing missing</b><span>The extra document a checklist quietly expects, like a marriage certificate to explain a surname.</span></div></div>
+
+<h2>Why check before you pay anyone</h2>
+<p>DIA doesn&#8217;t fix mistakes. It sends the application back, and you start again weeks later, often with another international courier and a deadline getting closer. A wrong certificate, an out-of-date one, or the wrong kind of certification are all easy to spot before anything is lodged and painful to discover after.</p>
+<p>The check takes us minutes. Getting it wrong can cost you weeks. That&#8217;s why we offer it free to everyone, whether or not you go ahead with us. See what this looks like in practice in our <a href="/real-cases/">real document cases</a>.</p>
+
+<h2>You don&#8217;t need to work it out yourself</h2>
+<p>If you&#8217;ve already spent hours on government pages trying to decode a checklist, you can stop there. Our document specialist spent 15 years in consular work, on the side that receives NZ documents and decides whether to accept them. We already know what embassies, visa offices, citizenship registries, banks and courts look for. Send us what you have and leave the rules to us.</p>
+
+<h2>What you get back</h2>
+<ul class="nda-list">
+<li><strong>A straight answer:</strong> it&#8217;s fine as it is, it needs something added, or it needs replacing.</li>
+<li><strong>What&#8217;s missing,</strong> in plain words, if anything is.</li>
+<li><strong>How long it will take</strong> to be ready, measured against your deadline.</li>
+<li><strong>One all-in price</strong> if you&#8217;d like us to take care of it, with nothing hidden.</li>
+</ul>
+
+<h2>How to send it</h2>
+<ol class="nda-flow" aria-label="How to send a document for a free check"><li>Take a photo<small>The whole page, flat, in good light.</small></li><li>Add the request<small>The email, letter or checklist you were given.</small></li><li>Send it to us<small>WhatsApp, email or our contact form.</small></li><li>We check it<small>Against what the overseas office needs.</small></li><li>You get an answer<small>Within 2 business hours, NZ time.</small></li></ol>
+<p>Send it by <a href="https://wa.me/64221003242?text=Hi%20NZ%20Document%20Assist%2C%20I%27d%20like%20a%20free%20document%20check." target="_blank" rel="noopener">WhatsApp on +64 22 100 3242</a>, email <a href="mailto:help@nzdocumentassist.co.nz?subject=Free%20document%20check">help@nzdocumentassist.co.nz</a>, or use our <a href="/contact/">contact form</a>. You&#8217;re welcome to cover anything private we don&#8217;t need to see, such as ID numbers. Your details are handled under our <a href="/privacy-policy/">privacy policy</a>.</p>
+
+<h2>Which documents the free check covers</h2>
+<p>Any <strong>New Zealand document going overseas</strong>, including:</p>
+<div class="related-guides-clean"><div class="related-guides-grid"><a href="/birth-certificate-nz/"><strong>Birth, marriage and death certificates</strong><span>Including name change and civil union certificates.</span></a><a href="/criminal-record-check-nz/"><strong>Criminal record checks</strong><span>Ministry of Justice records for visas and jobs abroad.</span></a><a href="/apostille-education-documents-nz/"><strong>Degrees and transcripts</strong><span>University, NZQA and school records.</span></a><a href="/apostille-power-of-attorney-nz/"><strong>Powers of attorney</strong><span>And other documents signed in front of a notary.</span></a><a href="/apostille-divorce-dissolution-nz/"><strong>Court and divorce orders</strong><span>Dissolution orders and other court documents.</span></a><a href="/certified-copy-passport-nz/"><strong>Certified passport copies</strong><span>Notarised copies for banks and offices overseas.</span></a></div></div>
+<p>Two things sit outside it. We can&#8217;t check or apostille <strong>documents issued by another country</strong>, because only that country can do it. And while we check your documents against the list you were given, we don&#8217;t give <strong>legal or immigration advice</strong> about the application itself.</p>
+
+<h2>Living overseas?</h2>
+<p>Working against a deadline from another time zone? If your document turns out to need a new certificate, we can <a href="/order-nz-certificates-from-overseas/">order NZ certificates from overseas</a> for you, apostille them and courier them to your door. Not sure whether you need an apostille or an authentication? Our guide to <a href="/apostille-vs-authentication-nz/">apostille vs authentication</a> explains the difference, and the check will confirm which one applies.</p>
+<h2>Our guarantee, in plain words</h2><p>We check everything before you pay. If we take your job and then find we can&#8217;t complete it, you get a <strong>full refund of our fee</strong>, plus any government or notary fees we haven&#8217;t yet paid. What we can&#8217;t guarantee is a decision made by an overseas authority. That part is theirs, which is exactly why we check first.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="nda-faq"><h3>Is the document check really free?</h3><p>Yes. We check your document and the request you were given at no cost, and you&#8217;re under no obligation to use us afterwards.</p></div>
+<div class="nda-faq"><h3>What documents can you check?</h3><p>Any New Zealand document going overseas: birth, marriage, death and name change certificates, criminal record checks, degrees and transcripts, powers of attorney, court and divorce orders, and notarised or certified copies.</p></div>
+<div class="nda-faq"><h3>How quickly will I hear back?</h3><p>Within 2 business hours, Monday to Saturday (Saturday until 1pm), New Zealand time.</p></div>
+<div class="nda-faq"><h3>How do I send my document for a check?</h3><p>Send a photo of the document and the request you were given by WhatsApp on +64 22 100 3242, by email to help@nzdocumentassist.co.nz, or through our contact form.</p></div>
+<div class="nda-faq"><h3>Can you check documents from another country?</h3><p>No. We only check New Zealand documents. A document issued by another country has to be certified or apostilled by that country.</p></div>
+<div class="nda-faq"><h3>Do you check documents for a visa or citizenship application?</h3><p>Yes. We check your NZ documents against the list the visa office or registry gave you. The decision on the application is theirs, and we don&#8217;t give immigration advice.</p></div>
+<div class="nda-faq"><h3>What happens if something is wrong?</h3><p>We tell you exactly what&#8217;s wrong and what&#8217;s needed. If you&#8217;d like us to fix it, we send one all-in price first and only start once you say yes.</p></div>
+<div class="nda-sources"><h2>Sources</h2><ul><li><a href="https://www.govt.nz/browse/passports-citizenship-and-identity/proving-and-protecting-your-identity/use-your-nz-documents-overseas/" rel="noopener" target="_blank">Use your NZ documents overseas (govt.nz)</a></li><li><a href="https://www.govt.nz/browse/passports-citizenship-and-identity/proving-and-protecting-your-identity/service-timeframes/" rel="noopener" target="_blank">Service timeframes (govt.nz)</a></li></ul></div>
+<p class="nda-disclaimer">NZ Document Assist Limited is an independent company and an approved BDM Online organisation. We are not Births, Deaths and Marriages, the Department of Internal Affairs or any government agency. We are not a law firm, Notary Public or licensed immigration adviser and do not give legal or immigration advice.</p></article>
+<aside class="sidebar"><div class="side-card"><h3>Free document check</h3><p>Send a photo of the document and the request you were given. We reply within 2 business hours.</p><a class="btn" href="https://wa.me/64221003242?text=Hi%20NZ%20Document%20Assist%2C%20I%27d%20like%20a%20free%20document%20check." target="_blank" rel="noopener">Send It on WhatsApp</a><p style="margin:14px 0 0;font-size:14px;color:#5a697a;">Or email <a href="mailto:help@nzdocumentassist.co.nz?subject=Free%20document%20check" style="color:#9a7413;font-weight:800;">help@nzdocumentassist.co.nz</a></p></div><div class="side-card"><h3>Related guides</h3><a href="/order-nz-certificates-from-overseas/">Order From Overseas</a><a href="/new-zealand-apostille-requirements/">NZ Apostille Requirements</a><a href="/apostille-vs-authentication-nz/">Apostille vs Authentication</a><a href="/who-can-certify-documents-nz/">Who Can Certify Documents?</a><a href="/real-cases/">Real Document Cases</a><a href="/pricing/">Pricing</a></div><div class="side-card"><h3>Our services</h3><a href="/apostille-nz/">Apostille NZ</a><a href="/document-authentication-nz/">Document Authentication</a><a href="/notary-public-auckland-help/">Notary + Apostille</a><a href="/translation-coordination-nz/">Translation</a><a href="/courier-document-return/">Courier &amp; Document Return</a></div></aside>
+</div>
+</section>
+<section class="cta-section">
+<div class="wrap">
+<h2>Not sure your document will be accepted?</h2>
+<p>Send us a photo and the request you were given. We&#8217;ll tell you, free, before you pay anyone.</p>
+<a class="btn" href="https://wa.me/64221003242?text=Hi%20NZ%20Document%20Assist%2C%20I%27d%20like%20a%20free%20document%20check." target="_blank" rel="noopener">Send It on WhatsApp</a>
+<p style="margin-top:16px;"><a href="mailto:help@nzdocumentassist.co.nz?subject=Free%20document%20check" style="color:#f0ce61;font-weight:800;">Or email help@nzdocumentassist.co.nz</a></p>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap foot">
+<div>
+<img alt="NZ Document Assist - Apostille and Overseas Document Assistance" class="footer-logo" height="168" src="/assets/images/nz-document-assist-logo-dark-bg.webp" width="460"/>
+<p>Apostille &amp; Overseas Document Assistance throughout New Zealand.</p>
+<p>NZ Document Assist Limited<br/>NZBN 9429053965790</p>
+<p><a href="mailto:help@nzdocumentassist.co.nz">help@nzdocumentassist.co.nz</a><a href="tel:+64221003242">+64 22 100 3242</a><a href="https://wa.me/64221003242?text=Hi%20NZ%20Document%20Assist%2C%20I%20need%20help%20with%20a%20document." target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','whatsapp_click');if(window.fbq)fbq('track','Contact');">WhatsApp us</a></p>
+<p class="foot-hours">Mon–Fri 8:30am–6pm · Sat 9am–1pm<br/>New Zealand time</p>
+</div>
+<div>
+<strong>Services</strong>
+<a href="/order-certificate-nz/">Order a Certificate</a>
+<a href="/apostille-nz/">Apostille NZ</a>
+<a href="/document-authentication-nz/">Authentication</a>
+<a href="/translation-coordination-nz/">Translation Coordination</a>
+<a href="/notary-public-auckland-help/">Notary Coordination</a>
+<a href="/courier-document-return/">Courier &amp; Document Return</a>
+</div>
+<div>
+<strong>Information</strong>
+<a href="/resources/">Resources</a>
+<a href="/new-zealand-apostille-requirements/">Apostille Requirements</a>
+<a href="/documents-for-overseas-use/">Documents for Overseas Use</a>
+<a href="/how-it-works/">How It Works</a>
+<a href="/pricing/">Pricing</a>
+<a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/terms/">Terms</a>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const nav = document.querySelector('header .nav');
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', function () {
+      const isOpen = nav.classList.toggle('mobile-open');
+      menuToggle.textContent = isOpen ? 'Close' : 'Menu';
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+  }
+
+  dropdowns.forEach(function (dropdown) {
+    const button = dropdown.querySelector('.nav-dropbtn');
+    if (!button) return;
+    button.addEventListener('click', function (event) {
+      if (window.innerWidth <= 900) {
+        event.preventDefault();
+        const willOpen = !dropdown.classList.contains('mobile-open');
+        dropdowns.forEach(function (otherDropdown) {
+          if (otherDropdown !== dropdown) {
+            otherDropdown.classList.remove('mobile-open');
+            const otherButton = otherDropdown.querySelector('.nav-dropbtn');
+            if (otherButton) otherButton.setAttribute('aria-expanded', 'false');
+          }
+        });
+        dropdown.classList.toggle('mobile-open', willOpen);
+        button.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      }
+    });
+  });
+});
+</script>
+<script src="/assets/js/main.js"></script>
+<a class="wa-float" href="https://wa.me/64221003242?text=Hi%20NZ%20Document%20Assist%2C%20I%20need%20help%20with%20a%20document." target="_blank" rel="noopener" aria-label="Message NZ Document Assist on WhatsApp" onclick="if(window.gtag)gtag('event','whatsapp_click');if(window.fbq)fbq('track','Contact');"><svg aria-hidden="true" viewBox="0 0 32 32" width="26" height="26" fill="currentColor"><path d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.98L4 29l8.27-1.58a12.1 12.1 0 0 0 3.77.6C22.68 28.02 28 22.66 28 16.05 28 9.44 22.68 3 16.04 3Zm0 22.86c-1.19 0-2.35-.19-3.45-.56l-.6-.2-4.9.94.97-4.68-.22-.62a9.84 9.84 0 0 1-1.6-5.4c0-5.43 4.4-9.84 9.8-9.84 5.4 0 9.8 4.41 9.8 9.84 0 5.42-4.4 10.52-9.8 10.52Zm5.38-7.37c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.67.15-.2.29-.77.96-.94 1.16-.17.2-.35.22-.64.07-.29-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.67-1.6-.91-2.2-.24-.57-.49-.5-.67-.5h-.57c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44 0 1.43 1.05 2.82 1.19 3.02.15.2 2.06 3.14 4.98 4.4.7.3 1.24.48 1.67.62.7.22 1.34.19 1.84.12.56-.08 1.74-.71 1.98-1.4.25-.69.25-1.28.17-1.4-.07-.12-.27-.2-.56-.34Z"/></svg><span>WhatsApp us</span></a>
+</body>
+</html>
