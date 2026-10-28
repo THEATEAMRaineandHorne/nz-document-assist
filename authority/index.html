@@ -1051,34 +1051,38 @@ Get a Quote
 <div class="auth-choice auth-who">
 <label class="auth-radio"><input type="radio" name="document_for" value="Myself" data-who="self" checked/> <span><strong>The document is mine</strong></span></label>
 <label class="auth-radio"><input type="radio" name="document_for" value="My child (I am the parent or legal guardian)" data-who="child"/> <span><strong>The document is for my child</strong><small>I am the child's parent or legal guardian.</small></span></label>
+<label class="auth-radio"><input type="radio" name="document_for" value="My parent" data-who="parent"/> <span><strong>The document is for my parent</strong><small>My parent has passed away, I hold their power of attorney, or they have asked me to arrange it.</small></span></label>
 </div>
 <p class="auth-note" id="details-note">Please enter your details exactly as they appear on your official records.</p>
 <div class="form-row">
-<div class="form-group"><label for="full_name" data-self="Your full name (current) *" data-child="Child's full name *">Your full name (current) *</label><input id="full_name" name="full_name" autocomplete="name" required/></div>
-<div class="form-group"><label for="name_at_birth">Full name at birth, if different</label><input id="name_at_birth" name="name_at_birth"/></div>
+<div class="form-group"><label for="full_name" data-self="Your full name (current) *" data-child="Child's full name *" data-parent="Your parent's full name *">Your full name (current) *</label><input id="full_name" name="full_name" autocomplete="name" required/></div>
+<div class="form-group"><label for="name_at_birth" data-self="Full name at birth, if different" data-child="Full name at birth, if different" data-parent="Your parent's full name at birth, if different">Full name at birth, if different</label><input id="name_at_birth" name="name_at_birth"/></div>
 </div>
 <div class="form-row">
-<div class="form-group"><label for="dob" data-self="Date of birth *" data-child="Child's date of birth *">Date of birth *</label><input id="dob" name="date_of_birth" type="date" required/></div>
-<div class="form-group auth-if-order"><label for="pob" data-self="Place of birth (town or city) *" data-child="Child's place of birth (town or city) *">Place of birth (town or city) *</label><input id="pob" name="place_of_birth"/></div>
+<div class="form-group"><label for="dob" data-self="Date of birth *" data-child="Child's date of birth *" data-parent="Your parent's date of birth *">Date of birth *</label><input id="dob" name="date_of_birth" type="date" required/></div>
+<div class="form-group auth-if-order"><label for="pob" data-self="Place of birth (town or city) *" data-child="Child's place of birth (town or city) *" data-parent="Your parent's place of birth (town or city) *">Place of birth (town or city) *</label><input id="pob" name="place_of_birth"/></div>
 </div>
 <div class="form-row auth-if-order">
-<div class="form-group"><label for="parent1" data-self="Mother's / parent's full name at your birth" data-child="Mother's / parent's full name at the child's birth">Mother's / parent's full name at your birth</label><input id="parent1" name="parent_1_name_at_birth"/></div>
-<div class="form-group"><label for="parent2" data-self="Father's / other parent's full name at your birth" data-child="Father's / other parent's full name at the child's birth">Father's / other parent's full name at your birth</label><input id="parent2" name="parent_2_name_at_birth"/></div>
+<div class="form-group"><label for="parent1" data-self="Mother's / parent's full name at your birth" data-child="Mother's / parent's full name at the child's birth" data-parent="Your parent's mother's full name at their birth">Mother's / parent's full name at your birth</label><input id="parent1" name="parent_1_name_at_birth"/></div>
+<div class="form-group"><label for="parent2" data-self="Father's / other parent's full name at your birth" data-child="Father's / other parent's full name at the child's birth" data-parent="Your parent's father's full name at their birth">Father's / other parent's full name at your birth</label><input id="parent2" name="parent_2_name_at_birth"/></div>
 </div>
 <div class="form-row auth-if-order">
-<div class="form-group"><label for="maiden" data-self="Mother's maiden name (her surname before marriage)" data-child="Child's mother's maiden name (her surname before marriage)">Mother's maiden name (her surname before marriage)</label><input id="maiden" name="mothers_maiden_name" placeholder="Leave blank if it's the same as above"/></div>
+<div class="form-group"><label for="maiden" data-self="Mother's maiden name (her surname before marriage)" data-child="Child's mother's maiden name (her surname before marriage)" data-parent="Your parent's mother's maiden name (her surname before marriage)">Mother's maiden name (her surname before marriage)</label><input id="maiden" name="mothers_maiden_name" placeholder="Leave blank if it's the same as above"/></div>
 </div>
 <div class="form-row auth-if-marriage">
 <div class="form-group"><label for="spouse">Spouse or partner's full name *</label><input id="spouse" name="spouse_full_name"/></div>
 <div class="form-group"><label for="event_date">Date and place of marriage / civil union / death *</label><input id="event_date" name="event_date_and_place" placeholder="e.g. 14 February 2015, Auckland"/></div>
 </div>
-<div class="auth-if-child">
-<p class="auth-note"><strong>Your details (the parent or guardian signing)</strong></p>
+<div class="auth-if-rep">
+<p class="auth-note"><strong data-self="" data-child="Your details (the parent or guardian signing)" data-parent="Your details (the son or daughter signing)">Your details (the parent or guardian signing)</strong></p>
 <div class="form-row">
 <div class="form-group"><label for="guardian_name">Your full name *</label><input id="guardian_name" name="parent_guardian_full_name" autocomplete="name"/></div>
-<div class="form-group"><label for="guardian_rel">Your relationship to the child *</label>
+<div class="form-group auth-if-child"><label for="guardian_rel">Your relationship to the child *</label>
 <select id="guardian_rel" name="parent_guardian_relationship"><option value="">Choose…</option><option>Mother</option><option>Father</option><option>Parent</option><option>Legal guardian</option></select></div>
+<div class="form-group auth-if-parent"><label for="parent_basis">Why are you arranging this for your parent? *</label>
+<select id="parent_basis" name="authority_to_act_for_parent"><option value="">Choose…</option><option>My parent has passed away</option><option>I hold an enduring power of attorney for my parent</option><option>My parent has asked me to arrange it and will confirm by email</option></select></div>
 </div>
+<p class="auth-note" id="parent-basis-note" hidden></p>
 </div>
 <div class="form-row">
 <div class="form-group"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required/></div>
@@ -1123,7 +1127,7 @@ Get a Quote
 </ul>
 <p>This authority ends once my request has been completed, or earlier if I withdraw it in writing.</p>
 </div>
-<label class="auth-check"><input type="checkbox" name="authority_given" value="Yes" required/> <span id="confirm-text" data-self="I confirm I am the person named in section 2, the details I have given are true and correct, and I give the authority above." data-child="I confirm I am the parent or legal guardian of the child named in section 2, I have the right to act for them in this request, the details I have given are true and correct, and I give the authority above on the child's behalf.">I confirm I am the person named in section 2, the details I have given are true and correct, and I give the authority above.</span></label>
+<label class="auth-check"><input type="checkbox" name="authority_given" value="Yes" required/> <span id="confirm-text" data-self="I confirm I am the person named in section 2, the details I have given are true and correct, and I give the authority above." data-child="I confirm I am the parent or legal guardian of the child named in section 2, I have the right to act for them in this request, the details I have given are true and correct, and I give the authority above on the child's behalf." data-parent="I confirm I am the son or daughter of the parent named in section 2, I have the right to arrange this request for them for the reason I have given, the details I have given are true and correct, and I give the authority above on my parent's behalf (or on behalf of their estate, if they have passed away).">I confirm I am the person named in section 2, the details I have given are true and correct, and I give the authority above.</span></label>
 <label class="auth-check"><input type="checkbox" name="fees_agreed" value="Yes" required/> <span id="fees-text">I agree to pay the fees set out in the written estimate NZ Document Assist has given me, and I agree to the <a href="/terms/" target="_blank" rel="noopener">Terms of Service</a>.</span></label>
 <label class="auth-check"><input type="checkbox" name="privacy_agreed" value="Yes" required/> <span>I have read the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>. I understand my details are used only for this request, are held securely (including with an overseas form-processing provider) and are deleted when no longer needed.</span></label>
 </fieldset>
@@ -1138,7 +1142,7 @@ Get a Quote
 <label class="auth-check"><input type="checkbox" name="esignature_agreed" value="Yes" required/> <span>I agree that typing my name above is my signature on this Letter of Authority.</span></label>
 </fieldset>
 
-<div class="auth-id-note"><strong>Last step after you submit:</strong> email a clear photo of your passport or driver licence (the parent or guardian's, if the document is for your child) to <a href="mailto:help@nzdocumentassist.co.nz">help@nzdocumentassist.co.nz</a> so we can confirm your identity. We will not start until we receive it.</div>
+<div class="auth-id-note"><strong>Last step after you submit:</strong> email a clear photo of your passport or driver licence (your own, if the document is for your child or your parent) to <a href="mailto:help@nzdocumentassist.co.nz">help@nzdocumentassist.co.nz</a> so we can confirm your identity. We will not start until we receive it.</div>
 
 <p class="auth-error" id="auth-error" role="alert" hidden></p>
 <button type="submit" class="btn auth-submit" id="auth-submit">Sign and submit authority</button>
@@ -1403,7 +1407,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* Paste your Formspree form ID here (the part after formspree.io/f/) */
   var FORMSPREE_ID = 'moevywdo';
   var ENDPOINT = 'https://formspree.io/f/' + FORMSPREE_ID;
-  var AUTHORITY_VERSION = 'Letter of Authority v6 (14 Oct 2026)';
+  var AUTHORITY_VERSION = 'Letter of Authority v7 (28 Oct 2026)';
 
   var form = document.getElementById('authority-form');
   if(!form) return;
@@ -1472,18 +1476,33 @@ document.addEventListener('DOMContentLoaded', function () {
     var mixed = usesDia && route.indexOf('Different') === 0;
     document.getElementById('instructions').required = mixed;
     document.getElementById('instr-opt').textContent = mixed ? '*' : '(optional)';
-    /* document for self or child */
-    var who = form.querySelector('input[name="document_for"]:checked');
-    var child = who && who.dataset.who === 'child';
-    form.querySelectorAll('[data-self][data-child]').forEach(function(el){ el.textContent = child ? el.dataset.child : el.dataset.self; });
+    /* document for self, child or parent */
+    var mode = whoMode();
+    var child = mode === 'child', parent = mode === 'parent';
+    form.querySelectorAll('[data-self][data-child]').forEach(function(el){ var t = el.dataset[mode]; el.textContent = (t !== undefined) ? t : el.dataset.self; });
+    form.querySelectorAll('.auth-if-rep').forEach(function(el){ el.hidden = !(child || parent); });
     form.querySelectorAll('.auth-if-child').forEach(function(el){ el.hidden = !child; });
-    document.getElementById('guardian_name').required = child;
+    form.querySelectorAll('.auth-if-parent').forEach(function(el){ el.hidden = !parent; });
+    document.getElementById('guardian_name').required = child || parent;
     document.getElementById('guardian_rel').required = child;
-    document.getElementById('details-title').textContent = child ? 'Details of your child and you' : 'Your details';
-    document.getElementById('details-note').textContent = child ? "Enter your child's details exactly as they appear on the birth registration, then your own details." : 'Please enter your details exactly as they appear on your official records.';
-    document.getElementById('auth-intro').innerHTML = child ? 'As the parent or legal guardian of the child named in section 2, I authorise <strong>NZ Document Assist</strong> to act as our agent for this request only, and to:' : 'I authorise <strong>NZ Document Assist</strong> to act as my agent for this request only, and to:';
+    document.getElementById('parent_basis').required = parent;
+    var basis = document.getElementById('parent_basis').value;
+    var basisNote = document.getElementById('parent-basis-note');
+    var BASIS_NOTES = {
+      'My parent has passed away': "We may ask for a copy of the death certificate if we don't order it for you.",
+      'I hold an enduring power of attorney for my parent': 'After you submit, please email us a copy of the power of attorney along with your ID.',
+      'My parent has asked me to arrange it and will confirm by email': "We'll email your parent to confirm before we start. For a criminal record request or a passport copy, your parent must also sign and send their own ID."
+    };
+    basisNote.textContent = parent ? (BASIS_NOTES[basis] || '') : '';
+    basisNote.hidden = !(parent && BASIS_NOTES[basis]);
+    document.getElementById('details-title').textContent = child ? 'Details of your child and you' : parent ? 'Details of your parent and you' : 'Your details';
+    document.getElementById('details-note').textContent = child ? "Enter your child's details exactly as they appear on the birth registration, then your own details." : parent ? "Enter your parent's details exactly as they appear on their official records, then your own details." : 'Please enter your details exactly as they appear on your official records.';
+    document.getElementById('auth-intro').innerHTML = child ? 'As the parent or legal guardian of the child named in section 2, I authorise <strong>NZ Document Assist</strong> to act as our agent for this request only, and to:' : parent ? 'On behalf of my parent named in section 2, I authorise <strong>NZ Document Assist</strong> to act as our agent for this request only, and to:' : 'I authorise <strong>NZ Document Assist</strong> to act as my agent for this request only, and to:';
   }
-  function isChild(){ var w = form.querySelector('input[name="document_for"]:checked'); return !!(w && w.dataset.who === 'child'); }
+  function whoMode(){ var w = form.querySelector('input[name="document_for"]:checked'); return (w && w.dataset.who) || 'self'; }
+  function isChild(){ return whoMode() === 'child'; }
+  function isRep(){ var m = whoMode(); return m === 'child' || m === 'parent'; }
+  document.getElementById('parent_basis').addEventListener('change', toggle);
   form.querySelectorAll('input[name="document_for"]').forEach(function(r){ r.addEventListener('change', toggle); });
   document.getElementById('route').addEventListener('change', toggle);
   form.querySelectorAll('input[name="request_type"]').forEach(function(r){ r.addEventListener('change', toggle); });
@@ -1513,12 +1532,12 @@ document.addEventListener('DOMContentLoaded', function () {
       if(!ok){ bad.push(el.type === 'checkbox' ? el.closest('label') : el); }
     });
     var sig = document.getElementById('signature').value.trim().toLowerCase().replace(/\s+/g,' ');
-    var nm = document.getElementById(isChild() ? 'guardian_name' : 'full_name').value.trim().toLowerCase().replace(/\s+/g,' ');
+    var nm = document.getElementById(isRep() ? 'guardian_name' : 'full_name').value.trim().toLowerCase().replace(/\s+/g,' ');
     var sigMismatch = sig && nm && sig !== nm;
     if(sigMismatch){ bad.push(document.getElementById('signature')); }
     if(bad.length){
       bad.forEach(function(el){ el.classList.add('auth-invalid'); });
-      errBox.textContent = (bad.length === 1 && sigMismatch) ? (isChild() ? 'Your typed signature must match your own full name (the parent or guardian) in section 2.' : 'Your typed signature must match your full name in section 2.') : 'Please complete the highlighted fields before submitting.' + (sigMismatch ? ' Your typed signature must also match your full name.' : '');
+      errBox.textContent = (bad.length === 1 && sigMismatch) ? (isChild() ? 'Your typed signature must match your own full name (the parent or guardian) in section 2.' : whoMode() === 'parent' ? 'Your typed signature must match your own full name (not your parent\'s) in section 2.' : 'Your typed signature must match your full name in section 2.') : 'Please complete the highlighted fields before submitting.' + (sigMismatch ? ' Your typed signature must also match your full name.' : '');
       errBox.hidden = false; bad[0].scrollIntoView({behavior:'smooth', block:'center'});
       return;
     }
@@ -1526,8 +1545,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var data = new FormData(form);
     var name = document.getElementById('full_name').value.trim();
-    var signer = isChild() ? document.getElementById('guardian_name').value.trim() : name;
-    data.append('_subject', (PAID ? 'PAID – ' : '') + 'Letter of Authority signed – ' + name + (isChild() ? ' (signed by parent/guardian ' + signer + ')' : ''));
+    var signer = isRep() ? document.getElementById('guardian_name').value.trim() : name;
+    data.append('_subject', (PAID ? 'PAID – ' : '') + 'Letter of Authority signed – ' + name + (isChild() ? ' (signed by parent/guardian ' + signer + ')' : whoMode() === 'parent' ? ' (signed by son/daughter ' + signer + ')' : ''));
     data.append('_replyto', document.getElementById('email').value.trim());
     data.append('authority_version', AUTHORITY_VERSION);
     data.append('signed_at', today.toISOString());
@@ -1553,8 +1572,23 @@ document.addEventListener('DOMContentLoaded', function () {
       phone: 'phone_parent_guardian',
       current_address: 'current_address_parent_guardian'
     };
+    var PARENT_KEYS = {
+      full_name: 'full_name_parent',
+      name_at_birth: 'name_at_birth_parent',
+      date_of_birth: 'date_of_birth_parent',
+      place_of_birth: 'place_of_birth_parent',
+      other_names_used: 'other_names_used_parent',
+      parent_1_name_at_birth: 'mother_full_name_at_birth_of_parent',
+      parent_2_name_at_birth: 'father_full_name_at_birth_of_parent',
+      mothers_maiden_name: 'mothers_maiden_name_of_parent',
+      parent_guardian_full_name: 'son_or_daughter_full_name',
+      email: 'email_son_or_daughter',
+      phone: 'phone_son_or_daughter',
+      current_address: 'current_address_son_or_daughter'
+    };
+    var MAP = isChild() ? CHILD_KEYS : whoMode() === 'parent' ? PARENT_KEYS : {};
     var renamed = new FormData();
-    data.forEach(function(v, k){ renamed.append((isChild() && CHILD_KEYS[k]) || KEYS[k] || k, v); });
+    data.forEach(function(v, k){ renamed.append(MAP[k] || KEYS[k] || k, v); });
     data = renamed;
 
     var btn = document.getElementById('auth-submit');
