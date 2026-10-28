@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en-NZ">
 <head>
+<script src="/analytics.js" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Terms of Service | NZ Document Assist</title>
@@ -101,25 +102,300 @@
 .legal-content a{word-break:break-word}
 </style>
 
+<style id="site-header-standard">
+/* Site-wide header: matches service pages */
+/* ===== NAVIGATION ===== */
+
+header .nav {
+  min-height: 74px;
+  gap: 20px;
+}
+
+header .logo {
+  width: 225px;
+  height: auto;
+}
+
+header .links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 17px !important;
+}
+
+header .links > a {
+  font-size: 14px !important;
+  white-space: nowrap;
+}
+
+header .nav-dropdown {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+header .nav-dropbtn {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0 !important;
+  outline: 0;
+  background: transparent !important;
+  color: #0c2442 !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  padding: 12px 0 !important;
+  margin: 0 !important;
+  cursor: pointer;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+header .nav-arrow {
+  display: inline-block;
+  font-size: 11px;
+  transition: transform .2s ease;
+}
+
+header .nav-dropdown-menu {
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  left: -20px !important;
+  display: block !important;
+  width: max-content !important;
+  min-width: 270px !important;
+  max-width: 340px !important;
+  margin: 0 !important;
+  padding: 10px !important;
+  background: #ffffff !important;
+  border: 1px solid #e3e8ee !important;
+  border-radius: 14px !important;
+  box-shadow: 0 18px 45px rgba(7,31,63,.16) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(8px);
+  transition:
+    opacity .18s ease,
+    transform .18s ease,
+    visibility .18s ease;
+  z-index: 9999 !important;
+}
+
+header .nav-dropdown-menu a {
+  display: block !important;
+  width: 100% !important;
+  padding: 12px 14px !important;
+  margin: 0 !important;
+  color: #0c2442 !important;
+  background: transparent !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+}
+
+header .nav-dropdown-menu a:hover {
+  background: #f5f7fa !important;
+  color: #9a7413 !important;
+}
+
+header .nav-dropdown:hover .nav-dropdown-menu,
+header .nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+
+header .nav-dropdown:hover .nav-arrow,
+header .nav-dropdown:focus-within .nav-arrow {
+  transform: rotate(180deg);
+}
+
+header .nav-quote {
+  padding: 12px 18px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+
+@media (max-width: 900px) {
+
+  header .nav {
+    position: relative;
+    min-height: 72px;
+    padding: 8px 0;
+    flex-wrap: wrap;
+  }
+
+  header .logo {
+    width: 185px !important;
+    max-width: 52vw;
+  }
+
+  header .links {
+    width: 100%;
+    order: 3;
+    display: none !important;
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 0 !important;
+    padding: 14px 0 6px;
+  }
+
+  header .nav.mobile-open .links {
+    display: flex !important;
+  }
+
+  header .nav-quote {
+    display: none !important;
+  }
+
+  header .mobile-menu-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    border: 0;
+    background: #071f3f;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 12px 16px;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+
+  header .links > a,
+  header .nav-dropbtn {
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 8px !important;
+    font-size: 16px !important;
+    border-bottom: 1px solid #e6ebf0 !important;
+  }
+
+  header .nav-dropdown {
+    display: block !important;
+    width: 100%;
+  }
+
+  header .nav-dropdown-menu {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 0 6px 14px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    display: none !important;
+    background: #ffffff !important;
+  }
+
+  header .nav-dropdown.mobile-open .nav-dropdown-menu {
+    display: block !important;
+  }
+
+  header .nav-dropdown-menu a {
+    padding: 11px 10px !important;
+    border-bottom: 0 !important;
+    font-size: 15px !important;
+  }
+
+  header .nav-dropdown.mobile-open .nav-arrow {
+    transform: rotate(180deg);
+  }
+
+
+}
+
+header .nav{gap:14px!important}
+header .links{gap:14px!important}
+header .nav-phone-btn,header .nav-quote{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  min-height:48px!important;padding:12px 17px!important;border-radius:14px!important;
+  white-space:nowrap!important;text-decoration:none!important;font-weight:800!important
+}
+header .nav-phone-btn{gap:7px!important;margin-left:auto!important}
+header .nav-phone-btn svg{width:18px!important;height:18px!important}
+@media(max-width:1100px){
+  header .logo{width:195px!important}
+  header .links{gap:10px!important}
+  header .links>a,header .nav-dropbtn{font-size:13px!important}
+  header .nav-phone-btn,header .nav-quote{padding:11px 13px!important;font-size:13px!important}
+}
+@media(max-width:900px){
+  header .nav-phone-btn{display:inline-flex!important;order:2;margin-left:auto!important;min-height:42px!important;padding:9px 12px!important;font-size:13px!important}
+  header .nav-quote{display:none!important}
+  header .mobile-menu-toggle{order:2;margin-left:8px!important}
+  header .links{order:3}
+}
+@media(max-width:560px){
+  header .nav-phone-btn{font-size:0!important;width:44px!important;min-width:44px!important;padding:0!important}
+  header .nav-phone-btn svg{width:20px!important;height:20px!important}
+}
+
+</style>
 </head>
 <body>
 
 <header>
-  <div class="wrap nav">
-    <a href="/" aria-label="NZ Document Assist home">
-      <img class="logo" src="/assets/images/nz-document-assist-logo-primary.webp" alt="NZ Document Assist" width="550" height="201">
-    </a>
-    <nav class="links" aria-label="Main navigation">
+<div class="wrap nav">
+<a aria-label="NZ Document Assist home" href="/">
+<img alt="NZ Document Assist - Apostille and Overseas Document Assistance" class="logo" height="201" src="/assets/images/nz-document-assist-logo-primary.webp" width="550"/>
+</a>
+<nav aria-label="Main navigation" class="links" id="main-navigation">
+<a href="/">Home</a>
 <a class="nav-order" href="/order-certificate-nz/">Order a Certificate</a>
-      <a href="/#services">Services</a>
-      <a href="/resources/">Resources</a>
-      <a href="/how-it-works/">How It Works</a>
-      <a href="/pricing/">Pricing</a>
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
-    </nav>
-    <a class="btn" href="/contact/">Get a Quote</a>
-  </div>
+<div class="nav-dropdown">
+<button aria-expanded="false" class="nav-dropbtn" type="button">
+      Services
+      <span class="nav-arrow">▾</span>
+</button>
+<div class="nav-dropdown-menu">
+<a href="/apostille-nz/">Apostille NZ</a>
+<a href="/document-authentication-nz/">Document Authentication</a>
+<a href="/notary-public-auckland-help/">Notary Coordination</a>
+<a href="/translation-coordination-nz/">Translation Coordination</a>
+<a href="/courier-document-return/">Courier &amp; Document Return</a>
+</div>
+</div>
+<div class="nav-dropdown">
+<button aria-expanded="false" class="nav-dropbtn" type="button">
+      Resources
+      <span class="nav-arrow">▾</span>
+</button>
+<div class="nav-dropdown-menu"><a href="/resources/">All Resources</a><a href="/new-zealand-apostille-requirements/">NZ Apostille Requirements</a><a href="/documents-for-overseas-use/">Documents for Overseas Use</a><a href="/apostille-vs-authentication-nz/">Apostille vs Authentication NZ</a><a href="/who-can-certify-documents-nz/">Who Can Certify Documents in NZ?</a><a href="/e-apostille-nz/">Paper vs E-Apostille NZ</a></div>
+</div>
+<a href="/how-it-works/">How It Works</a>
+<a href="/pricing/">Pricing</a>
+<a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+</nav>
+<button aria-controls="main-navigation" aria-expanded="false" aria-label="Open menu" class="mobile-menu-toggle" type="button">
+  Menu
+</button>
+<a aria-label="Call NZ Document Assist on +64 22 100 3242" class="btn nav-phone-btn" href="tel:+64221003242"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"></path></svg> Call +64 22 100 3242</a><a class="btn nav-quote" href="/contact/">
+      Get a Quote
+    </a>
+</div>
 </header>
 
 
@@ -308,5 +584,54 @@
 </footer>
 
 <a class="wa-float" href="https://wa.me/64221003242?text=Hi%20NZ%20Document%20Assist%2C%20I%20need%20help%20with%20a%20document." target="_blank" rel="noopener" aria-label="Message NZ Document Assist on WhatsApp" onclick="if(window.gtag)gtag('event','whatsapp_click');if(window.fbq)fbq('track','Contact');"><svg aria-hidden="true" viewBox="0 0 32 32" width="26" height="26" fill="currentColor"><path d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.98L4 29l8.27-1.58a12.1 12.1 0 0 0 3.77.6C22.68 28.02 28 22.66 28 16.05 28 9.44 22.68 3 16.04 3Zm0 22.86c-1.19 0-2.35-.19-3.45-.56l-.6-.2-4.9.94.97-4.68-.22-.62a9.84 9.84 0 0 1-1.6-5.4c0-5.43 4.4-9.84 9.8-9.84 5.4 0 9.8 4.41 9.8 9.84 0 5.42-4.4 10.52-9.8 10.52Zm5.38-7.37c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.67.15-.2.29-.77.96-.94 1.16-.17.2-.35.22-.64.07-.29-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.67-1.6-.91-2.2-.24-.57-.49-.5-.67-.5h-.57c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44 0 1.43 1.05 2.82 1.19 3.02.15.2 2.06 3.14 4.98 4.4.7.3 1.24.48 1.67.62.7.22 1.34.19 1.84.12.56-.08 1.74-.71 1.98-1.4.25-.69.25-1.28.17-1.4-.07-.12-.27-.2-.56-.34Z"/></svg><span>WhatsApp us</span></a>
+<script src="/assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const nav = document.querySelector('header .nav');
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', function () {
+      nav.classList.toggle('mobile-open');
+
+      const isOpen = nav.classList.contains('mobile-open');
+
+      menuToggle.textContent = isOpen ? 'Close' : 'Menu';
+      menuToggle.setAttribute(
+        'aria-label',
+        isOpen ? 'Close menu' : 'Open menu'
+      );
+    });
+  }
+
+  dropdowns.forEach(function (dropdown) {
+
+    const button = dropdown.querySelector('.nav-dropbtn');
+
+    if (!button) return;
+
+    button.addEventListener('click', function (event) {
+
+      if (window.innerWidth <= 900) {
+
+        event.preventDefault();
+
+        dropdowns.forEach(function (otherDropdown) {
+          if (otherDropdown !== dropdown) {
+            otherDropdown.classList.remove('mobile-open');
+          }
+        });
+
+        dropdown.classList.toggle('mobile-open');
+      }
+
+    });
+
+  });
+
+});
+</script>
 </body>
 </html>
