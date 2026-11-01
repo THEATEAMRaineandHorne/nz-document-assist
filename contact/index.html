@@ -1233,54 +1233,10 @@ Just four quick details are required (marked *). Not sure what you need? That is
 <label for="requirements">What have you been asked for? <span class="optional">(optional)</span></label>
 <textarea id="requirements" name="requirements" placeholder="Paste the instructions, or just describe it in your own words. Not sure? Leave it blank."></textarea>
 </div>
-<details class="form-more">
-<summary>Add more details <span class="optional">(optional)</span></summary>
-<div class="form-more-body">
-<div class="form-row">
 <div class="form-group">
-<label for="document-status">Do you already have the document? <span class="optional">(optional)</span></label>
-<select id="document-status" name="document_status">
-<option value="">Please select</option>
-<option value="Yes">Yes</option>
-<option value="No, I need it ordered">No, I need it ordered</option>
-<option value="Some documents only">I have some of the documents</option>
-<option value="Not sure">Not sure</option>
-</select>
-</div>
-<div class="form-group">
-<label for="number">Number of documents <span class="optional">(optional)</span></label>
-<input id="number" min="1" name="number" placeholder="e.g. 2" type="number"/>
-</div>
-</div>
-<div class="form-row">
-<div class="form-group">
-<label for="phone">Phone or WhatsApp <span class="optional">(optional)</span></label>
-<input autocomplete="tel" id="phone" name="phone" placeholder="Include country code, e.g. +44" type="tel"/>
-</div>
-<div class="form-group">
-<label for="location">Where are you based? <span class="optional">(optional)</span></label>
-<input id="location" name="location" placeholder="e.g. London, Sydney, Auckland" type="text"/>
-</div>
-</div>
-<div class="form-row">
-<div class="form-group">
-<label for="organisation">Who has asked for the document? <span class="optional">(optional)</span></label>
-<input id="organisation" name="organisation" placeholder="e.g. bank, employer or embassy" type="text"/>
-</div>
-<div class="form-group">
-<label for="deadline">Do you have a deadline? <span class="optional">(optional)</span></label>
-<input id="deadline" name="deadline" placeholder="e.g. appointment date" type="text"/>
-</div>
-</div>
-<div class="form-group">
-<label for="message">Anything else we should know? <span class="optional">(optional)</span></label>
-<textarea id="message" name="message" placeholder="Anything that may help us understand your situation."></textarea>
-</div>
-</div>
-</details>
-<div class="form-warning">
-<strong>Describe your documents in this first enquiry.</strong>
-<p>Please leave out passport numbers and sensitive personal details. We will explain how to provide documents if needed.</p>
+<label for="message">Anything else that helps us quote? <span class="optional">(optional)</span></label>
+<textarea aria-describedby="message-help" id="message" name="message" placeholder="e.g. I have 2 certificates, I'm in London, the bank needs them by 15 December. WhatsApp +44 ..."></textarea>
+<small class="form-help" id="message-help">Helpful to mention: whether you already have the document or need it ordered, how many, where you&#8217;re based, who asked for it, any deadline, and your phone or WhatsApp with country code. Please leave out passport numbers and other sensitive details. We&#8217;ll tell you how to send documents safely if needed.</small>
 </div>
 <button class="btn form-submit" type="submit">Send My Quote Request</button>
 <div aria-live="polite" class="form-status" id="form-status" role="status"></div>
