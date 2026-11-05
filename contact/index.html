@@ -88,7 +88,7 @@
       "url": "https://nzdocumentassist.co.nz/contact/",
       "name": "Document Quote NZ | Certificates & Apostilles",
       "datePublished": "2026-09-06T18:31:40+12:00",
-      "dateModified": "2026-10-19T10:20:00+13:00",
+      "dateModified": "2026-11-05T19:00:00+13:00",
       "description": "Request a free quote for NZ certificates, apostilles, authentication and document coordination. Help with documents for New Zealand or overseas use.",
       "primaryImageOfPage": {
         "@type": "ImageObject",
@@ -492,6 +492,25 @@ header .nav-quote {
   color:#687789;
   font-size:13px;
   line-height:1.45;
+}
+
+.form-section-title {
+  margin:30px 0 16px;
+  padding-top:22px;
+  border-top:1px solid #dfe5ec;
+  color:#0c2442;
+  font-size:18px;
+}
+.form-section-title:first-of-type {
+  margin-top:0;
+  padding-top:0;
+  border-top:0;
+}
+.form-group input.form-date {
+  min-height:50px;
+}
+.form-group input[disabled] {
+  background:#f3f5f7;
 }
 
 .form-more {
@@ -1172,7 +1191,7 @@ Get a Quote for Your NZ Documents
 <p class="hero-lead">
 We arrange certificate ordering, apostilles, authentication, notary appointments, translations and delivery. Tell us what you need for use in New Zealand or overseas. Your quote is free.
 </p>
-<p class="page-date-meta">Published <time datetime="2026-09-06">6 September 2026</time><span aria-hidden="true"> · </span> Updated <time datetime="2026-10-19">19 October 2026</time></p>
+<p class="page-date-meta">Published <time datetime="2026-09-06">6 September 2026</time><span aria-hidden="true"> · </span> Updated <time datetime="2026-11-05">5 November 2026</time></p>
 </div>
 </section>
 <section class="section">
@@ -1195,11 +1214,12 @@ Request a Document Quote
 </ul>
 </div>
 <p class="form-intro">
-Just four quick details are required (marked *). Not sure what you need? That is fine, we will work it out with you.
+Only the five details marked * are required. The rest helps us give you an accurate quote faster, so skip anything you are not sure about.
 </p>
 <form action="https://formspree.io/f/moevywdo" id="quote-form" method="POST">
 <input name="_subject" type="hidden" value="New quote request - NZ Document Assist"/>
 <input autocomplete="off" name="_gotcha" style="display:none" tabindex="-1" type="text"/>
+<h3 class="form-section-title">About you</h3>
 <div class="form-row">
 <div class="form-group">
 <label for="name">Your name *</label>
@@ -1210,9 +1230,52 @@ Just four quick details are required (marked *). Not sure what you need? That is
 <input autocomplete="email" id="email" name="email" required="" type="email"/>
 </div>
 </div>
+<div class="form-row">
+<div class="form-group">
+<label for="phone">Phone or WhatsApp <span class="optional">(optional)</span></label>
+<input autocomplete="tel" id="phone" name="phone" placeholder="e.g. +44 7700 900123" type="tel"/>
+<small class="form-help">Please include your country code.</small>
+</div>
+<div class="form-group">
+<label for="lives">Where do you live now? *</label>
+<select id="lives" name="lives" required>
+<option value="">Please select</option>
+<option value="New Zealand">In New Zealand</option>
+<option value="Overseas">Overseas</option>
+</select>
+</div>
+</div>
+<div class="form-group" hidden id="location-group">
+<label for="location"><span id="location-label">City or suburb</span> <span class="optional">(optional)</span></label>
+<input disabled id="location" name="location" type="text"/>
+</div>
+<h3 class="form-section-title">Your documents</h3>
 <div class="form-group">
 <label for="document">Which document do you need help with? *</label>
 <input id="document" name="document" placeholder="e.g. Birth certificate, degree, power of attorney" required="" type="text"/>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="have-document">Do you already have it? <span class="optional">(optional)</span></label>
+<select id="have-document" name="have_document">
+<option value="">Please select</option>
+<option value="Yes, I have it">Yes, I have it</option>
+<option value="No, please order it">No, please order it for me</option>
+<option value="Not sure">Not sure</option>
+</select>
+</div>
+<div class="form-group">
+<label for="document-count">How many documents? <span class="optional">(optional)</span></label>
+<select id="document-count" name="document_count">
+<option value="">Please select</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5 or more">5 or more</option>
+<option value="Not sure">Not sure</option>
+</select>
+</div>
 </div>
 <div class="form-row">
 <div class="form-group">
@@ -1230,18 +1293,64 @@ Just four quick details are required (marked *). Not sure what you need? That is
 </div>
 </div>
 <div class="form-group">
+<label for="needed-by">When do you need it by? <span class="optional">(optional)</span></label>
+<input aria-describedby="needed-by-help" class="form-date" id="needed-by" name="needed_by" type="date"/>
+<small class="form-help" id="needed-by-help">Your appointment, visa or bank date. Leave blank if there is no deadline.</small>
+</div>
+<div class="form-group">
 <label for="requirements">What have you been asked for? <span class="optional">(optional)</span></label>
 <textarea id="requirements" name="requirements" placeholder="Paste the instructions, or just describe it in your own words. Not sure? Leave it blank."></textarea>
 </div>
+<h3 class="form-section-title">Delivery and payment</h3>
+<div class="form-row">
+<div class="form-group">
+<label for="return-to">Where should we send the finished documents? <span class="optional">(optional)</span></label>
+<select id="return-to" name="return_to">
+<option value="">Please select</option>
+<option value="Where I live">To where I live</option>
+<option value="Somewhere else">Somewhere else</option>
+<option value="Not sure yet">Not sure yet</option>
+</select>
+</div>
+<div class="form-group">
+<label for="payment">How would you prefer to pay? <span class="optional">(optional)</span></label>
+<select aria-describedby="payment-help" id="payment" name="payment_preference">
+<option value="">Please select</option>
+<option value="Credit or debit card">Credit or debit card online</option>
+<option value="NZ bank transfer">NZ bank transfer</option>
+<option value="Not sure yet">Not sure yet</option>
+</select>
+<small class="form-help" id="payment-help">Nothing is charged now. You pay only after you approve your quote.</small>
+</div>
+</div>
+<div class="form-group" hidden id="return-group">
+<label for="return-location">Which city and country? <span class="optional">(optional)</span></label>
+<input disabled id="return-location" name="return_location" placeholder="e.g. Dubai, United Arab Emirates" type="text"/>
+</div>
+<details class="form-more">
+<summary>Ordering for a business?</summary>
+<div class="form-more-body">
+<div class="form-row">
+<div class="form-group">
+<label for="company">Company name <span class="optional">(optional)</span></label>
+<input autocomplete="organization" id="company" name="company" type="text"/>
+</div>
+<div class="form-group">
+<label for="reference">Your reference <span class="optional">(optional)</span></label>
+<input id="reference" name="reference" placeholder="e.g. PO or matter number" type="text"/>
+</div>
+</div>
+</div>
+</details>
 <div class="form-group">
 <label for="message">Anything else that helps us quote? <span class="optional">(optional)</span></label>
-<textarea aria-describedby="message-help" id="message" name="message" placeholder="e.g. I have 2 certificates, I'm in London, the bank needs them by 15 December. WhatsApp +44 ..."></textarea>
-<small class="form-help" id="message-help">Helpful to mention: whether you already have the document or need it ordered, how many, where you&#8217;re based, who asked for it, any deadline, and your phone or WhatsApp with country code. Please leave out passport numbers and other sensitive details. We&#8217;ll tell you how to send documents safely if needed.</small>
+<textarea aria-describedby="message-help" id="message" name="message" placeholder="e.g. Who asked for it, or the best time to call you."></textarea>
+<small class="form-help" id="message-help">Please leave out passport numbers and other sensitive details. We&#8217;ll tell you how to send documents safely if needed.</small>
 </div>
 <button class="btn form-submit" type="submit">Send My Quote Request</button>
 <div aria-live="polite" class="form-status" id="form-status" role="status"></div>
 <p class="form-note">
-We reply by email. You approve the quote before paid work begins. <a href="/privacy-policy/">Privacy policy</a>.
+We reply by email. You approve the quote before paid work begins, then pay by card or NZ bank transfer. <a href="/privacy-policy/">Privacy policy</a>.
 </p>
 </form>
 </div>
@@ -1265,7 +1374,7 @@ help@nzdocumentassist.co.nz
 </p>
 <p>
 
-Include the document type, where it will be used and any deadline. Tell us if you need it ordered.
+Include the document type, where it will be used, where you live and any deadline. Tell us if you need it ordered.
 
 </p>
 <p><strong>Or message us on WhatsApp</strong><br/><a href="https://wa.me/64221003242?text=Hi%20NZ%20Document%20Assist%2C%20I%20need%20help%20with%20a%20document." target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','whatsapp_click');if(window.fbq)fbq('track','Contact');">+64 22 100 3242</a> &middot; handy if you&#8217;re overseas</p>
@@ -1540,13 +1649,50 @@ document.addEventListener('DOMContentLoaded', function () {
     const countryField = document.getElementById('country');
     const countryGroup = document.getElementById('country-group');
 
+    const livesField = document.getElementById('lives');
+    const locationGroup = document.getElementById('location-group');
+    const locationField = document.getElementById('location');
+    const locationLabel = document.getElementById('location-label');
+    const returnField = document.getElementById('return-to');
+    const returnGroup = document.getElementById('return-group');
+    const returnLocation = document.getElementById('return-location');
+    const neededBy = document.getElementById('needed-by');
+
+    const now = new Date();
+    neededBy.min = [
+      now.getFullYear(),
+      String(now.getMonth() + 1).padStart(2, '0'),
+      String(now.getDate()).padStart(2, '0')
+    ].join('-');
+
+    function formatDate(value) {
+      if (!value) return '';
+      const parts = value.split('-').map(Number);
+      return new Date(parts[0], parts[1] - 1, parts[2]).toLocaleDateString('en-NZ', {
+        day: 'numeric', month: 'long', year: 'numeric'
+      });
+    }
+
     function updateDestination() {
       const domestic = useField.value === 'New Zealand';
       countryGroup.hidden = domestic;
       countryField.disabled = domestic;
+
+      const overseas = livesField.value === 'Overseas';
+      const answered = livesField.value !== '';
+      locationGroup.hidden = !answered;
+      locationField.disabled = !answered;
+      locationLabel.textContent = overseas ? 'Which city and country?' : 'City or suburb';
+      locationField.placeholder = overseas ? 'e.g. London, United Kingdom' : 'e.g. New Lynn, Auckland';
+
+      const elsewhere = returnField.value === 'Somewhere else';
+      returnGroup.hidden = !elsewhere;
+      returnLocation.disabled = !elsewhere;
     }
 
-    useField.addEventListener('change', updateDestination);
+    [useField, livesField, returnField].forEach(function (field) {
+      field.addEventListener('change', updateDestination);
+    });
     window.addEventListener('pageshow', updateDestination);
     updateDestination();
 
@@ -1562,7 +1708,8 @@ document.addEventListener('DOMContentLoaded', function () {
           : countryField.value.trim() || 'Not sure';
 
       quoteForm.querySelector('input[name="_subject"]').value =
-        'Quote request - ' + docType + ' - ' + country;
+        'Quote request - ' + docType + ' - ' + country +
+        (neededBy.value ? ' - needed by ' + formatDate(neededBy.value) : '');
 
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
@@ -1571,6 +1718,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const formData = new FormData(quoteForm);
       formData.set('country', country);
+      formData.set('needed_by', formatDate(neededBy.value) || 'No date given');
 
       fetch(quoteForm.action, {
         method: 'POST',
