@@ -544,6 +544,9 @@ header .nav-quote {
   font-size:14px;
 }
 
+.form-warning[hidden] { display:none!important; }
+#origin-warning { margin:-8px 0 22px; }
+
 .form-submit {
   border:0;
   cursor:pointer;
@@ -1214,7 +1217,7 @@ Request a Document Quote
 </ul>
 </div>
 <p class="form-intro">
-Only the five details marked * are required. The rest helps us give you an accurate quote faster, so skip anything you are not sure about.
+Only the six details marked * are required. The rest helps us give you an accurate quote faster, so skip anything you are not sure about.
 </p>
 <form action="https://formspree.io/f/moevywdo" id="quote-form" method="POST">
 <input name="_subject" type="hidden" value="New quote request - NZ Document Assist"/>
@@ -1460,6 +1463,20 @@ Only the five details marked * are required. The rest helps us give you an accur
 <div class="form-group">
 <label for="document">Which document do you need help with? *</label>
 <input id="document" name="document" placeholder="e.g. Birth certificate, degree, power of attorney" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="doc-origin">Is it a New Zealand document? *</label>
+<select aria-describedby="doc-origin-help" id="doc-origin" name="document_origin" required>
+<option value="">Please select</option>
+<option value="NZ document">Yes, it's from New Zealand</option>
+<option value="Overseas document, signing in NZ">No, but I'm in New Zealand</option>
+<option value="Overseas document, client overseas">No, and I'm overseas</option>
+<option value="Not sure">Not sure</option>
+</select>
+<small class="form-help" id="doc-origin-help">For example a NZ birth certificate, NZ degree, NZ police check or NZ company document.</small>
+</div>
+<div class="form-warning" hidden id="origin-warning" role="note">
+<strong>We may not be able to help with this one.</strong> We work with New Zealand documents, and with documents signed in front of a notary here in New Zealand. A document from another country that you sign overseas usually has to be notarised and apostilled in the country where you sign it. You can still send your request and we will tell you honestly whether we can help.
 </div>
 <div class="form-row">
 <div class="form-group">
@@ -1864,6 +1881,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const returnGroup = document.getElementById('return-group');
     const returnLocation = document.getElementById('return-location');
     const neededBy = document.getElementById('needed-by');
+    const originField = document.getElementById('doc-origin');
+    const originWarning = document.getElementById('origin-warning');
+    const NOT_NZ = 'Overseas document, client overseas';
 
     const now = new Date();
     neededBy.min = [
@@ -1902,9 +1922,11 @@ document.addEventListener('DOMContentLoaded', function () {
       const elsewhere = returnField.value === 'Somewhere else';
       returnGroup.hidden = !elsewhere;
       returnLocation.disabled = !elsewhere;
+
+      originWarning.hidden = originField.value !== NOT_NZ;
     }
 
-    [useField, livesField, returnField].forEach(function (field) {
+    [useField, livesField, returnField, originField].forEach(function (field) {
       field.addEventListener('change', updateDestination);
     });
     window.addEventListener('pageshow', updateDestination);
@@ -1922,7 +1944,8 @@ document.addEventListener('DOMContentLoaded', function () {
           : countryField.value.trim() || 'Not sure';
 
       quoteForm.querySelector('input[name="_subject"]').value =
-        'Quote request - ' + docType + ' - ' + country +
+        (originField.value === NOT_NZ ? 'CHECK: not an NZ document - ' : 'Quote request - ') +
+        docType + ' - ' + country +
         (neededBy.value ? ' - needed by ' + formatDate(neededBy.value) : '');
 
       submitBtn.disabled = true;
